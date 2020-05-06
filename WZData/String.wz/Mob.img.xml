@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="Mob.img">
+    <imgdir name="100100">
+        <string name="name" value="蜗牛"/>
+    </imgdir>
+    <imgdir name="100101">
+        <string name="name" value="蓝蜗牛"/>
+    </imgdir>
+    <imgdir name="120100">
+        <string name="name" value="蘑菇仔"/>
+    </imgdir>
+    <imgdir name="130100">
+        <string name="name" value="木妖"/>
+    </imgdir>
+    <imgdir name="130101">
+        <string name="name" value="红蜗牛"/>
+    </imgdir>
+    <imgdir name="210100">
+        <string name="name" value="绿水灵"/>
+    </imgdir>
+    <imgdir name="1110100">
+        <string name="name" value="绿蘑菇"/>
+    </imgdir>
+    <imgdir name="1110101">
+        <string name="name" value="黑木妖"/>
+    </imgdir>
+    <imgdir name="1120100">
+        <string name="name" value="三眼章鱼"/>
+    </imgdir>
+    <imgdir name="1130100">
+        <string name="name" value="斧木妖"/>
+    </imgdir>
+    <imgdir name="1210100">
+        <string name="name" value="猪猪"/>
+    </imgdir>
+    <imgdir name="1210101">
+        <string name="name" value="漂漂猪"/>
+    </imgdir>
+    <imgdir name="1210102">
+        <string name="name" value="花蘑菇"/>
+    </imgdir>
+    <imgdir name="1210103">
+        <string name="name" value="蓝水灵"/>
+    </imgdir>
+    <imgdir name="2110200">
+        <string name="name" value="刺蘑菇"/>
+    </imgdir>
+    <imgdir name="2130100">
+        <string name="name" value="黑斧木妖"/>
+    </imgdir>
+    <imgdir name="2130103">
+        <string name="name" value="青蛇"/>
+    </imgdir>
+    <imgdir name="2220100">
+        <string name="name" value="蓝蘑菇"/>
+    </imgdir>
+    <imgdir name="2230100">
+        <string name="name" value="火独眼兽"/>
+    </imgdir>
+    <imgdir name="2230101">
+        <string name="name" value="僵尸蘑菇"/>
+    </imgdir>
+    <imgdir name="2230102">
+        <string name="name" value="野猪"/>
+    </imgdir>
+    <imgdir name="2230103">
+        <string name="name" value="트릭스터"/>
+    </imgdir>
+    <imgdir name="2230104">
+        <string name="name" value="그린 트릭스터"/>
+    </imgdir>
+    <imgdir name="2300100">
+        <string name="name" value="蝙蝠"/>
+    </imgdir>
+    <imgdir name="3000000">
+        <string name="name" value="石球"/>
+    </imgdir>
+    <imgdir name="3000001">
+        <string name="name" value="蝴蝶精1"/>
+    </imgdir>
+    <imgdir name="3000002">
+        <string name="name" value="蝴蝶精2"/>
+    </imgdir>
+    <imgdir name="3000003">
+        <string name="name" value="蝴蝶精3"/>
+    </imgdir>
+    <imgdir name="3000004">
+        <string name="name" value="蝴蝶精4"/>
+    </imgdir>
+    <imgdir name="3000005">
+        <string name="name" value="브라운 테니"/>
+    </imgdir>
+    <imgdir name="3110100">
+        <string name="name" value="鳄鱼"/>
+    </imgdir>
+    <imgdir name="3110101">
+        <string name="name" value="핑크 테니"/>
+    </imgdir>
+    <imgdir name="3110102">
+        <string name="name" value="라츠"/>
+    </imgdir>
+    <imgdir name="3210100">
+        <string name="name" value="火野猪"/>
+    </imgdir>
+    <imgdir name="3210200">
+        <string name="name" value="幼红独角狮"/>
+    </imgdir>
+    <imgdir name="3210201">
+        <string name="name" value="幼黄独角狮"/>
+    </imgdir>
+    <imgdir name="3210202">
+        <string name="name" value="幼蓝独角狮"/>
+    </imgdir>
+    <imgdir name="3210203">
+        <string name="name" value="팬더 테니"/>
+    </imgdir>
+    <imgdir name="3210204">
+        <string name="name" value="더키 패밀리"/>
+    </imgdir>
+    <imgdir name="3210205">
+        <string name="name" value="블랙 라츠"/>
+    </imgdir>
+    <imgdir name="3210206">
+        <string name="name" value="치크세이버"/>
+    </imgdir>
+    <imgdir name="3210207">
+        <string name="name" value="티키"/>
+    </imgdir>
+    <imgdir name="3210800">
+        <string name="name" value="猴子"/>
+    </imgdir>
+    <imgdir name="3230100">
+        <string name="name" value="风独眼兽"/>
+    </imgdir>
+    <imgdir name="3230101">
+        <string name="name" value="小幽灵"/>
+    </imgdir>
+    <imgdir name="3230102">
+        <string name="name" value="红螃蟹"/>
+    </imgdir>
+    <imgdir name="3230103">
+        <string name="name" value="킹 블록퍼스"/>
+    </imgdir>
+    <imgdir name="3230200">
+        <string name="name" value="星光精灵"/>
+    </imgdir>
+    <imgdir name="3230300">
+        <string name="name" value="幼魔精灵1"/>
+    </imgdir>
+    <imgdir name="3230301">
+        <string name="name" value="幼魔精灵2"/>
+    </imgdir>
+    <imgdir name="3230302">
+        <string name="name" value="블록퍼스"/>
+    </imgdir>
+    <imgdir name="3230303">
+        <string name="name" value="핑크세이버"/>
+    </imgdir>
+    <imgdir name="3230304">
+        <string name="name" value="스카이세이버"/>
+    </imgdir>
+    <imgdir name="3230305">
+        <string name="name" value="장난감 목마"/>
+    </imgdir>
+    <imgdir name="3230306">
+        <string name="name" value="크로노스"/>
+    </imgdir>
+    <imgdir name="3230307">
+        <string name="name" value="처프"/>
+    </imgdir>
+    <imgdir name="3230308">
+        <string name="name" value="트위터"/>
+    </imgdir>
+    <imgdir name="4130100">
+        <string name="name" value="土龙"/>
+    </imgdir>
+    <imgdir name="4130101">
+        <string name="name" value="乌龟"/>
+    </imgdir>
+    <imgdir name="4130102">
+        <string name="name" value="黑食人花"/>
+    </imgdir>
+    <imgdir name="4130103">
+        <string name="name" value="롬바드"/>
+    </imgdir>
+    <imgdir name="4230100">
+        <string name="name" value="冰独眼兽"/>
+    </imgdir>
+    <imgdir name="4230101">
+        <string name="name" value="僵尸猴"/>
+    </imgdir>
+    <imgdir name="4230102">
+        <string name="name" value="大幽灵"/>
+    </imgdir>
+    <imgdir name="4230103">
+        <string name="name" value="铁甲猪"/>
+    </imgdir>
+    <imgdir name="4230104">
+        <string name="name" value="青螃蟹"/>
+    </imgdir>
+    <imgdir name="4230105">
+        <string name="name" value="食人花"/>
+    </imgdir>
+    <imgdir name="4230106">
+        <string name="name" value="月光精灵"/>
+    </imgdir>
+    <imgdir name="4230107">
+        <string name="name" value="独眼蝙蝠"/>
+    </imgdir>
+    <imgdir name="4230108">
+        <string name="name" value="小猎犬"/>
+    </imgdir>
+    <imgdir name="4230109">
+        <string name="name" value="블록골렘"/>
+    </imgdir>
+    <imgdir name="4230110">
+        <string name="name" value="킹 블록골렘"/>
+    </imgdir>
+    <imgdir name="4230111">
+        <string name="name" value="로보토이"/>
+    </imgdir>
+    <imgdir name="4230112">
+        <string name="name" value="마스터 로보"/>
+    </imgdir>
+    <imgdir name="4230113">
+        <string name="name" value="틱톡"/>
+    </imgdir>
+    <imgdir name="4230114">
+        <string name="name" value="플래툰 크로노스"/>
+    </imgdir>
+    <imgdir name="4230115">
+        <string name="name" value="마스터 크로노스"/>
+    </imgdir>
+    <imgdir name="4230116">
+        <string name="name" value="바나드 그레이"/>
+    </imgdir>
+    <imgdir name="4230117">
+        <string name="name" value="제타 그레이"/>
+    </imgdir>
+    <imgdir name="4230118">
+        <string name="name" value="울트라 그레이"/>
+    </imgdir>
+    <imgdir name="4230119">
+        <string name="name" value="마티안"/>
+    </imgdir>
+    <imgdir name="4230120">
+        <string name="name" value="플라티안"/>
+    </imgdir>
+    <imgdir name="4230121">
+        <string name="name" value="메카티안"/>
+    </imgdir>
+    <imgdir name="4240000">
+        <string name="name" value="원로 그레이"/>
+    </imgdir>
+    <imgdir name="5100000">
+        <string name="name" value="小白雪人"/>
+    </imgdir>
+    <imgdir name="5100001">
+        <string name="name" value="变形小白雪人"/>
+    </imgdir>
+    <imgdir name="5100002">
+        <string name="name" value="火精灵"/>
+    </imgdir>
+    <imgdir name="5120000">
+        <string name="name" value="日光精灵"/>
+    </imgdir>
+    <imgdir name="5120001">
+        <string name="name" value="红独角狮"/>
+    </imgdir>
+    <imgdir name="5120002">
+        <string name="name" value="黄独角狮"/>
+    </imgdir>
+    <imgdir name="5120003">
+        <string name="name" value="蓝独角狮"/>
+    </imgdir>
+    <imgdir name="5120100">
+        <string name="name" value="머신 MT-09"/>
+    </imgdir>
+    <imgdir name="5130100">
+        <string name="name" value="青龙"/>
+    </imgdir>
+    <imgdir name="5130101">
+        <string name="name" value="石头人"/>
+    </imgdir>
+    <imgdir name="5130102">
+        <string name="name" value="黑石头人"/>
+    </imgdir>
+    <imgdir name="5130103">
+        <string name="name" value="黑鳄鱼"/>
+    </imgdir>
+    <imgdir name="5130104">
+        <string name="name" value="野狼"/>
+    </imgdir>
+    <imgdir name="5130105">
+        <string name="name" value="小黑雪人"/>
+    </imgdir>
+    <imgdir name="5130106">
+        <string name="name" value="变形小黑雪人"/>
+    </imgdir>
+    <imgdir name="5130107">
+        <string name="name" value="僵尸"/>
+    </imgdir>
+    <imgdir name="5130108">
+        <string name="name" value="矿山僵尸"/>
+    </imgdir>
+    <imgdir name="5140000">
+        <string name="name" value="白狼"/>
+    </imgdir>
+    <imgdir name="5200000">
+        <string name="name" value="小石球"/>
+    </imgdir>
+    <imgdir name="5200001">
+        <string name="name" value="冰石球"/>
+    </imgdir>
+    <imgdir name="5200002">
+        <string name="name" value="火石球"/>
+    </imgdir>
+    <imgdir name="5300000">
+        <string name="name" value="小白雪鬼"/>
+    </imgdir>
+    <imgdir name="5300001">
+        <string name="name" value="小黑雪鬼"/>
+    </imgdir>
+    <imgdir name="5300100">
+        <string name="name" value="巫婆"/>
+    </imgdir>
+    <imgdir name="5400000">
+        <string name="name" value="小企鹅王"/>
+    </imgdir>
+    <imgdir name="6130100">
+        <string name="name" value="赤龙"/>
+    </imgdir>
+    <imgdir name="6130101">
+        <string name="name" value="蘑菇王"/>
+    </imgdir>
+    <imgdir name="6130102">
+        <string name="name" value="孤单企鹅王"/>
+    </imgdir>
+    <imgdir name="6130103">
+        <string name="name" value="企鹅王"/>
+    </imgdir>
+    <imgdir name="6130104">
+        <string name="name" value="魔精灵"/>
+    </imgdir>
+    <imgdir name="6230100">
+        <string name="name" value="怪猫"/>
+    </imgdir>
+    <imgdir name="6230101">
+        <string name="name" value="石像鬼"/>
+    </imgdir>
+    <imgdir name="6230200">
+        <string name="name" value="黑企鹅王"/>
+    </imgdir>
+    <imgdir name="6230201">
+        <string name="name" value="孤单黑企鹅王"/>
+    </imgdir>
+    <imgdir name="6300000">
+        <string name="name" value="白雪人"/>
+    </imgdir>
+    <imgdir name="6300001">
+        <string name="name" value="变形白雪人"/>
+    </imgdir>
+    <imgdir name="6300002">
+        <string name="name" value="孤单白雪人"/>
+    </imgdir>
+    <imgdir name="6300003">
+        <string name="name" value="石像鬼将"/>
+    </imgdir>
+    <imgdir name="6400000">
+        <string name="name" value="黑雪人"/>
+    </imgdir>
+    <imgdir name="6400001">
+        <string name="name" value="变形黑雪人"/>
+    </imgdir>
+    <imgdir name="6400002">
+        <string name="name" value="孤单黑雪人"/>
+    </imgdir>
+    <imgdir name="6400003">
+        <string name="name" value="石像鬼王"/>
+    </imgdir>
+    <imgdir name="7130000">
+        <string name="name" value="黑色飞狮"/>
+    </imgdir>
+    <imgdir name="7130001">
+        <string name="name" value="猎犬"/>
+    </imgdir>
+    <imgdir name="7130100">
+        <string name="name" value="月牙牛魔王"/>
+    </imgdir>
+    <imgdir name="7130101">
+        <string name="name" value="长枪牛魔王"/>
+    </imgdir>
+    <imgdir name="7130102">
+        <string name="name" value="企鹅王与白雪人"/>
+    </imgdir>
+    <imgdir name="7130200">
+        <string name="name" value="狼人"/>
+    </imgdir>
+    <imgdir name="8130100">
+        <string name="name" value="蝙蝠怪"/>
+    </imgdir>
+    <imgdir name="8140000">
+        <string name="name" value="白狼人"/>
+    </imgdir>
+    <imgdir name="8140100">
+        <string name="name" value="企鹅王与黑雪人"/>
+    </imgdir>
+    <imgdir name="8140500">
+        <string name="name" value="火焰猎犬"/>
+    </imgdir>
+    <imgdir name="8150000">
+        <string name="name" value="蝙蝠魔"/>
+    </imgdir>
+    <imgdir name="8800000">
+        <string name="name" value="扎昆1"/>
+    </imgdir>
+    <imgdir name="8800001">
+        <string name="name" value="扎昆2"/>
+    </imgdir>
+    <imgdir name="8800002">
+        <string name="name" value="扎昆3"/>
+    </imgdir>
+    <imgdir name="8800003">
+        <string name="name" value="扎昆手臂1"/>
+    </imgdir>
+    <imgdir name="8800004">
+        <string name="name" value="扎昆手臂2"/>
+    </imgdir>
+    <imgdir name="8800005">
+        <string name="name" value="扎昆手臂3"/>
+    </imgdir>
+    <imgdir name="8800006">
+        <string name="name" value="扎昆手臂4"/>
+    </imgdir>
+    <imgdir name="8800007">
+        <string name="name" value="扎昆手臂5"/>
+    </imgdir>
+    <imgdir name="8800008">
+        <string name="name" value="扎昆手臂6"/>
+    </imgdir>
+    <imgdir name="8800009">
+        <string name="name" value="扎昆手臂7"/>
+    </imgdir>
+    <imgdir name="8800010">
+        <string name="name" value="扎昆手臂8"/>
+    </imgdir>
+    <imgdir name="9000001">
+        <string name="name" value="风独眼兽2"/>
+    </imgdir>
+    <imgdir name="9000002">
+        <string name="name" value="刺蘑菇2"/>
+    </imgdir>
+    <imgdir name="9000100">
+        <string name="name" value="火野猪2"/>
+    </imgdir>
+    <imgdir name="9000101">
+        <string name="name" value="猴子2"/>
+    </imgdir>
+    <imgdir name="9000200">
+        <string name="name" value="火独眼兽2"/>
+    </imgdir>
+    <imgdir name="9000201">
+        <string name="name" value="僵尸蘑菇2"/>
+    </imgdir>
+    <imgdir name="9000300">
+        <string name="name" value="冰独眼兽2"/>
+    </imgdir>
+    <imgdir name="9000301">
+        <string name="name" value="蓝蘑菇2"/>
+    </imgdir>
+    <imgdir name="9001000">
+        <string name="name" value="武术教练的分身"/>
+    </imgdir>
+    <imgdir name="9001001">
+        <string name="name" value="汉斯的分身"/>
+    </imgdir>
+    <imgdir name="9001002">
+        <string name="name" value="赫丽娜的分身"/>
+    </imgdir>
+    <imgdir name="9001003">
+        <string name="name" value="达克鲁的分身"/>
+    </imgdir>
+    <imgdir name="9100000">
+        <string name="name" value="超级水灵"/>
+    </imgdir>
+    <imgdir name="9100001">
+        <string name="name" value="超级青蛇"/>
+    </imgdir>
+    <imgdir name="9100002">
+        <string name="name" value="超级蝙蝠"/>
+    </imgdir>
+    <imgdir name="9100003">
+        <string name="name" value="울트라 주니어 네키1"/>
+    </imgdir>
+    <imgdir name="9100004">
+        <string name="name" value="울트라 주니어 네키2"/>
+    </imgdir>
+    <imgdir name="9100005">
+        <string name="name" value="슈퍼 트릭스터"/>
+    </imgdir>
+    <imgdir name="9100006">
+        <string name="name" value="슈퍼 그린 트릭스터"/>
+    </imgdir>
+    <imgdir name="9200000">
+        <string name="name" value="野猪(PC)"/>
+    </imgdir>
+    <imgdir name="9200001">
+        <string name="name" value="火野猪(PC)"/>
+    </imgdir>
+    <imgdir name="9200002">
+        <string name="name" value="黑木妖(PC)"/>
+    </imgdir>
+    <imgdir name="9200003">
+        <string name="name" value="刺蘑菇(PC)"/>
+    </imgdir>
+    <imgdir name="9200004">
+        <string name="name" value="绿蘑菇(PC)"/>
+    </imgdir>
+    <imgdir name="9200005">
+        <string name="name" value="绿水灵(PC)"/>
+    </imgdir>
+    <imgdir name="9200006">
+        <string name="name" value="猴子(PC)"/>
+    </imgdir>
+    <imgdir name="9200007">
+        <string name="name" value="僵尸猴(PC)"/>
+    </imgdir>
+    <imgdir name="9200008">
+        <string name="name" value="蓝蘑菇(PC)"/>
+    </imgdir>
+    <imgdir name="9200009">
+        <string name="name" value="石头人(PC)"/>
+    </imgdir>
+    <imgdir name="9200010">
+        <string name="name" value="僵尸蘑菇(PC)"/>
+    </imgdir>
+    <imgdir name="9200011">
+        <string name="name" value="火独眼兽(PC)"/>
+    </imgdir>
+    <imgdir name="9200012">
+        <string name="name" value="青龙(PC)"/>
+    </imgdir>
+    <imgdir name="9200013">
+        <string name="name" value="冰独眼兽(PC)"/>
+    </imgdir>
+    <imgdir name="9200014">
+        <string name="name" value="怪猫(PC)"/>
+    </imgdir>
+    <imgdir name="9300000">
+        <string name="name" value="주니어 네키(PQ)"/>
+    </imgdir>
+    <imgdir name="9300001">
+        <string name="name" value="리게이터(PQ)"/>
+    </imgdir>
+    <imgdir name="9300002">
+        <string name="name" value="커즈아이(PQ)"/>
+    </imgdir>
+    <imgdir name="9300003">
+        <string name="name" value="킹슬라임(PQ)"/>
+    </imgdir>
+    <imgdir name="9300004">
+        <string name="name" value="미믹"/>
+    </imgdir>
+    <imgdir name="9300005">
+        <string name="name" value="차원의 라츠"/>
+    </imgdir>
+    <imgdir name="9300006">
+        <string name="name" value="차원의 블랙 라츠"/>
+    </imgdir>
+    <imgdir name="9300007">
+        <string name="name" value="차원의 블록퍼스"/>
+    </imgdir>
+    <imgdir name="9300008">
+        <string name="name" value="차원의 아이쉐도우"/>
+    </imgdir>
+    <imgdir name="9300009">
+        <string name="name" value="차원의 블록골렘"/>
+    </imgdir>
+    <imgdir name="9300010">
+        <string name="name" value="차원의 롬바드"/>
+    </imgdir>
+    <imgdir name="9400000">
+        <string name="name" value="까마귀"/>
+    </imgdir>
+    <imgdir name="9400001">
+        <string name="name" value="불너구리"/>
+    </imgdir>
+    <imgdir name="9400002">
+        <string name="name" value="구름여우"/>
+    </imgdir>
+    <imgdir name="9400003">
+        <string name="name" value="구름여우"/>
+    </imgdir>
+    <imgdir name="9400004">
+        <string name="name" value="구름여우"/>
+    </imgdir>
+    <imgdir name="9400100">
+        <string name="name" value="일본몹"/>
+    </imgdir>
+    <imgdir name="9400101">
+        <string name="name" value="일본몹"/>
+    </imgdir>
+    <imgdir name="9400102">
+        <string name="name" value="일본몹"/>
+    </imgdir>
+    <imgdir name="9400110">
+        <string name="name" value="일본몹"/>
+    </imgdir>
+    <imgdir name="9400111">
+        <string name="name" value="일본몹"/>
+    </imgdir>
+    <imgdir name="9400120">
+        <string name="name" value="일본몹"/>
+    </imgdir>
+</imgdir>

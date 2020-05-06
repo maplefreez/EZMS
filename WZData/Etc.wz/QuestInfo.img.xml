@@ -1,0 +1,2328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="QuestInfo.img">
+    <imgdir name="0000100">
+        <imgdir name="info">
+            <string name="subject" value="比格斯的物品收集"/>
+            <string name="req" value="没有等级限制"/>
+            <int name="island" value="0"/>
+        </imgdir>
+        <imgdir name="f">
+            <string name="desc"
+                    value="在南港见了叫比格斯的年轻水手。他跟我约好，我帮他收集#b10个花蘑菇的盖和30个蓝蜗牛的壳#k，他就给我好道具。他好像不相信我能做到… 郁闷。其实这个任务还是很容易完成的。"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="我收集了#b10个花蘑菇的盖和30个蓝蜗牛的壳#k给南港的比格斯了。我不知道用这些物品到底怎么能赚钱…？反正他给了我一个武器。有这个武器暂时可以去冒险了。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001100">
+        <imgdir name="info">
+            <string name="subject" value="妖精 玛丽和生命水"/>
+            <string name="req" value="没有等级限制"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在魔法密林见研究生命魔法的妖精&apos;玛丽’。她看了我的变成娃娃的宠物后，告诉我只有#b生命水#k和#b生命的卷轴#k可以复活我的宠物。听起来她好像认识射手村的科洛伊。她说射手村的宠物训练师#b巴特斯#k知道关于生命的卷轴，要快点见到他。"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="通过射手村的巴特的考试后，把#b生命水#k和#b生命的卷轴#k拿给妖精&apos;玛丽&apos;了。她用自己的魔法和我拿来的物品把娃娃换成了宠物。我又可以跟我的宠物一起去冒险了……"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000100">
+        <imgdir name="info">
+            <string name="subject" value="酋长的家修理"/>
+            <string name="req" value="没有等级限制"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="w">
+            <string name="desc"
+                    value="荒凉的高原村勇士部落。。。 在那里我见到了酋长，他穿得真奇怪。他拜托我收集为修理房子所需要的#b30个树枝和50个木块#k来。要是我答应他的请求，我就可以得到他的盾牌。但我不答应的话，难道他真会吃了我？"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="收集完#b30个树枝和50个木块#k给勇士部落的酋长了。用这些材料他可以修理房子了。作为答礼我收到了他的盾牌，那盾牌的很多地方有伤痕。看起来好像是很旧的，这么旧的盾牌就这样用没关系吗？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001800">
+        <imgdir name="info">
+            <string name="subject" value="帮助废弃都市居民们 I "/>
+            <string name="req" value="等级15, 全职业"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="1s">
+            <string name="desc"
+                    value="约定好给废弃都市的内拉1000金币，每当居民需要帮助时就委托她找人。首先防御具店老板为制造新的防具，需要收集#b50个绿蘑菇的盖#k和#b50个蓝水灵大水珠#k。绿蘑菇在工地或草丛里很常见而蓝水灵在地铁站内也很多。怎么样，不太难吧？"/>
+        </imgdir>
+        <imgdir name="1end">
+            <string name="desc" value="帮玛帕找所需要的东西，会得到很多柠檬。很期待玛帕用那个材料做的防具吧？ 而且，可能接受新的委托。所以要求顺便进来这里… 然后，去找内拉~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="2s">
+            <string name="desc"
+                    value="接受内拉的第二次委托。听在地铁站入口坐着的休咪说，想要为朋友给她的小狗造一个房子…为了造房子需要#b5个被加工过的木块#k和#b5个螺丝钉#k，所以你要找到这些材料并交给内拉。"/>
+        </imgdir>
+        <imgdir name="2end">
+            <string name="desc" value="帮休咪找东西，会得到休咪自己做的许多蛋糕 , 希望休咪的小狗在暖和的房子里能过的好！ 然后，去找内拉~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="3s">
+            <string name="desc"
+                    value="接受内拉的第三次委托。因为美容的助手安德里亚是老小伙儿，每顿都吃得不好， 所以她想要做海鲜汤吃… 为了做海鲜汤需要#b100个三眼章鱼触角#k和#b1个矿泉水#k。所以你要找到这些材料并交给内拉。"/>
+        </imgdir>
+        <imgdir name="3end">
+            <string name="desc" value="帮安德里亚找所需要的东西，会得到被安德里亚加固的一双手套 , 安德里亚也没什么心事了吧? 后来有时间 去找内拉~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000200">
+        <imgdir name="info">
+            <string name="subject" value="玛亚和奇怪的药"/>
+            <string name="req" value="等级15，新手不能做"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="m1">
+            <string name="desc"
+                    value="在射手村的小旧屋里见了叫玛亚的女孩子。她看起来有得了顽疾不能正常生活。她说如果有一种叫#b&quot;奇怪的药&quot;(名字真奇怪)#k就可以好一点…为了她我要去明珠港见一个叫特奥的水手。"/>
+        </imgdir>
+        <imgdir name="m2">
+            <string name="desc"
+                    value="在明珠港的金银号附近见了特奥。他是胡子很多的人。他说有是有#b那种药#k，但不能白给我。要是我给他会#b发光的石头#k，他就可以交给我那药。看起来他已经很熟悉玛亚，而且他已经知道玛亚的病，但怎么能提要求呢？真是奇怪的人... 我为了拿到发光的石头要去见勇士部落杂货店的#r索非亚#k。"/>
+            <string name="prev" value="m1"/>
+        </imgdir>
+        <imgdir name="m3">
+            <string name="desc"
+                    value="在杂货店里见到了索非亚。她是想成为炼金术士的小姐。她告诉我为制作发光的石头需要#b50个软软的液体，50个叶子，20个三眼章鱼的足，一瓶变异蘑菇的血#k。别的东西不难得到…但是变异蘑菇的血是什么呢？幸亏索非亚告诉我在勇士部落某个地方住着一个叫麦吉的男人肯定知道。叫麦吉... 他在哪里？"/>
+            <string name="prev" value="m2"/>
+        </imgdir>
+        <imgdir name="m4">
+            <string name="desc"
+                    value="在勇士部落见到了麦吉。不过他也说不能白白给我#b那变异蘑菇的血#k。他说要是我在这个岛的中央地下洞穴收集#b40个道符#k的话，他就可以给我。不过他有点小看我，现在我有点后悔了。"/>
+            <string name="prev" value="m3"/>
+        </imgdir>
+        <imgdir name="m5">
+            <string name="desc"
+                    value="在地下洞穴收集#b40个道符#k后回勇士部落给麦吉。那家伙……还是那么傲慢，但他说他一言为定，给我#b变异蘑菇的血#k。虽然他说话那么骄傲，但说不定他是个好人。我要快点收集#b50个软软的液体，50个叶子，20个三眼章鱼的足，一瓶变异蘑菇的血#k去找索非亚。"/>
+            <string name="prev" value="m4"/>
+        </imgdir>
+        <imgdir name="m6">
+            <string name="desc"
+                    value="看我收集万所有的材料，索非亚好像挺吃惊的。因为那不太容易。她用我收集来的材料做了#b发光的石头#k。看着它发光着闪耀的样子… 我才理解人们为什么想获得这个石头。我得到了石头，要赶快去利斯港见特奥和他交换奇怪的药。"/>
+            <string name="prev" value="m5"/>
+        </imgdir>
+        <imgdir name="m7">
+            <string name="desc"
+                    value="去明珠港给特奥#b发光的石头#k后收到了#b奇怪的药#k。那么我要把这药给射手村的#r玛亚#k就可以了。但我想来想去…觉得当初不应该答应她的请求…总之这个药… 看起来挺好吃… 路途中口渴的话，可不可以喝一点呢？"/>
+            <string name="prev" value="m6"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="到射手村给了玛亚奇怪的药。有这个玛亚的毛病可能治好吧？玛亚为了向我表示感谢给了我5000金币和#b褐色斗笠#k。这个斗笠….在太阳晒得太厉害的时候可以戴，但看起来很旧的样子。说不定里面有虫子…戴这个帽子没问题吗？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000800">
+        <imgdir name="info">
+            <string name="subject" value="迷宫入口的守卫兵，鲁克"/>
+            <string name="req" value="等级15，新手不能做"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在迷宫的入口见了叫鲁克的守卫兵。他拜托我收集有助于他母亲的健康所需要的#b100个青蛇的皮和10个蝙蝠的翅膀及1个沙拉#k。他说因为守卫工作很忙，不能亲自去。但我看起来他在这里一直睡觉..?!?!"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我给了鲁克他要的那些东西。他说打算用那些材料做蛇酒。听他这么一说，，我也想喝一点~ 鲁克为表示感谢给了我在附近找到的冶炼的宝石。这么好的宝石，是谁弄丢的吧？总之，我要等蛇酒完成的时候再来这里。。。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000900">
+        <imgdir name="info">
+            <string name="subject" value="约翰的粉红花篮"/>
+            <string name="req" value="等级15，全职业都可以"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="10">
+            <string name="desc"
+                    value="在明珠港见了渔夫约翰。他想在即将到来的结婚纪念日送给妻子漂亮的花篮。他拜托我收集他的妻子最喜欢的#b10束粉红花色的花#k...他告诉我通过在林中之城了的奇怪的石像可以进到有那种花的地方。是林中之城吗？那太远吧！？！？"/>
+        </imgdir>
+        <imgdir name="9">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他9束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="8">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他8束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="7">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他7束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="6">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他6束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="5">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他5束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他4束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他3束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他2束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="给了约翰几束#b粉红花#k。但还要给他1束。"/>
+            <int name="prev" value="10"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="找到#b10束粉红花#k给了约翰。用这些花他可以做花篮送给妻子。约翰为了表示感谢给了我看起来在船舶里收集的一些螺丝钉。但是一个船舶没有了这么多的螺丝钉，那船怎么能航海呢？难道这艘船还在海上运送旅客？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000300">
+        <imgdir name="info">
+            <string name="subject" value="皮亚和蓝蘑菇"/>
+            <string name="req" value="等级20，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="p">
+            <string name="desc"
+                    value="在射手村公园的钟表下见到了穿着动物样子衣服的皮亚。她说她去魔法密林的时候遇受到了蓝蘑菇的攻击，所以她拜托我替她找那些怪物报仇。他要求我收集#b60个蓝蘑菇的盖和60个绿蘑菇的盖#k作为替他报仇的证据。也许因为她穿着那么奇怪的衣服，怪物才攻击她的吧。"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="找到射手村公园钟表下的皮亚，给了她#b60个蓝蘑菇的盖和60个绿蘑菇的盖#k。她给了我头盔强化卷轴... 她说把卷轴拖拉到头盔上，就可以增加头盔的属性。但如果失败的话，怎么办？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002800">
+        <imgdir name="info">
+            <string name="subject" value="장로 스탄의 편지"/>
+            <string name="req" value="레벨 20, 전 직업 가능"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="빅토리아 아일랜드의 헤네시스에서 만난 #b장로 스탄#k은 오래된 것처럼 보이는 봉인된 편지 한 통을 건네주면서 오시리아라는 큰 대륙에 있는 지구방위본부의 김박사에게 전해줄 것을 부탁했다. 지구방위본부는 엘리니아에 있는 배를 통해 오르비스로 가서 그곳에서 루디브리엄 행 배를 한 번 더 타면 갈 수 있다는데…"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부에서 김박사를 만나 장로 스탄이 맡긴 #b오래된 편지#k를 전해 주었다. 그나저나 이곳은 외계인의 침략을 대비하기 위한 각종 시설이 갖춰져 있는 곳 같은데… 시간이 나거든 김박사와 이야기를 해 봐야 겠다."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001200">
+        <imgdir name="info">
+            <string name="subject" value="休咪丢失的钱团"/>
+            <string name="req" value="等级20"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在废弃都市遇见了叫休咪的女孩子。她说她弄丢了从朋友那里借来的幸运金币。她拜托我找回她的金币。听说在地铁裹着白布的怪物拿了那金币。也许能在#b地铁工地B1#k上找到那金币吧…...首先我要进地铁站。"/>
+        </imgdir>
+        <imgdir name="g">
+            <string name="desc" value="在#b工地B1#k里找到了休咪弄丢的那金币。我要把这个金币还给休咪。"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我给休咪找回了她弄丢的金币。因为那是从朋友借来的很贵重的东西，她很高兴地给了我很多回城卷轴。这次的冒险没有白辛苦。而且她说在#b工地B1#k里还有另外贵重的物品，以后有空我要再进去。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000500">
+        <imgdir name="info">
+            <string name="subject" value="离家出去的阿勒斯"/>
+            <string name="req" value="等级20，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="a">
+            <string name="desc"
+                    value="在废弃都市见到了叫阿勒斯的男孩子。他说几天前因为和严历的父亲闹别扭他离家出走了，此后就在废弃都市游荡。现在不但钱也都花光了，而且已经觉得无聊了... 但是现在回家可能父亲要打他…他拜托我说服射手村的长老(他父亲)同意他回家。他还说如果我成功说服他父亲，就拿着母亲的遗物-#b金表#k过来，他才可以相信。我不知道他为什么离家出走~！"/>
+        </imgdir>
+        <imgdir name="t">
+            <string name="desc"
+                    value="在射手村公园入口前面见到阿勒斯的父亲斯坦长老。第一次他好凶，我一句话也说不上。但我收集来为维修村落需要的#b50个火独眼兽之尾和100个猪猪的蝴蝶结#k，他开始听我说了。他比我听说的更严格。但是他和阿勒斯之间的误会终于解决了。而且收到了阿勒斯母亲的#b金表#k。我要去废弃都市还给阿勒斯这个物品。"/>
+            <string name="prev" value="a"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我把那块金表给了阿勒斯。这样他就可以回家了吧。他为了表示感谢，给了我他旅游时从朋友那里得到的耳环。不过，虽然父亲原谅了他，但是他还没有马上回家的打算。下次去射手村的时候要确认一下。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000400">
+        <imgdir name="info">
+            <string name="subject" value="简和野猪"/>
+            <string name="req" value="等级25，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="j">
+            <string name="desc"
+                    value="在明珠港的金银号旁边见到了带着兔子发箍的简。简正在苦闷，因为她想去冒险看看更多地方，但她父亲不允许她去。所以她拜托我收集来#b100个野猪的尖牙和120个角蘑菇的盖#k。她说有这么多的证据，她的父亲也许会允许她去冒险。但是这样的证据不是要她去自己收集的吗？不过那到不是很难的事情，这次我要去高原打野猪啦…"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我收集完#b100个野猪的尖牙和120个角蘑菇的盖#k后交给了简。但是我还有点担心，可能她父亲还不允许她去冒险。尤其看她那兔子发箍谁能够放心让她去冒险呢？她为了表示感谢，就给了我可以强化武器的卷轴。要是成功，可以做很好的武器吧？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001000">
+        <imgdir name="info">
+            <string name="subject" value="艾温的玻璃鞋"/>
+            <string name="req" value="等级25，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="魔法密林叫艾温的妖精告诉我，她几天前去勇士部落的路上受到了全身都是火焰的怪物的攻击。那怪物抢走了她贵重的#b玻璃鞋#k。妖精族非常喜欢那样闪闪发光的东西，所以她很想找回来。在勇士部落打怪物的话，说不定可以找回艾温的玻璃鞋。"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我找到那贵重的玻璃鞋后还给了魔法密林的艾温。从很凶猛的火野猪那里抢来了这双玻璃鞋，我是很幸运的啊！艾温表示感谢，给我妖精族的物品。非常漂亮而且闪闪发光的东西！用这个物品也许能做很特别的物品吧？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000700">
+        <imgdir name="info">
+            <string name="subject" value="萨比特拉玛的减肥药"/>
+            <string name="req" value="等级25，全职业都可以。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="1_01">
+            <string name="desc"
+                    value="在林中之城前面遇见了药商#b萨比特拉玛#k。他看起来是克利斯拉玛的兄弟。他说他发现了做药时必须需要的药草，拜托我去树林找#b粉红花束#k。在绿色草丛中有小粉红花。我找到后应该给他这些花。魔法密林附近的某个地方才有那些花，我要去魔法密林见#b赛恩#k。"/>
+        </imgdir>
+        <imgdir name="1_02">
+            <string name="desc"
+                    value="在林中之城前面遇见了药商#b萨比特拉玛#k。他看起来是克利斯拉玛的兄弟。他说他发现了做药时必须需要的药草，拜托我去树林找#b朱红花束#k。在绿色草丛中有小朱红花。我找到后应该给他这些花。魔法密林附近的某个地方才有那些花，我要去魔法密林见#b赛恩#k。"/>
+        </imgdir>
+        <imgdir name="1_03">
+            <string name="desc"
+                    value="在林中之城前面遇见了药商#b萨比特拉玛#k。他看起来是克利斯拉玛的兄弟。他说他发现了做药时必须需要的药草，拜托我去树林找#b蓝花束#k。在绿色草丛中有小蓝花。我找到后应该给他这些花。魔法密林附近的某个地方才有那些花，我要去魔法密林见#b赛恩#k。"/>
+        </imgdir>
+        <imgdir name="1_04">
+            <string name="desc"
+                    value="在林中之城前面遇见了药商#b萨比特拉玛#k。他看起来是克利斯拉玛的兄弟。他说他发现了做药时必须需要的药草，拜托我去树林找#b黄花束#k。在绿色草丛中有小黄花。我找到后应该给他这些花。魔法密林附近的某个地方才有那些花，我要去魔法密林见#b赛恩#k。"/>
+        </imgdir>
+        <imgdir name="1_11">
+            <string name="desc" value="经过很长时间，在忍苦树林的二层找到了花簇。在花簇里发现了#b粉红花束#k。这个花可能就是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="1_01"/>
+        </imgdir>
+        <imgdir name="1_12">
+            <string name="desc" value="经过很长时间，在忍苦树林的二层找到了花簇。在花簇里发现了#b朱红花束#k。这个花可能就是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="1_02"/>
+        </imgdir>
+        <imgdir name="1_13">
+            <string name="desc" value="经过很长时间，在忍苦树林的二层找到了花簇。在花簇里发现了#b蓝花束#k。这个花可能就是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="1_03"/>
+        </imgdir>
+        <imgdir name="1_14">
+            <string name="desc" value="经过很长时间，在忍苦树林的二层找到了花簇。在花簇里发现了#b黄花束#k。这个花可能就是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="1_04"/>
+        </imgdir>
+        <imgdir name="1_91">
+            <string name="desc" value="我好几次想放弃，那么辛苦才在忍苦树林的二层才找到了花簇。在花簇里发现了#b粉红花束#k... 这个花可能就是萨比特拉玛说的那种药草吧？"/>
+            <string name="prev" value="1_01"/>
+        </imgdir>
+        <imgdir name="1_92">
+            <string name="desc" value="我好几次想放弃，那么辛苦才在忍苦树林的二层才找到了花簇。在花簇里发现了#b朱红花束#k... 这个花可能就是萨比特拉玛说的那种药草吧？"/>
+            <string name="prev" value="1_02"/>
+        </imgdir>
+        <imgdir name="1_93">
+            <string name="desc" value="我好几次想放弃，那么辛苦才在忍苦树林的二层才找到了花簇。在花簇里发现了#b蓝花束#k... 这个花可能就是萨比特拉玛说的那种药草吧？"/>
+            <string name="prev" value="1_03"/>
+        </imgdir>
+        <imgdir name="1_94">
+            <string name="desc" value="我好几次想放弃，那么辛苦才在忍苦树林的二层才找到了花簇。在花簇里发现了#b黄花束#k... 这个花可能就是萨比特拉玛说的那种药草吧？"/>
+            <string name="prev" value="1_04"/>
+        </imgdir>
+        <imgdir name="1_00">
+            <string name="desc"
+                    value="幸亏在忍苦树林里发现了萨比特拉玛说过的那些花，萨比特拉玛为表示感谢给了我#b全身铠甲防御力卷轴#k。而且他又说从现在开始，我可以免费进入赛恩的忍苦树林。听说萨比特拉玛现在制作的减肥药是为赛因的爱人做的... 以后有空我要再去忍苦树林。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="1_99">
+            <string name="desc"
+                    value="虽然很辛苦，我采来的花跟他说的不一样，但他还给了我礼物。我收到了#b10个特殊药水#k，总算没有白辛苦。而且他又说从现在开始，我可以免费进入赛恩的忍苦树林。听说萨比特喇嘛现在制作的减肥药是为赛因的爱人做的... 以后有空我要再去忍苦树林。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001801">
+        <imgdir name="info">
+            <string name="subject" value="帮助废弃都市居民们 II"/>
+            <string name="req" value="等级 25, 全职业"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="1s">
+            <string name="desc"
+                    value="很久没见的内拉看到不断成长的我交给一个有点难的委托。首先药店老板在研究药水的过程中将材料用完了，非常难过。听说他还差#b100个刺蘑菇的盖#k和#b50个青蛇皮#k… 有点儿别扭，可是不太难吧？"/>
+        </imgdir>
+        <imgdir name="1end">
+            <string name="desc" value="帮药店老板找所需要的东西，会得到多个白色药水。很期待铭仁用那些材料做出的药水！而且可能接受新的委托，所以要求顺便进来这里… 然后，去找内拉~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="2s">
+            <string name="desc"
+                    value="接受内拉的第二次委托。听说铁器店的皮奥最爱用的枕头最近被偷了， 所以一直没有睡好… 为了做一个新枕头需要#b50个硬羽毛#k和#b20个动物的皮革#k。 取得后交给内拉。"/>
+        </imgdir>
+        <imgdir name="2end">
+            <string name="desc" value="帮皮奥找所需要东西，会得到皮奥精心冶炼的钢铁和青铜。皮奥应该会睡得很好吧? 然后，去找内拉~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="3s">
+            <string name="desc"
+                    value="接受内拉的第三次委托。护身用品店的主人曼斯塔是个很特别的美食家，听说他需要烤火独眼兽尾的材料… 他只想要#b200个火独眼兽之尾#k，就可以做很久的饭菜……取得后交给内拉。"/>
+        </imgdir>
+        <imgdir name="3end">
+            <string name="desc" value="帮曼斯塔托找所需要的东西，会得到一双坚固的鞋。这些材料也够曼斯塔也能做一阵子饭菜吧? 然后，去找内拉~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000600">
+        <imgdir name="info">
+            <string name="subject" value="泰素夫的秘密之书"/>
+            <string name="req" value="等级30，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc"
+                    value="在林中之城的高级桑拿房里遇见了叫#b泰素夫#k的秃头叔叔。他说他有一个儿子几天前拿着他最喜爱的书离家出走了。然后拜托我找到他的儿子拿回那本书。要是我找到他那本书，他会给我一件很实用的衣服。他又告诉我他的儿子洛尼常常去魔法密林附近的树林通道。所以我去那里找，应该能找到。不过，那本书比儿子还重要吗？到底是什么样的书啊...?!?!"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc"
+                    value="在魔法密林的树林通道里找到了泰素夫的儿子#b洛尼#k。第一次他跟我说他绝不能给我那本红色的书。不过他看起来很饿？最后跟我约好，要是我给他#b50个猴子的香蕉和丽娜的特质烤鳗鱼和新鲜的牛奶#k，就给我书。按照露妮说的，丽娜在射手村可以找到，新鲜的牛奶从魔法密林的妖精可以得到。虽然有点麻烦，但我还是要去…"/>
+            <int name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc"
+                    value="为获得特制烤鳗鱼和新鲜的牛奶都需要不少材料。射手村的丽娜说为了做烤鳗鱼需要#b50个风独眼兽之尾和5个猪头#k。魔法密林的妖精罗雯说,如果我给她冶炼#b钻石#k的话，她也可以给我新鲜的牛奶。钻石？那么贵重的东西我在哪里能得到呢？"/>
+            <int name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc"
+                    value="把所有的菜都给洛尼后，收到了泰素夫喜爱的#b那本秘密书#k。是一本封面图片很奇怪的红色书。我应不应该打开看看？我还是快点把这本书送给林中之城里高级桑拿房的泰素夫吧。"/>
+            <int name="prev" value="3"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="我交给泰素夫他非常喜爱的那本书。我问了他担不担心洛尼，但他说因为洛尼和妖精族在一起他不担心。。。也许对洛尼来说跟妖精族在一起会更好吧？他为表示感谢给了我一件桑拿服。在桑拿房里穿铠甲确实不方便。我这次收到了这么实用的衣服，就慢慢洗桑拿吧。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000101">
+        <imgdir name="info">
+            <string name="subject" value="酋长盖房子"/>
+            <string name="req" value="等级30，人气度10，新手不能做."/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="p0">
+            <string name="desc"
+                    value="我又去找以前帮过他的酋长。他看我这么强的样子，好像很吃惊。但他这次拜托我更难问题。因为住在射手村的亲戚们都要搬来，需要新的房子。他说为了盖新房子，需要#b100个石头人的石头，30个螺丝钉，一张地契#k。但是上次他儿子拿着地契，在林中之城附近被风独眼兽抢走了。我只好去沼泽地找它们算帐。"/>
+        </imgdir>
+        <imgdir name="pe">
+            <string name="desc"
+                    value="我把#b100个石头人的石头，30个螺丝钉，一张地契#k都交给了酋长。难道我这次都收集来了这么多的材料，他还会让我找另外材料？他为表示感谢给了我一些经验值和15000金币和10%成功率的武器卷轴。人气度也上升2点，这算是满好的报酬。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000901">
+        <imgdir name="info">
+            <string name="subject" value="约翰的礼物"/>
+            <string name="req" value="等级30，全职业都可以"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="20">
+            <string name="desc"
+                    value="在明珠港再次见到了约翰。这次妻子的生日他想送蓝花。听说那#b蓝花#k会500年持续散发香气。我这次也答应了….但是约翰告诉我，为了得到那些花，要我再通过奇怪的石像进入以前那个奇怪的树林。"/>
+        </imgdir>
+        <imgdir name="19">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要19束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="18">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要18束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="17">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要17束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="16">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要16束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="15">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要15束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="14">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要14束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="13">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要13束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="12">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要12束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="11">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要11束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="10">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要10束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="9">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要9束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="8">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要8束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="7">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要7束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="6">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要6束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="5">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要5束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要4束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要3束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要2束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="发现几束#b蓝花#k给了约翰。但还需要1束。"/>
+            <int name="prev" value="20"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="给了约翰#b20束蓝花#k。确实是好香，但收集了20束有点儿头晕~ 约翰为了表示感谢，给了我一双在船舶里面拣到的手套。他说这肯定是乘客弄丢的。我戴别人弄丢的手套没关系吗？冒险时遇见这手套的原主人，那怎么办？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001201">
+        <imgdir name="info">
+            <string name="subject" value="休咪丢失的钞票"/>
+            <string name="req" value="等级30"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在废弃都市又见到了休咪。她在担心几天前她弄丢的房费。她说蝙蝠抢走那钞票后逃进地铁站了。怎么又去那里呢？不如我替她付房费吧...不过她拜托我像上次那样进#b工地B2里#k面找回她的钱沓... 我只好进去了…"/>
+        </imgdir>
+        <imgdir name="g">
+            <string name="desc" value="在地铁#b工地B2#k里找到了休咪弄丢的钞票。我要把这个给休咪。"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我找回了休咪弄丢的钞票。她可以付房费了吧？她为了表示感谢，给了我#b100个魔法药水#k。她说在地铁#b工地B2#k里还有另外贵重的物品。以后有空的话，我要再次进去。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000601">
+        <imgdir name="info">
+            <string name="subject" value="妖精罗雯和诅咒的娃娃"/>
+            <string name="req" value="等级35，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="r0">
+            <string name="desc"
+                    value="又见到了以前给我新鲜牛奶的#b罗雯#k。那时候她很不喜欢人类，但是现在好像把我当成洛尼的朋友。原来罗雯是魔法密林的大魔法师汉斯的助手。但见面的时候她很担心，因为很久以前汉斯研究过黑魔法，那时候他所诅咒的娃娃现在又出来了。树林里的猴子偷走那娃娃后变成了僵尸猴把树林搞得乱七八糟。为了把树林恢复到原来的样子，必须打退僵尸猴抢回那被#b诅咒的娃娃#k。我这次也答应了收集#b100个诅咒娃娃#k，但是这么凶的对待猴子好不好呢？"/>
+        </imgdir>
+        <imgdir name="r1">
+            <string name="desc" value="在魔法密林附近的树林打退僵尸猴收集了#b100个诅咒娃娃#k。然后收到7个母矿。但那么大的树林是这么容易恢复得吗？"/>
+            <string name="prev" value="r0"/>
+        </imgdir>
+        <imgdir name="r2">
+            <string name="desc" value="罗雯又拜托我收集#b200个诅咒娃娃#k。不就是200个嘛… 这算是比较容易的…"/>
+            <string name="prev" value="r1"/>
+        </imgdir>
+        <imgdir name="r3">
+            <string name="desc" value="在魔法密林附近的树林打退僵尸猴收集了#b200个诅咒娃娃#k。然后收到10个母矿。但那么大的树林是这么容易恢复得吗？"/>
+            <string name="prev" value="r2"/>
+        </imgdir>
+        <imgdir name="r4">
+            <string name="desc" value="罗雯再拜托我收集#b400个诅咒娃娃#k。是400个呀，好像难度逐渐在增加呀…"/>
+            <string name="prev" value="r3"/>
+        </imgdir>
+        <imgdir name="r5">
+            <string name="desc" value="在魔法密林附近的树林打退僵尸猴收集了#b400个诅咒娃娃#k。然后收到5个很稀有得母矿。但那么大的树林是这么容易恢复得吗？"/>
+            <string name="prev" value="r4"/>
+        </imgdir>
+        <imgdir name="r6">
+            <string name="desc" value="罗雯拜托我再收集#b600个诅咒娃娃#k。又是600个！这不是开玩笑吗？"/>
+            <string name="prev" value="r5"/>
+        </imgdir>
+        <imgdir name="r7">
+            <string name="desc" value="在魔法密林附近的树林打退僵尸猴收集来#b600个诅咒娃娃#k。然后收到一张手套卷轴。但那么大的树林是这么容易恢复得吗？"/>
+            <string name="prev" value="r6"/>
+        </imgdir>
+        <imgdir name="r8">
+            <string name="desc" value="罗雯最后拜托我收集#b1000个诅咒娃娃#k。她收集这么多娃娃干什么？难道她打算做娃娃生意？"/>
+            <string name="prev" value="r7"/>
+        </imgdir>
+        <imgdir name="re">
+            <string name="desc"
+                    value="在魔法密林附近的树林打退僵尸猴收集了#b1000个诅咒娃娃#k。然后收到了报酬。那就是很好的帽子。虽然我收集了这么多的娃娃，但是树林的僵尸猴好像没减少。这是怎么回事呢？不过让我很高兴得是，今后妖精族开始有点喜欢人类了。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000401">
+        <imgdir name="info">
+            <string name="subject" value="炼金术士，简"/>
+            <string name="req" value="等级40，新手不能做。"/>
+            <int name="reqLevel" value="40"/>
+            <int name="reqPOP" value="0"/>
+            <int name="reqJob" value="0"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="j0">
+            <string name="desc"
+                    value="在明珠港又见到了简。但她说我以前为她收集来的那些东西，被爸爸发现那不是她自己收集来的。所以她放弃了去冒险。 但是她最近有另外的梦想，那就是当炼金术士。她说为了做炼金术实验需要多种的材料，又拜托我收集#b1瓶矿泉水和30个奇秒的药和20个巫婆的试验用青蛙#k。她保证，有这些材料能够做特殊药水，这次我相信她吧。"/>
+        </imgdir>
+        <imgdir name="j1">
+            <string name="desc" value="我收集完为做特殊药水所需的所有材料后交给了简。实验成功的话，可以得到特殊药水，但失败的话，也又可能发生爆炸吧？"/>
+            <string name="prev" value="j0"/>
+        </imgdir>
+        <imgdir name="j2">
+            <string name="desc"
+                    value="简说这次能够做更好的，拜托我收集来#b1个蘑菇王的芽孢，3个龙血，100个奇怪的药，30个巫婆的试验用青蛙#k来了。她能够做同时恢复HP和MP的超级药水。。。"/>
+            <string name="prev" value="j1"/>
+        </imgdir>
+        <imgdir name="j3">
+            <string name="desc" value="我收集完为做超级药水需要的所有材料后给了简。实验成功的话，可以得到非常好的药水，但失败的话…质量不能保证，我有点怕吃那药水了…"/>
+            <string name="prev" value="j2"/>
+        </imgdir>
+        <imgdir name="j4">
+            <string name="desc" value="最后简拜托我收集为做神秘的卷轴需要的材料。那就是#1个月石，20个龙皮，10个古木树液#k。关于月石，魔法密林的妖精们可能知道吧？"/>
+            <string name="prev" value="j3"/>
+        </imgdir>
+        <imgdir name="je">
+            <string name="desc"
+                    value="我收集完为做卷轴需要的所有材料后给了明珠港的简。幸亏她成功地做出提高手套攻击力的卷轴。她给了我她做的东西。卷轴成功的话，能做很好的手套吧？简说她以后也会更努力研究，一定要成为非常优秀的炼金术士。如果我以后有空再来这里，也许能买到很好的物品。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001202">
+        <imgdir name="info">
+            <string name="subject" value="休咪丢失的钱包"/>
+            <string name="req" value="等级40"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc" value="在废弃都市又见到了休咪。她几天前答应后胡同的吉姆替他买特殊药水。但是弄丢了吉姆交给他的钱包。她说这次在#b工地B3#k可能找得到那钱包。"/>
+        </imgdir>
+        <imgdir name="g">
+            <string name="desc" value="在地铁#b工地B3#k里找到了休咪弄丢的那钱包。我要把这个给休咪。"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我找到休咪弄丢的钱包。她能买吉姆说的物品了吧？我收到了报酬，那就是提高#b鞋子移动速度的卷轴#k。她说在#b工地B3#k里肯定有另外的好东西。以后我要再进去找找看。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001400">
+        <imgdir name="info">
+            <string name="subject" value="阿尔法部队联络网 "/>
+            <string name="req" value="等级40，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在冰峰雪域村落里碰到了用降落伞的伞兵：珀斯上尉。他需要帮助他找三名部下然后问他们任务履行得如何。 要寻找的三名部下是：#b查里中士、伊吉上等兵、巴伯下士#k，他们可能在神秘岛…  要按阶级高低见面， 太麻烦吧？"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="在天空之城里见到了#b查里中士#k。 他现正在执行任务，他需要给“珀斯上尉”报告：在周边调查中找到了古代文件碎片。那么找去#b伊吉上等兵、巴伯下士#k吧…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="10">
+            <string name="desc"
+                    value="在离冰峰雪域村落很远的寒冰平原中见到了#b巴伯下士#k。他现正在执行任务，他需要给“珀斯上尉”报告：在周边调查中找到了古代文件碎片。那么找去#b查里中士、伊吉上等兵#k吧…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="100">
+            <string name="desc"
+                    value="在离天空之城很远的云彩公园中见到了#b伊吉上等兵#k。他现正在执行任务，他需要给“珀斯上尉”报告：在周边调查中找到了古代文件碎片。那么找去#b查里中士#k、#b巴伯下士#k吧…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="12">
+            <string name="desc"
+                    value="在天空之城见到了#b查里中士#k，在寒冰平原当中见到了#b巴伯下士#k。他们都现正在执行任务，他们说根据珀斯上尉命令，在周边调查中找到的古代文件碎片。 那么只要找#b伊吉上等兵#k就可以啦…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="21">
+            <string name="desc"
+                    value="在天空之城见到了#b查里中士#k，在寒冰平原当中见到了#b巴伯下士#k。他们都现正在执行任务，他们说根据珀斯上尉命令，在周边调查中找到的古代文件碎片。 那么只要找#b伊吉上等兵#k就可以啦…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="102">
+            <string name="desc"
+                    value="在天空之城见到了#b查里中士#k，在寒冰平原当中见到了#b巴伯下士#k。他们都现正在执行任务，他们说根据珀斯上尉的命令，在周边调查中找到的古代文件碎片。 那么只要找#b巴伯下士#k就可以啦…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="201">
+            <string name="desc"
+                    value="在天空之城见到了#b查里中士#k，在寒冰平原当中见到了#b巴伯下士#k。他们都现正在执行任务，他们说根据珀斯上尉的命令，在周边调查中找到的古代文件碎片。 那么只要找#b巴伯下士#k就可以啦…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="120">
+            <string name="desc"
+                    value="在天空之城见到了#b查里中士#k，在寒冰平原当中见到了#b巴伯下士#k。他们都现正在执行任务，他们说给珀斯上尉周边调查中找到的古代文件碎片。 那么只要找#b查里中士#k就可以啦…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="210">
+            <string name="desc"
+                    value="在天空之城见到了#b查里中士#k，在寒冰平原中见到了#b巴伯下士#k。他们都现正在执行任务，他们说根据珀斯上尉的命令，在周边调查中找到的古代文件碎片。 那么只要找#b查里中士#k就可以啦…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="123">
+            <string name="desc"
+                    value="虽然不是按等级次序，但是还是见到了在天空之城的#b查里中士#k，在寒冰平原中的#b巴伯下士#k和在云彩公园中的#b伊吉上等兵#k，那么去拿寄存在他们那里的3个古代文件碎片给“珀斯上尉”就可以了?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="132">
+            <string name="desc"
+                    value="虽然不是按等级次序，但是还是见到了在天空之城的#b查里中士#k，在寒冰平原中的#b巴伯下士#k和在云彩公园中的#b伊吉上等兵#k，那么去拿寄存在他们那里的3个古代文件碎片给“珀斯上尉”就可以了?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="213">
+            <string name="desc"
+                    value="虽然不是按等级次序，但是还是见到了在天空之城的#b查里中士#k，在寒冰平原中的#b巴伯下士#k和在云彩公园的#b伊吉上等兵#k，那么去拿寄存在他们那里的3个古代文件碎片给“珀斯上尉”就可以了?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="231">
+            <string name="desc"
+                    value="虽然不是按等级次序，但是还是见到了在天空之城的#b查里中士#k，在寒冰平原中的#b巴伯下士#k和在云彩公园中的#b伊吉上等兵#k，那么去拿寄存在他们那里的3个古代文件碎片给“珀斯上尉”就可以了?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="312">
+            <string name="desc"
+                    value="虽然不是按等级次序，但是还是见到了在天空之城的#b查里中士#k，在寒冰平原中的#b巴伯下士#k和在云彩公园中的#b伊吉上等兵#k，那么去拿寄存在他们那里的3个古代文件碎片给“珀斯上尉”就可以了?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="321">
+            <string name="desc"
+                    value="虽然不是按等级次序，但是还是见到了在天空之城的#b查里中士#k，在寒冰平原中的#b巴伯下士#k和在云彩公园中的#b伊吉上等兵#k，那么去拿寄存在他们那里的3个古代文件碎片给“珀斯上尉”就可以了?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="end1">
+            <string name="desc"
+                    value="按“珀斯上尉”的委托见到了他的部下， 把他们寄存的3个古代文件碎片给了“珀斯上尉”。上尉太高兴，决定把用文件碎片做的定单递给我了。听说上尉希望我能关照他的部下…每当我有空就去找他们！"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="end2">
+            <string name="desc"
+                    value="虽然不是按次序找到的，但是见到了阿尔法部队的部队员们，把他们寄存的3个古代文件碎片给了“珀斯上尉”。上尉太高兴，决定把用文件碎片做的定单给我。听说上尉希望我能关照他的部下…每当我有空就去找他们！"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="end3">
+            <string name="desc"
+                    value="虽然不是按次序找到的，但是见到了阿尔法部队的部队员们，把他们寄存的3个古代文件碎片给了“珀斯上尉”。上尉太高兴，决定把用文件碎片做的定单给我。听说上尉希望我能关照他的部下…每当我有空就去找他们！"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="end4">
+            <string name="desc"
+                    value="虽然不是按次序找到的，但是见到了阿尔法部队的部队员们，把他们寄存的3个古代文件碎片给了“珀斯上尉”。上尉太高兴，决定把用文件碎片做的定单给我。听说上尉希望我能关照他的部下…每当我有空就去找他们！"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000201">
+        <imgdir name="info">
+            <string name="subject" value="麦吉的旧战剑"/>
+            <string name="req" value="等级45，新手不能做。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="ms">
+            <string name="desc"
+                    value="在勇士部落又见到了麦吉。他看我变成这么强大，好像很吃惊的样子。他拜托我一件事儿。以前他遇见过蝙蝠怪，从前他遇到危险的时候，传说中的英雄特里斯坦救他的命，为此他牺牲了。从那时候他一直保管特里斯坦的剑。但是那把剑受到了蝙蝠怪的邪恶能力的影响，已经沉睡了。麦吉给我那把#b旧战剑#k让我想办法唤醒这把剑。他说要是它完全觉醒的话，就会变成#b英雄战剑#k。我要根据麦吉说的去见林中之城的克利斯拉玛。"/>
+        </imgdir>
+        <imgdir name="mc">
+            <string name="desc"
+                    value="去林中之城找克利斯拉玛后，给他看了麦吉的#b旧战剑#k。他看了就说这把剑是他以前做的。为了唤醒剑，需要#b1个星石，1个冰块，1个上古卷轴，1个火焰翼毛#k。但是这些物品都是我听都没听说过的。克利斯拉玛说，迷宫入口的麦克可能知道。"/>
+            <string name="prev" value="ms"/>
+        </imgdir>
+        <imgdir name="mh">
+            <string name="desc"
+                    value="我收集完为唤醒宝剑需要的所有材料后给了克里斯拉玛。他简直不相信自己的眼睛，吃惊地看着我。后来他用那些材料把战剑唤醒，觉醒的旧战剑就变成了#b英雄战剑#k，看起来有神秘之气。要把剑还给麦吉我觉得有点可惜…"/>
+            <string name="prev" value="mc"/>
+        </imgdir>
+        <imgdir name="yes">
+            <string name="desc"
+                    value="确实可惜的。但是我还是把#b英雄战剑#k给了麦吉。麦吉跟我说非常感谢，同时他给了我#b一双白骨耳环#k。听说那是他朋友送给他的。戴这个头骨模样地耳环有点那个。但这是麦吉给我的，我得好好保管…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="no">
+            <string name="desc"
+                    value="拿着觉醒的#b英雄战剑#k回去见了麦吉，但我拒绝还给他这把剑。听了我的话他非常生气，他大声地喊着驱逐了我。现在再跟他说还给他，也没用了吧。虽然我这次得到了好剑，但心中还是有点不舒服。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000701">
+        <imgdir name="info">
+            <string name="subject" value="萨比特拉玛的年轻药"/>
+            <string name="req" value="等级50，全职业都可以。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="2_01">
+            <string name="desc"
+                    value="在林中之城宾馆前面又见到了#b萨比特拉玛#k。他说他发现了做药的时候必须需要的药草，拜托我去那树林找强效红参。是那种有#b两支根的红参#k...我记住了红参的样子。有那些药草的地方应该是在魔法密林附近#b赛恩#k的树林。"/>
+        </imgdir>
+        <imgdir name="2_02">
+            <string name="desc"
+                    value="在林中之城宾馆前面又见到了萨比特拉玛。他说他发现了做药的时候必须需要的药草，拜托我去那树林找特效红参。是有#b三支根的红参#k...我记住了红参的样子。有那些药草的地方应该是在魔法密林附近#b赛恩#k的树林。"/>
+        </imgdir>
+        <imgdir name="2_51">
+            <string name="desc"
+                    value="在林中之城宾馆前面又见到了#b萨比特拉玛#k。他说他发现了做药的时候必须需要的药草，拜托我去那树林找百年人参。是有#b一支根的人参#k。。。我记住了人参的样子。有那些药草的地方应该是在魔法密林附近#b赛恩#k的树林。"/>
+        </imgdir>
+        <imgdir name="2_52">
+            <string name="desc"
+                    value="在林中之城宾馆前面又见到了#b萨比特拉玛#k。他说他发现了做药的时候必须需要的药草，拜托我去那树林找强效百年人参。是有#b两支根的人参#k。。。我记住了人参的样子。有那些药草的地方应该是在魔法密林附近#b赛恩#k的树林。"/>
+        </imgdir>
+        <imgdir name="2_53">
+            <string name="desc"
+                    value="在林中之城宾馆前面又见到了#b萨比特拉玛#k。他说他发现了做药的时候必须需要的药草，拜托我去那树林找特效百年人参。是有#b三支根的人参#k。。。我记住了人参的样子。有那些药草的地方应该是在魔法密林附近#b赛恩#k的树林。"/>
+        </imgdir>
+        <imgdir name="2_11">
+            <string name="desc" value="经历千辛万苦，才在忍苦树林的五层找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这应该是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_01"/>
+        </imgdir>
+        <imgdir name="2_12">
+            <string name="desc" value="经历千辛万苦，才在忍苦树林的五层找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这应该是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_02"/>
+        </imgdir>
+        <imgdir name="2_61">
+            <string name="desc" value="经历千辛万苦，才在忍苦树林的五层找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这应该是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_51"/>
+        </imgdir>
+        <imgdir name="2_62">
+            <string name="desc" value="经历千辛万苦，才在忍苦树林的五层找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这应该是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_52"/>
+        </imgdir>
+        <imgdir name="2_63">
+            <string name="desc" value="经历千辛万苦，才在忍苦树林的五层找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这应该是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_53"/>
+        </imgdir>
+        <imgdir name="2_91">
+            <string name="desc" value="经历千辛万苦，我好几次想放弃在忍苦树林的五层才找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这个可能是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_01"/>
+        </imgdir>
+        <imgdir name="2_92">
+            <string name="desc" value="经历千辛万苦，我好几次想放弃在忍苦树林的五层才找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这个可能是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_02"/>
+        </imgdir>
+        <imgdir name="2_81">
+            <string name="desc" value="经历千辛万苦，我好几次想放弃在忍苦树林的五层才找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这个可能是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_51"/>
+        </imgdir>
+        <imgdir name="2_82">
+            <string name="desc" value="经历千辛万苦，我好几次想放弃在忍苦树林的五层才找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这个可能是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_52"/>
+        </imgdir>
+        <imgdir name="2_83">
+            <string name="desc" value="经历千辛万苦，我好几次想放弃在忍苦树林的五层才找到了药草丛莽。在那里发现了长有#b两支根的红参#k...这个可能是萨比特拉玛说的那药草吧？"/>
+            <string name="prev" value="2_53"/>
+        </imgdir>
+        <imgdir name="2_00">
+            <string name="desc"
+                    value="幸亏在忍苦树林里发现了萨比特拉玛说的那些人参，萨比特拉玛为表示感谢给了我神秘之石。而且他又说从现在我可以免费进赛恩的忍苦树林里。听说萨比特拉玛现在制作的年轻药是为赛因做的... 以后有空我要再去忍苦树林。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+        <imgdir name="2_99">
+            <string name="desc"
+                    value="虽然那么辛苦,但我还是给了他跟他说的不一样的根，但他还是给了我礼物。我收到了#b50个特殊药水#k，总算没有白辛苦。而且他又说从现在我可以免费进赛恩的忍苦树林。听说萨比特拉玛现在制作的年轻药是为赛因做的。。。 以后有空我要再次进入忍苦树林。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000801">
+        <imgdir name="info">
+            <string name="subject" value="守卫兵鲁克的决心"/>
+            <string name="req" value="等级50，只有战士可以挑战。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在迷宫入口又见到了守卫兵鲁克。不过他说他和他母亲已经喝完了以前做的蛇酒。鲁克下了结束守卫兵的生活去冒险的决心。但他说为了去冒险它需要手套，可是勇士部落的斯密斯告诉他为了做手套需要#b1个黑翼毛，10个紫矿石，50个龙皮，40个螺丝钉，3个长枪牛魔王之角#k！要我收集这些材料吗？什么？关于黑翼毛魔法，密林的妖精族才知道？"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="给了鲁克为做手套需要的所有材料后，他给了我他家祖传的#b古老若曼青铜头盔#k。好像我吃亏了，但是他说这是家祖传宝贝，我也不能说什么。听说辛德能够把这头盔改造得更好，我要去找勇士部落的辛德。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000301">
+        <imgdir name="info">
+            <string name="subject" value="皮亚的为朋友的礼物"/>
+            <string name="req" value="等级55，只有盗贼可以挑战。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在射手村的公园里又见到了皮亚，她还穿着那件奇怪的衣服。她说这次她的朋友决定去冒险，所以她想为朋友准备拳套！但是为了做拳套需要#b15个银，50个龙皮，40个螺丝钉#k。。。 尤其她拜托我找回射手村的丽娜借去的#b红色披风#k。要是我拿给她这些东西，她肯定会好好报答我吧？"/>
+        </imgdir>
+        <imgdir name="g">
+            <string name="desc"
+                    value="射手村的丽娜说那披风原来是因为皮亚没还给她借去的物品所以，她才保留了披风。如果我替皮亚还给她皮亚借过去的物品，她就给我披风...皮亚借去的物品是#b1个黑水晶，1个古代的卷轴，30个月牙牛魔王的角#k…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="p">
+            <string name="desc"
+                    value="给丽娜#b1个黑水晶，1个古代的卷轴，30个月牙牛魔王的角#k后收到了皮亚的#b红色披风#k。除了这披风，还要收集#b15个银，50个龙皮，40个螺丝钉#k给皮亚。"/>
+            <string name="prev" value="g"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="给射手村公园的皮亚为做拳套需要的所有材料后，从她那儿收到了飞侠专用衣服。她说这是她为我特意做的。我一定要好好穿这件衣服。不过她的朋友出发了没有呢？说不定会在途中遇到呢。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000602">
+        <imgdir name="info">
+            <string name="subject" value="洛尼和妖精们的盖新房子"/>
+            <string name="req" value="等级55，只有魔法师可以挑战。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="魔法密林的洛尼拜托我收集为妖精族孩子盖新房子所需的材料。需要#b花蘑菇的盖、叶子、软软的液体、红蜗牛的壳各50个#k...可能从草原上的怪物可以得到吧？"/>
+        </imgdir>
+        <imgdir name="1e">
+            <string name="desc" value="我都收集完后给洛尼。不过什么时候给我报酬呢？什么？还有好几次？天啊~"/>
+            <int name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="洛尼说这次需要#b三眼章鱼的足、风独眼兽之尾、野猪的尖牙、道符各50个#k。从幽深的树林、高原、蚂蚁洞的怪物那里可以得到吧。都没问题~"/>
+            <string name="prev" value="1e"/>
+        </imgdir>
+        <imgdir name="2e">
+            <string name="desc" value="我收集完后给洛尼了。难道这次的任务是免费的？"/>
+            <int name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="洛尼又拜托我收集#b龙的头骨、石头、黑鳄鱼之皮、猴子的香蕉各50个的#k。在蚂蚁洞，草原，沼泽地里可以得到吧。好像未来为难了…"/>
+            <string name="prev" value="2e"/>
+        </imgdir>
+        <imgdir name="3e">
+            <string name="desc" value="我收集完后给了洛尼。但是还没有报酬？这个任务什么时候才结束呢？"/>
+            <int name="prev" value="3"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="最后洛尼拜托我收集#b奇怪的药、黑石头、怪猫的眼睛、月牙牛魔王的角各50个和1个钻石#k。为了收集这些东西我要去地铁，幽深的森林，蚂蚁洞。这不是太难了吗？"/>
+            <string name="prev" value="3e"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="我最后收集完给了洛尼才结束。洛尼给了我报酬。那是妖精族在魔法密林附近的树林里拣到后送给他的鞋子。但他不能穿那鞋子，就给了我。那...没关系的吧？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000202">
+        <imgdir name="info">
+            <string name="subject" value="为玛亚的收集"/>
+            <string name="req" value="等级55，只有弓箭受可以挑战。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="射手村的玛亚说她正在收集几种物品。她拜托我帮她收集#b蜗牛壳、蓝蜗牛壳、蘑菇芽孢、叶子各50个#k。可能在草原可以得到吧。。。"/>
+        </imgdir>
+        <imgdir name="1e">
+            <string name="desc" value="我收集完后给了玛亚。不过什么时候给我报酬呢？什么？还有好几次？天啊~"/>
+            <int name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="玛亚说这次需要#b火野猪的尖牙、蓝水灵的大水珠、猪猪的蝴蝶结、桌布各50个#k。估计在高原，地铁，草原里可以得到吧。"/>
+            <string name="prev" value="1e"/>
+        </imgdir>
+        <imgdir name="2e">
+            <string name="desc" value="我收集完后给了玛亚。难道这次的任务是免费的？"/>
+            <int name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="玛亚说这次需要#b10个猴子娃娃、冰独眼兽之尾、乌龟壳、铁甲猪的铁蹄各50个#k。这些在高原，海边，草原里可以得到的…好像越来越难了。"/>
+            <string name="prev" value="2e"/>
+        </imgdir>
+        <imgdir name="3e">
+            <string name="desc" value="我收集完后给了玛亚。但是还没有报酬？这个任务什么时候才结束呢？"/>
+            <int name="prev" value="3"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc"
+                    value="最后玛亚拜托我收集#b青螃蟹的镊子、黑石头、怪猫的眼睛、月牙牛魔王的角各50个和1个钻石#k。这些在海边，幽深的树林，蚂蚁洞里可以得到的。但是这不是太难了吗？！真是受不了！"/>
+            <string name="prev" value="3e"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="我最后收集完给了玛亚才结束、我从玛亚那里收到了礼物。那是以前玛亚的奶奶为这个村落的元老赫勒纳做的鞋子。虽然是很久以前做的，但是看上去跟新的一样。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002000">
+        <imgdir name="info">
+            <string name="subject" value="何克的魔法材料收集"/>
+            <string name="req" value="没有等级限制"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在位于天空之城中间的秘密之室里遇到了叫何克的老人。他说他在这里研究自己会动的石头已经30年了。他拜托我收集#b45个小石球的石片，20个冰石球的石片，20个火石球的石片#k了。。。那么我去做？"/>
+        </imgdir>
+        <imgdir name="end">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="把我收集来的材料给了位于天空之城中间的秘密之室的何克。然后收到他的魔法石唤醒卷轴。听说这个卷轴用于对天空之城塔20楼和1楼有的魔法石使用的话，能把我移动到有别的魔法石的地方。。。还有，看来何克还需要更多的标本，我以后有时间一定再去找他。"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002700">
+        <imgdir name="info">
+            <string name="subject" value="생명의 주문서"/>
+            <string name="req" value="제한 없음"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄의 어느 집에서 온 몸에서 빛을 내고 있는 작은 소환체인 위습을 만났다. 요정 마르의 소환체인 그는 인형이 된 내 펫을 보더니 #b생명의 물#k과 #b생명의 주문서#k만 있으면 인형을 다시 살아 움직이게 할 수 있다고 말해 주었다. 생명의 주문서는 지금은 텅 비어있는 루디브리엄 내의 #b클로이의 집#k에 있다는데… 한 번 찾아봐야 겠는걸? "/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄에 있는 #b클로이의 집#k에서 #b생명의 주문서#k를 찾아냈다. 이것을 #b생명의 물#k과 함께 위습에게 가져다 주었더니 인형이 된 나의 펫을 다시 살아 움직일 수 있도록 해 주었다. 이걸로 다시 나의 귀여운 펫과 즐거운 시간을 만들 수 있을 것 같다."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002200">
+        <imgdir name="info">
+            <string name="subject" value="길잃은 병정"/>
+            <string name="req" value="제한 없음"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="에오스 탑 93층에서 길잃은 병정을 만났다. 경비를 서러 59층으로 가야 하는데 몬스터들 때문에 갈 수가 없다면서 #b낡은 고글 30개, 비행기 프로펠러 30개#k를 모아와 달라는데... 어디 한 번 해볼까?"/>
+        </imgdir>
+        <imgdir name="end">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="에오스 탑 93층의 길잃은 병정에게 몬스터를 쓰러뜨린 증거를 가져다 주고 에오스의 돌 활성화 주문서를 받았다. 에오스 탑 곳곳에 있는 에오스의 돌에서 사용하면 다른 돌로 워프시켜 주는 아이템이라는데... 그리고 병정이 59층으로 가려면 더 많은 몬스터를 쓰러뜨려야 할 것 같으니 시간이 날 때마다 찾아가 봐야겠다."/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002300">
+        <imgdir name="info">
+            <string name="subject" value="네미의 도시락 배달"/>
+            <string name="req" value="제한 없음"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄의 네미로부터 장난감 공장의 공장장인 아버지에게 도시락을 대신 전달해 줄 것을 부탁받았다. 네미의 아버지인 #b공장장 카호#k는 장난감 공장 어딘가에 있을 거라고…"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="장난감 공장에 있는 #b공장장 카호#k에게 딸인 네미가 부탁한 도시락을 무사히 전해 주었다. 그런데 왠지 카호가 뭔가를 부탁하고 싶어하는 눈치인걸?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002301">
+        <imgdir name="info">
+            <string name="subject" value="근무 중 이상 무"/>
+            <string name="req" value="제한 없음"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 시계탑 안의 장난감 공장에 있는 #b공장장 카호#k로부터 에오스 탑 곳곳에 있는 10 명의 오뚝이 일꾼을 찾고 열심히 일하고 있는지 사진을 찍어와 줄 것을 부탁받았다. 일꾼은 순서대로 찾아야 한다는데… 루디브리엄에 연결되어 있는 에오스 탑으로 가봐야 할 것 같다."/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="첫번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="두번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="세번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="네번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="3"/>
+        </imgdir>
+        <imgdir name="5">
+            <string name="desc" value="다섯번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="4"/>
+        </imgdir>
+        <imgdir name="6">
+            <string name="desc" value="여섯번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="5"/>
+        </imgdir>
+        <imgdir name="7">
+            <string name="desc" value="일곱번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="6"/>
+        </imgdir>
+        <imgdir name="8">
+            <string name="desc" value="여덟번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="7"/>
+        </imgdir>
+        <imgdir name="9">
+            <string name="desc" value="아홉번째 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="8"/>
+        </imgdir>
+        <imgdir name="10">
+            <string name="desc" value="마지막 오뚝이 일꾼을 찾아 카호가 준 사진기로 사진을 찍었다."/>
+            <string name="prev" value="9"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄 장난감 공장의 공장장 카호에게 열 명의 오뚝이 일꾼의 모습이 담긴 사진을 전해 주었다. 그나저나 여섯번째 오뚝이 일꾼이 뭔가 도움이 필요한 것처럼 보였는데 한 번 찾아가 볼까?"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002302">
+        <imgdir name="info">
+            <string name="subject" value="오뚝이의 연장"/>
+            <string name="req" value="제한 없음"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="에오스 탑에서 여섯번째 오뚝이 일꾼을 다시 만났다. 일꾼으로부터 얼마 전 아끼던 연장을 몬스터가 많은 곳에서 잃어버렸다면서 찾아줄 것을 부탁받았다. 아마도 #b블록퍼스#k가 가져간 것 같다는데…"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc" value="에오스 탑의 여섯번째 오뚝이 일꾼에게 잃어버린 연장을 찾아 주었다. 이제 에오스 탑 보수 작업을 다시 시작할 수 있겠지…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002400">
+        <imgdir name="info">
+            <string name="subject" value="코린의 기억"/>
+            <string name="req" value="레벨 25, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 외곽의 작은 집 안에서 #b코린#k이라는 소녀를 만났다. 코린은 10개월동안 행방불명 된 적이 있고 그 때의 일은 모두 기억하지 못한다며 자신을 만나러 왔던 검은 옷을 입은 사나이를 찾아가 무슨 일이 벌어진 건지 알아봐 달라는 부탁을 해왔다. 검은 옷을 입은 사나이라… 루디브리엄이나 에오스탑에는 없을 것 같은데…"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위 본부 안전지대에서 검은 옷을 입은 사나이인 #b요원 M#k에게 받은 코린의 기억을 코린에게 가져다 주었다. 기억을 되찾은 그녀는 잠시 혼란스러워 했지만 곧 예전처럼 밝게 살아갈 것을 약속했다. 이제 다시 코린이 납치되는 일은 생기지 말아야 할텐데…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002401">
+        <imgdir name="info">
+            <string name="subject" value="검은 옷의 사나이"/>
+            <string name="req" value="레벨 25, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위 본부 안전지대에서 #b요원 M#k을 만났다. 코린에 대해 묻자 코린은 지구방위 본부로 침입한 외계인들에게 피랍되었다는 이야기를 들을 수 있었다. 만일 코린의 기억을 되찾고 싶다면 #b마티안#k을 쓰러뜨리고 코린의 기억이 담긴 #b기억의 조각 5개#k를 모아오라는데… 되도록 빨리 로스웰 초원으로 향해야 겠다."/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="로스월 초원에서 #b마티안#k을 쓰러뜨리고 그들의 소지품을 뒤져 코린의 기억이 담겨있는 #b기억의 조각#k 5개를 모아 요원 M에게 가져다 주었다. 그러자 그는 5개의 조각을 하나로 합쳐 #b코린의 기억#k으로 만들어 주었다. 이제 이걸 코린에게 가져가면 되겠지…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002600">
+        <imgdir name="info">
+            <string name="subject" value="장난감 병정의 호두"/>
+            <string name="req" value="레벨 25, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="에오스 탑 100층의 굳게 닫힌 문을 지키고 있는 장난감병정 델브로부터 지루한 경비 업무를 달래줄 #b맛있는 호두#k를 20개만 구해와 달라는 부탁을 받았다. 에오스 탑에 있는 검은 생쥐 모양의 몬스터인 #b블랙 라츠#k가 줄 것 같다는데…"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="에오스 탑 100층의 굳게 닫힌 문을 지키고 있는 장난감병정 델브에게 무료한 경비 업무를 달래줄 #b맛있는 호두#k 20개를 모아 전해 주었다. 델브는 매우 고마워 하면서 시간이 난다면 옆에 있는 장난감병정 올슨에게 말을 걸어보지 않겠냐고 말해 주었다."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002601">
+        <imgdir name="info">
+            <string name="subject" value="인형의 집"/>
+            <string name="req" value="레벨 25, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="에오스 탑 100층에서 델브와 함께 경비를 서고 있는 장난감병정 올슨을 만났다. 올슨으로부터 시간의 균열로 침입한 몬스터가 루디브리엄 시계탑의 시계추를 훔쳐 도망가 이 방 안에서 인형의 집으로 변신해 버렸다는 이야기를 들었다. 안에 있는 수 많은 인형의 집 중 미묘하게 다른 하나를 찾아내야만 한다."/>
+        </imgdir>
+        <imgdir name="f">
+            <string name="desc"
+                    value="10분 내에 미묘하게 다른 인형의 집을 찾아 부셔서 시계추를 얻어 장난감병정 마크에게 전해주어야 하지만 결국 실패하고 말았다. 다시 한 번 도전해 봐야 겠는걸…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="에오스 탑 비밀의 방 안에서 인형의 집으로 변해 숨어버린 몬스터를 찾아내어 인형의 집을 부수고 시계추를 되찾아 장난감병정 마크에게 무사히 전해 주었다. 이걸로 루디브리엄 시계탑도 다시 정상적으로 움직일 수 있겠지?"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003800">
+        <imgdir name="info">
+            <string name="subject" value="네미의 요리재료"/>
+            <string name="req" value="레벨 28, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 마을에 있는 작은 집에서 네미를 다시 만났다. 네미는 저녁에 일을 마치고 돌아오시는 아버지를 위해 맛있는 스프를 끓여 드리고 싶다며 에오스 탑에 있는 #b라츠#k를 쓰러뜨리고 #b고소한 치즈 10개#k를 가져와 달라는 부탁을 해왔다. "/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 마을의 작은 집에 있는 네미에게 부탁받은 #b고소한 치즈#k를 모두 모아 가져다 주었다. 네미가 이 치즈로 어떤 스프를 만들 수 있을지 기대되는걸?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003801">
+        <imgdir name="info">
+            <string name="subject" value="네미의 요리재료2"/>
+            <string name="req" value="레벨 28, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 마을에 있는 작은 집에서 네미를 다시 만났다. 네미는 이번에는 아버지의 도시락 반찬으로 쓸 새알이 필요하다며 에오스 탑 외벽에서 볼 수 있는 분홍색 새 모습의 몬스터인 #b트위터#k를 쓰러뜨리고 #b작은 알 15개#k를 가져와 달라는 부탁을 해왔다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 마을의 작은 집에 있는 네미에게 부탁받은 #b작은 알#k을 모두 모아 가져다 주었다. 이 알들로 아버지를 위한 어떤 맛있는 반찬을 만들지 궁금한데…?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003802">
+        <imgdir name="info">
+            <string name="subject" value="네미의 고민"/>
+            <string name="req" value="레벨 28, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 마을에 있는 작은 집에서 네미를 다시 만났다. 네미는 최근 음식을 맛있게 만들어 놓으면 누군가 모두 먹어버린다면서 쥐들이 의심스럽다고 말했다. 그 때문에 라츠라는 장난감 쥐를 만들어 쥐덫을 설치시켰었는데 지금은 몬스터가 되어 버렸다고… 네미의 부탁대로 라츠를 쓰러뜨리고 #b쥐덫 45개#k를 모아 가져가야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 마을의 작은 집에 있는 네미에게 부탁받은 쥐덫을 모두 모아 가져다 주었다. 이제 쥐덫으로 만들어 둔 음식을 노리는 쥐를 쫓을 수 있겠지? 그나저나 에오스 탑에 있는 라츠들이 전부 네미가 설치한 장난감 인형이었다니 놀랐는걸…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002500">
+        <imgdir name="info">
+            <string name="subject" value="정비 부품의 행방"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 장난감 공장에서 하얀 목마를 탄 조교 챙을 만났다. 챙은 최근 장난감 공장의 기계 부품이 사라지는 사건이 발생해서 그것을 대신 찾아달라는 부탁을 해왔다. 챙을 통해 부품이 숨겨져 있는 장난감공장&lt;메인공정1&gt;4구역으로 가서 10개의 부품을 모아 다시 조교 챙에게 전해야 한다."/>
+        </imgdir>
+        <imgdir name="f">
+            <string name="desc" value="20분 내에 기계 부품 10개를 모아 조교 챙에게 전해 주어야 하지만 결국 실패하고 말았다. 다시 한 번 도전해 봐야 겠는걸…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄 장난감 공장에서 분실한 10개의 기계 부품을 찾아 무사히 조교 챙에게 전해 주었다. 이걸로 장난감 공장도 원활하게 돌아갈 수 있겠지?"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002100">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑 청소"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 탑에 살고 있는 거대한 생쥐인 #b라츠#k를 50마리 쓰러뜨리고 돌아와 달라는 부탁을 받았다.\n\n라츠 퇴치 남은 수 : #r#a10021001##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 탑에 살고 있는 거대한 생쥐인 #b라츠#k를 50마리 쓰러뜨리고 돌아와 달라는 부탁을 받았다. 50마리 모두 쓰러뜨렸는걸?\n\n라츠 퇴치 남은 수 : #b#a10021001##k"/>
+        </imgdir>
+        <imgdir name="end1">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 부탁받은 #b라츠#k 퇴치를 무사히 완수했다. 하지만 아직도 에오스 탑에는 더 지저분한 녀석들이 많은 것 같은데..."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002101">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑 깊은곳 청소"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 깊은곳에 살고 있는 거대한 검은 생쥐인 #b블랙 라츠#k 50마리와 거미인 #b트릭스터#k 50마리를 쓰러뜨리고 돌아와 달라는 부탁을 받았다.\n\n블랙 라츠 퇴치 남은 수 : #r#a10021011##k\n트릭스터 퇴치 남은 수 : #r#a10021012##k "/>
+        </imgdir>
+        <imgdir name="000000">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 깊은곳에 살고 있는 거대한 검은 생쥐인 #b블랙 라츠#k 50마리와 거미인 #b트릭스터#k 50마리를 쓰러뜨리고 돌아와 달라는 부탁을 받았다. 전부 쓰러뜨린 것 같은데?\n\n블랙 라츠 퇴치 남은 수 : #b#a10021011##k\n트릭스터 퇴치 남은 수 : #b#a10021012##k"/>
+        </imgdir>
+        <imgdir name="end2">
+            <string name="desc" value="루디브리엄의 마르셀로부터 부탁받은 #b블랙 라츠#k와 #b트릭스터#k 퇴치를 무사히 완수했다. 하지만 탑 밖에도 뭔가가 있는 것 같은데..."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002102">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑 외부 청소"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 탑 외부에 살고 있는 비행 몬스터인 #b핑크 세이버#k 30마리와 #b트위터#k 30마리를 쓰러뜨리고 돌아와 달라는 부탁을 받았다.\n\n핑크 세이버 퇴치 남은 수 : #r#a10021021##k\n트위터 퇴치 남은 수 : #r#a10021022##k"/>
+        </imgdir>
+        <imgdir name="000000">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 탑 외부에 살소 있는 비행 몬스터인 #b핑크 세이버#k 30마리와 #b트위터#k 30마리를 쓰러뜨리고 돌아와 달라는 부탁을 받았다. 전부 쓰러뜨린 것 같은데?\n\n핑크 세이버 퇴치 남은 수 : #b#a10021021##k\n트위터 퇴치 남은 수 : #b#a10021022##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 부탁받은 #b핑크 세이버#k와 #b트위터#k 퇴치를 무사히 완수했다. 하지만 이번에는 탑 어딘가에서 루디브리엄을 위협하는 엄청난 녀석들이 있는 것 같은데…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002900">
+        <imgdir name="info">
+            <string name="subject" value="김박사의 전언"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 사령실에 있는 김박사로부터 현재 새롭게 만들고 있는 로봇의 설계도를 철이, 훈이, 건이에게 보여주고 돌아와 달라는 부탁을 받았다. 우선 #b격납고 어딘가에 있는 철이#k를 만나봐야 겠는걸?"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc"
+                    value="지구방위본부 격납고에서 철이를 만나 김박사로부터 받은 #b로봇의 설계도#k를 보여주었다. 철이는 이것을 훈이에게도 보여주고 싶다면서 필드로 나간지 오래되는 훈이에게 설계도와 함께 #b우주 식량#k 20개를 가져가 달라는 부탁을 했다. 우주 식량은 가는길에 만날 수 있는 외계인이 줄 것 같은데…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 훈이를 만나 설계도를 보여주고 우주 식량 20개를 전해 주었다. 훈이는 마침 건이의 총이 고장이 나서 전해주러 가던 길이었다며 설계도를 보여주러 가는 길에 고쳐진 총도 같이 가져가 달라고 부탁했다. 필드 어딘가에 있는 건이를 찾아 볼까나~"/>
+            <string name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 건이를 만나 총을 건네주고 설계도를 보여주었다. 건이는 고맙다며 이제 사령실에 있는 김박사에게 돌아가 모든 일들을 보고해 달라는 부탁을 해왔다. 건이에게 받은 워프 캡슐이 꽤 유용하게 쓰일 수 있을 것 같은데…?"/>
+            <string name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 사령실의 김박사의 부탁대로 철이, 훈이, 건이에게 새로 개발중안 로봇의 설계도를 보여주고 그들의 문제까지 함께 해결해 주었다. 김박사는 매우 고마워 하면서 나중에라도 시간이 난다면 다시 자신을 찾아와 달라고 말해 주었다."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003000">
+        <imgdir name="info">
+            <string name="subject" value="로봇 부품 전달"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 사령실에 있는 김박사로부터 루디브리엄 장난감 공장에 있는 조교 챙에게서 중요한 부품 3개를 받아 가지고 와 달라는 부탁을 받았다. 루디브리엄까지 언제 올라간담…"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="prev" value="s"/>
+            <string name="desc"
+                    value="루디브리엄 장난감 공장에서 조교 챙을 만나 로봇을 만드는 데 쓰이는 부품 상자 3개를 전해 받았다. 이제 이것을 지구방위본부 사령실의 김박사에게 가지고 가면 되겠지?"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 장난감 공장에 있는 조교 챙으로부터 로봇을 만드는 데 쓰이는 부품 상자 3개를 받아 지구방위본부 사령실의 김박사에게 전해 주었다. 보답으로 루디브리엄으로 한 번에 이동할 수 있는 워프 캡슐을 받았는데… 꽤 유용하게 쓰이겠는걸?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003001">
+        <imgdir name="info">
+            <string name="subject" value="로봇 부품 회수"/>
+            <string name="req" value="레벨 30, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="로봇 부품을 전달해 주었던 김박사를 다시 찾았다. 김박사는 누군가 부품 상자 3개를 모두 훔쳐가 버렸다면서 로스웰 초원의 숨겨진 장소로 가서 외계인들의 상자를 부수고 그 안에서 부품 상자 3개를 되찾아 돌아와 달라는 부탁을 해왔다."/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 사령실의 김박사에게 외계인들이 훔쳐간 로봇 부품 상자 3개를 모두 찾아 가져다 주었다. 이제 신형 로봇의 개발이 순조롭게 진행될 수 있겠지?"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003600">
+        <imgdir name="info">
+            <string name="subject" value="훈이의 이 통증"/>
+            <string name="req" value="레벨 31, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 훈이를 다시 만났다. 훈이는 단것을 엄청 좋아하는 것처럼 보이는데… 덕분에 이가 많이 상해서 통증 완화제가 필요하다고 한다. 지구방위본부에서 #b통증 완화제#k를 입수한 후 훈이에게 가져가야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 훈이에게 격납고에 있는 페퍼로부터 구입한 #b통증 완화제#k를 가져다 주었다. 그러게 단 음식은 적당히 먹었어야지~"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002602">
+        <imgdir name="info">
+            <string name="subject" value="버려진 공간으로의 배달"/>
+            <string name="req" value="레벨 33, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="에오스 탑 100층의 장난감병정 올슨으로부터 인형의 집을 부수고 얻은 #b시계추#k를 루디브리엄 시계탑 안의 버려진 공간에 있는 #b괘종시계#k에게 전해주라는 부탁을 받았다. 괘종시계에게 주면 그가 시계탑을 고칠 수 있을 거라고…"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 시계탑 아래 버려진 공간에 있는 괘종시계에게 루디브리엄 시계탑의 중요한 부품인 #b시계추#k를 무사히 전달해 주었다. 이제 괘종시계가 시계탑의 시계를 고치기를 기다리는 일만 남은 것 같다. 이걸로 시계탑도 정상 가동인가?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002603">
+        <imgdir name="info">
+            <string name="subject" value="괘종시계의 부탁"/>
+            <string name="req" value="레벨 33, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="인형의 집을 부수고 얻은 시계추를 가지고 루디브리엄의 시계탑 아래 버려진 공간으로 가보니 괘종시계라는 녀석을 만날 수 있었다. 그런데 시계탑의 시계를 정비하기 전에 자신이 멈출 지경이라며 버려진 공간에 있는 몬스터 #b틱톡#k을 쓰러뜨리고 녀석들이 지니고 있는 #b만능 시계 태엽#k을 구해와 달라는데… 괘종시계가 멈추기 전에 빨리 구해서 가져다 줘야 할 것 같다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄의 시계탑 아래 버려진 공간에 있는 괘종시계에게 틱톡에게서 얻은 #b만능 시계 태엽#k을 전해 주었다. 그가 멈춰버리기 전에 건네주게 되어 정말 다행인걸…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1004200">
+        <imgdir name="info">
+            <string name="subject" value="로키의 수리 부품"/>
+            <string name="req" value="레벨 34, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 시계탑 장난감 공장 안에서 수리공 로키를 만났다. 로키는 부쩍 늘어난 몬스터들 때문에 고장나는 기계들이 많아지고 있어 수리하는 데에도 많은 부품이 들어가고 있다면서 기계를 수리하기 위해 필요한 부품을 모아와 달라는 부탁을 해왔다. 가져와야 할 부품은 #b톱니바퀴 50개#k와 #b나사 30개#k이다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 시계탑 장난감 공장 안에 있는 수리공 로키에게 고장난 기계들을 수리하기 위해 필요한 톱니바퀴와 나사를 가져다 주었다. 몬스터들 때문에 고장난 기계들이 많았는데 이제 이걸로 수리할 수 있게 되었겠지?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002605">
+        <imgdir name="info">
+            <string name="subject" value="시계탑의 골치거리"/>
+            <string name="req" value="레벨 34, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="루디브리엄 잃어버린 시간 깊은 곳에서 괘종시계를 다시 만났다. 괘종시계는 요즘 자그마한 티키들이 시계탑 곳곳으로 들어가서 고장을 내거나 하는 바람이 여간 골치아픈 것이 아니라는데… 괘종시계를 위해 #b티키#k를 100마리 쓰러뜨려야 한다.\n\n티키 퇴치 남은 수 : #r#a10026051##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="루디브리엄 잃어버린 시간 깊은 곳에서 괘종시계를 다시 만났다. 괘종시계는 요즘 자그마한 티키들이 시계탑 곳곳으로 들어가서 고장을 내거나 하는 바람이 여간 골치아픈 것이 아니라는데… 괘종시계를 위해 #b티키#k를 100마리 쓰러뜨려야 한다. 전부 쓰러뜨린 것 같은데?\n\n티키 퇴치 남은 수 : #b#a10026051##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄 잃어버린 시간 깊은 곳에서 만난 괘종시계로부터 부탁받은 #b티키#k 퇴치를 무사히 완수했다. 그 동안 시계탑을 고장내던 또 다른 원인이었던 몬스터가 줄어들었으니 괘종시계의 걱정거리도 많이 줄어들겠지…?"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002103">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑의 위협"/>
+            <string name="req" value="레벨 35, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 탑 어딘가에 살고 있는 골렘인 #b블록골렘#k 25마리와 #b킹 블록골렘#k 15마리를 쓰러뜨리고 돌아와 달라는 부탁을 받았다.\n\n블록골렘 퇴치 남은 수 : #r#a10021031##k\n킹 블록골렘 퇴치 남은 수 : #r#a10021032##k"/>
+        </imgdir>
+        <imgdir name="000000">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 에오스 탑 어딘가에 살고 있는 골렘인 #b블록골렘#k 25마리와 #b킹 블록골렘#k 15마리를 쓰러뜨리고 돌아와 달라는 부탁을 받았다. 전부 쓰러뜨린 것 같은데?\n\n블록골렘 퇴치 남은 수 : #b#a10021031##k\n킹 블록골렘 퇴치 남은 수 : #b#a10021032##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 부탁받은 #b블록골렘#k과 #b킹 블록골렘#k 퇴치를 무사히 완수했다. 이제 탑을 위협하는 녀석들이 사라졌나 했는데… 무시무시한 녀석이 있는 모양인걸…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003200">
+        <imgdir name="info">
+            <string name="subject" value="도곤스 기지의 행방"/>
+            <string name="req" value="레벨 35, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 격납고에서 다시 만난 철이로부터 외계인 추종자의 비밀기지를 찾아 달라는 부탁을 받았다. 지구방위본부 주변 필드 어딘가에 있는 숨겨진 도곤스 기지를 찾아 그곳에 있는 상자에서 #b도곤스 보고서#k를 찾아내어 철이에게 가져가야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 격납고에 있는 철이에게 도곤스 비밀기지에서 찾은 #b도곤스 보고서#k를 가져다 주었다. 외계인에게 협력하는 사람들이 있었다니 조금 충격적인 사실인걸…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1004100">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑 보수 작업 돕기"/>
+            <string name="req" value="레벨 35, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="에오스 탑에서 오뚝이 일꾼8을 다시 만났다. 녀석은 보수할 곳은 많지만 주변에 있는 몬스터들 때문에 작업이 힘들다며 #b킹 블록퍼스를 30마리#k 쓰러뜨리고 #플라스틱 왕관도 25개#k 모아와 달라는 부탁을 해왔다. 귀찮지만 한 번 해볼까나…\n\n킹 블록퍼스 퇴치 남은 수 : #r#a10041001##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="에오스 탑에서 오뚝이 일꾼8을 다시 만났다. 녀석은 보수할 곳은 많지만 주변에 있는 몬스터들 때문에 작업이 힘들다며 #b킹 블록퍼스를 30마리#k 쓰러뜨리고 #플라스틱 왕관도 25개#k 모아와 달라는 부탁을 해왔다. 몬스터는 전부 쓰러뜨렸으니 아이템까지 모두 모아 가면 되겠는걸?\n\n킹 블록퍼스 퇴치 남은 수 : #b#a10041001##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="에오스 탑에서 만난 오뚝이 일꾼8에게 부탁대로 킹 블록퍼스를 쓰러뜨리고 플라스틱 왕관을 모아 가져다 주었다. 그나저나 도대체 이 탑의 보수 작업은 언제쯤 끝나는 걸까… 빨리 보수가 끝나서 이 녀석들의 부탁을 받는 일이 없어졌으면 좋겠는걸~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1004000">
+        <imgdir name="info">
+            <string name="subject" value="장난감 조립"/>
+            <string name="req" value="레벨 36, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 장난감 공장에서 장난감 조립공인 #b한스#k를 만났다. 한스는 조립할 수 있는 장난감의 재료를 모아다 준다면 재미난 것을 만들어 주겠다고 제안했다. 마침 심심하던 참에 잘됐는걸? 필요한 물건은 #b로보토이의 싸구려 건전지 20개, 마스터로보의 기계심장 20개, 크로노스의 톱니바퀴 30개#k이다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 장난감 공장의 장난감 조립공 #b한스#k에게 장난감을 만들 수 있는 여러 가지 재료를 가져다 주었다. 한스는 모아온 재료들로 순식간에 신기한 보따리를 만들어서 나에게 건네 주었다. 그 안에 여러 가지 장난감을 넣어 두었다고… 하지만 갑자기 위험한 것들이 튀어나올지도 모르니 함부로 열어보지 말아야 겠는걸…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003100">
+        <imgdir name="info">
+            <string name="subject" value="그레이의 퇴치"/>
+            <string name="req" value="레벨 37, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 메소레인저 블랙이라는 이상한 복장을 하고 있는 남자를 만났다. 그는 지금 이 쿨란 초원을 점령하고 있는 외계인 #b바나드 그레이#k를 30 마리 퇴치해 달라는 부탁을 해왔다.\n\n바나드 그레이 퇴치 남은 수 : #r#a10031001##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 메소레인저 블랙에게서 부탁받은 쿨란 초원의 바나드 그레이를 30 마리 모두 퇴치하는데 성공했다. 이제 메소레인저 블랙에게 돌아가 이 소식을 전하는 일만 남은 것 같은걸?\n\n바나드 그레이 퇴치 남은 수 : #b#a10031001##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 주변 필드의 메소레인저 블랙으로부터 부탁받은 #b바나드 그레이#k 퇴치를 무사히 완수했다. 하지만 아직도 쿨란 초원에는 훨씬 더 위협적인 녀석들이 나타나는 것 같은걸…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003300">
+        <imgdir name="info">
+            <string name="subject" value="알람시계"/>
+            <string name="req" value="레벨 38, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 근처 필드에서 고칠 수 없는 늦잠으로 고민하고 있는 #b메소레인저 핑크#k를 만났다. 그녀는 자신을 위해 몬스터 #b틱톡#k이 주는 #b작은 시계#k 20개를 구해와 달라는데… 루디브리엄 시계탑 아래로 내려가 봐야 겠는걸~"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 근처 필드에 있는 메소레인저 핑크에게 그녀의 늦잠을 해결해 줄 수 있는 #b작은 시계#k를 모아 가져다 주었다. 하지만 워낙 일어나기 어려워 하는터라 좀 더 강력한 시계가 필요할 것 같은걸…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003301">
+        <imgdir name="info">
+            <string name="subject" value="알람시계의 조합"/>
+            <string name="req" value="레벨 38, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 근처 필드에서 메소레인저 핑크를 다시 만났다. 아침에 잘 일어나게 되었을 줄 알았는데 그만 시계가 전부 망가져 버렸다고… 특수한 시계를 만들기 위해 #b특수 건전지 2개, 톱니 바퀴 10개, 작은 시계 10개#k가 필요하다고 한다. 루디브리엄 시계탑 안의 마스터로보로부터 특수 건전지를 얻을 수 있을 것 같다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 근처 필드에 있는 메소레인저 핑크에게 성능이 좋은 시계를 만들기 위한 재료인 #b특수 건전지, 톱니 바퀴, 작은 시계#k를 모아다 주었다. 부디 이번에 만드는 시계는 망가지지 말았으면 좋겠는데…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003302">
+        <imgdir name="info">
+            <string name="subject" value="알람시계 배달"/>
+            <string name="req" value="레벨 38, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 근처 필드에서 메소레인저 핑크를 다시 만났다. 지난번에 모아와 준 재료들을 지구방위본부에 있는 #b병사 케빈#k에게 맡겼다면서 그에게서 #b슈퍼 알람 시계#k를 가져와 달라는 부탁을 해왔다. 이 시계만 있다면 이제 아침에 일찍 일어날 수 있는 거겠지?"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc"
+                    value="지구방위본부에 있는 #b병사 케빈#k으로부터 메소레인저 핑크가 부탁한 #b슈퍼 알람 시계#k를 받았다. 이제 이걸 메소레인저 핑크에게 가져다 주면 되겠지?"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 근처 필드에 있는 메소레인저 핑크에게 #b병사 케빈#k이 만들어 준 #b슈퍼 알람 시계#k를 가져다 주었다. 이번에야 말로 이 시계로 아침에 일찍 일어날 수 있게 되었으면 좋겠는걸…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002604">
+        <imgdir name="info">
+            <string name="subject" value="일꾼 시계들의 건전지"/>
+            <string name="req" value="레벨 39, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="루디브리엄 잃어버린 시간 깊은 곳에서 괘종시계를 다시 만났다. 괘종시계는 자신은 오래된 시계라서 태엽으로 움직일 수 있지만 요즘 만들어진 일꾼 시계들은 모두 건전지로 움직인다는데… 건전지를 마련하지 못해 제 기능을 하지 못하는 시계가 많다고 한다. 괘종시계를 위해 #b싸구려 건전지 50개#k를 모아다 주어야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="루디브리엄 잃어버린 시간 깊은 곳에 있는 괘종시계에게 최신 일꾼 시계들을 움직이는데 필요한 싸구려 건전지를 모아 가져다 주었다. 괘종시계는 그 동안 건전지가 없어서 일꾼들이 제 역할을 하지 못했는데 이제 그런 걱정은 없을것 같다고 기뻐했다. 그나저나 이렇게 깊은 곳에서 무슨 일을 하고 있는 것일까…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1002104">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑의 평화"/>
+            <string name="req" value="레벨 40, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="루디브리엄의 마르셀로부터 마지막으로 에오스 탑의 모든 몬스터들을 다스리고 있는 블록골렘 군주 #b롬바드#k를 쓰러뜨리고 돌아와 달라는 부탁을 받았다. 에오스 탑 중간의 숨겨진 공간 안에서 가끔 발견된다고 하는데…\n\n롬바드 퇴치 남은 수 : #r#a10021041##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="루디브리엄의 마르셀에게 부탁받은 블록골렘 군주 롬바드를 에오스 탑 숨겨진 공간에서 발견하여 쓰러뜨리는데 성공했다. 이제 마르셀에게 이 소식을 전하는 일만 남은 것 같은걸?\n\n롬바드 퇴치 남은 수 : #b#a10021041##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="루디브리엄의 마르셀이 마지막으로 부탁한 블록골렘 군주 롬바드를 쓰러뜨리는 데에 성공했다. 이것으로 잠시나마 에오스 탑은 평화를 유지할 수 있겠지…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003002">
+        <imgdir name="info">
+            <string name="subject" value="외계인 퇴치"/>
+            <string name="req" value="레벨 40, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="지구방위본부 사령실의 김박사로부터 로스웰 초원 어딘가에 강력한 외계인이 나타났다면서 퇴치해 줄 것을 부탁받았다. 아직 신형 로봇이 개발되지 않은 터라 급한대로 나에게 부탁하는 거라고… 로스웰 초원 숨겨진 곳에서 #b머신 MT-09#k를 찾아 5마리를 퇴치해야 한다.\n\n머신 MT-09 퇴치 남은 수 : #r#a10030021##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="로스웰 초원 숨겨진 곳에서 #b머신 MT-09#k를 찾아 5마리를 퇴치하는 데 성공했다. 이제 지구방위본부 사령실로 돌아가 봐야지...\n\n머신 MT-09 퇴치 남은 수 : #b#a10030021##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 사령실의 김박사로부터 부탁받은 강력한 외계인 머신 MT-09를 5마리 모두 퇴치하고 돌아왔다. 빨리 신형 로봇의 개발이 끝나서 내가 나서는 일이 생기지 않았으면…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003900">
+        <imgdir name="info">
+            <string name="subject" value="에오스 탑 보수 작업"/>
+            <string name="req" value="레벨 40, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="에오스 탑에서 만난 오뚝이 일꾼10 이 탑의 보수 작업을 위해 필요하다며 #b노란색 장난감 블록 30개#k와 #b파란색 장난감 블록 15개#k를 구해와 달라고 부탁해 왔다. 일꾼을 만난 곳 근처에서 볼 수 있는 블록골렘을 쓰러뜨리면 얻을 수 있을 것 같은걸?"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="에오스 탑에서 만난 오뚝이 일꾼10 에게 탑의 보수 작업에 필요한 노란색,파란색 장난감 블록을 가져다 주었다. 장난감 블록이 탑을 보수하는 재료라니… 역시 장난감 성인 루디브리엄 다운걸?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003101">
+        <imgdir name="info">
+            <string name="subject" value="원로 그레이의 처치"/>
+            <string name="req" value="레벨 43, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 메소레인저 블랙을 다시 만났다. 그는 그레이 종족 중 높은 계급에 있는 #b원로 그레이#k를 쓰러뜨리고 그들이 지니고 있는 #b노트#k를 3개 모아 가져와 달라는 부탁을 해왔다. 원로 그레이는 모든 그레이 종족 중 극소수여서 찾기 힘들 것 같은걸…"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 메소레인저 블랙에게 원로 그레이에게서 빼앗은 #b노트#k 3개를 모아 전해 주었다. 이 노트에는 그레이들의 역사가 적혀 있다고 하는데… 빨리 노트에 적힌 내용의 해독이 끝났으면 좋겠는걸~"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003400">
+        <imgdir name="info">
+            <string name="subject" value="외계인 그레이와의 거래"/>
+            <string name="req" value="레벨 44, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 주변 쿨란 초원에서 #b외계인 그레이#k를 만났다. 그는 오히려 나쁜 것은 지구방위본부라면서 지구방위본부를 침투하기 위해 필요한 몇 가지 자료들을 격납고 안에서 가져와 달라고 말했다. 꺼림직 하긴 하지만… 어쩔 수 없지… 지구방위본부 격납고로 들어가 #b비밀문서 3개#k를 가져와야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 주변 쿨란 초원에 있는 #b외계인 그레이#k에게 격납고에서 얻은 3개의 비밀문서를 가져다 주었다. 보상은 두둑히 받았지만 지금까지 했던 말이 그레이의 거짓말이었다니… 내가 외계인을 도운 사실이 지구방위본부 누군가의 귀에 들어간다면 큰일인걸…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003401">
+        <imgdir name="info">
+            <string name="subject" value="만회의 노력"/>
+            <string name="req" value="레벨 44, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 메소레인저 옐로우를 만났다. 그녀는 내가 외계인 그레이를 도운 사실을 이미 알고 있다면서 적으로 오인되고 싶지 않다면 만회의 노력을 해야 한다고 말했다. 다시 한 번 믿음을 얻기 위해서는 외계인을 처치해야 한다.\n\n울트라 그레이 퇴치 남은 수 : #b#a10034011##k"/>
+        </imgdir>
+        <imgdir name="000">
+            <string name="desc"
+                    value="외계인을 도운 사실을 알고 있는 메소레인저 옐로우에게 믿음을 얻기 위해서 외계인들을 처치해 달라는 임무를 받았다. 외계인을 충분히 쓰러뜨린 것 같은데…?\n\n울트라 그레이 퇴치 남은 수 : #b#a10034011##k"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="한 순간의 실수로 외계인 그레이를 돕긴 했지만 메소레인저 옐로우가 준 임무를 무사히 수행해서 어느 정도 신뢰는 회복한 것 같다. 역시 외계인들은 우리와 평화롭게 지낼 마음이 없는 모양인걸…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003402">
+        <imgdir name="info">
+            <string name="subject" value="운석 샘플 채집"/>
+            <string name="req" value="레벨 44, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="default">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 메소레인저 옐로우를 다시 만났다. 그녀는 나를 믿고 쿨란 초원에 흩어져 있는 우주에서 떨어진 운석을 조사하여 #b운석 샘플 6개#k를 가져와 달라는 부탁을 해왔다. 이 임무까지 완수한다면 옐로우로부터 더욱 더 신뢰를 받을 수 있겠지?"/>
+        </imgdir>
+        <imgdir name="111111">
+            <string name="desc" value="쿨란 초원에 흩어져 있는 운석을 조사하고 #b운석 샘플 6개#k를 모두 채집했다. 이제 이것을 메소레인저 옐로우에게 가져다 주면 되겠지…"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 메소레인저 옐로우에게 쿨란 초원의 운석에서 채집한 운석 샘플을 모두 모아 가져다 주었다. 이걸로 연구도 한층 활발해 지겠지…?"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003102">
+        <imgdir name="info">
+            <string name="subject" value="제타 레티큘란의 역사"/>
+            <string name="req" value="레벨 45, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 메소레인저 블랙을 다시 만났다. 그는 노트를 해독한 결과 그레이들이 살던 별에 극도의 위험한 오염물질이 유입되어 이곳으로 삶의 터전을 옮기고 있다는 사실을 알아냈다고 말해 주었다. 그리고는 그들이 얼마나 오염물질에 노출되었는지 알기 위해 #b바나드 그레이, 제타 그레이, 울트라 그레이, 원로 그레이 각각의 세포#k를 구해와 달라는 부탁을 해왔다."/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 메소레인저 블랙에게 #b바나드 그레이, 제타 그레이, 울트라 그레이, 원로 그레이#k의 세포를 전해 주었다. 만일 이들의 몸 속에 있는 오염물질의 농도가 심각한 수준이라면 이곳도 결코 안전하지는 않다…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003700">
+        <imgdir name="info">
+            <string name="subject" value="원로 그레이의 표식"/>
+            <string name="req" value="레벨 47, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 주변 필드에서 건이를 다시 만났다. 건이는 최근 원로 그레이를 추적하는 임무를 수행중인데 길을 자주 잃어버리는 탓에 원로 그레이가 있는 곳을 찾을 수가 없다고 말했다. 건이를 위해 원로 그레이를 처치하고 그들이 지니고 있는 표식 5개를 모아 건이에게 전해주어야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 주변 필드에 있는 건이에게 원로 그레이의 표식을 모아 전해주었다. 이 표식만 있으면 건이도 원로 그레이를 추적하는 임무를 훨씬 더 잘 수행할 수 있겠지…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003500">
+        <imgdir name="info">
+            <string name="subject" value="머신 MT-09의 연료"/>
+            <string name="req" value="레벨 50, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 격납고에서 케이라는 엔지니어를 만났다. 마침 조수가 필요하던 참이라는 케이에 말에 그녀의 조수로 일해 보기로 했는데… 우선은 MT-09의 연료를 재활용한 기계를 연구중인 케이를 위해 #b머신 MT-09의 연료 5개#k를 구해와야 한다."/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc" value="지구방위본부 격납고에 있는 엔지니어 케이를 위해 머신 MT-09의 연료를 구해왔다. 케이가 과연 이 연료로 어떤 기계를 만들지 기대되는걸?"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003501">
+        <imgdir name="info">
+            <string name="subject" value="롬바드의 조종 프로그램"/>
+            <string name="req" value="레벨 50, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 격납고에 있는 케이를 다시 만났다. 일전에 조수로 일해주기로 약속한 걸 잊진 않았겠지? 그녀는 롬바드 조종 프로그램이 담긴 메모리카드가 여러 개 필요하다며 에오스 탑 어딘가에 있는 롬바드라는 몬스터를 찾아 #b메모리카드#k를 3개 정도 넉넉히 모은 후 사령실에 있는 #b포터#k 박사에게 해독을 의뢰하여 #b해독된 메모리카드 3개#k를 가져와 달라고 말했다."/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc"
+                    value="지구방위본부 사령실에 있는 #b포터#k 박사에게 롬바드의 메모리카드 3개를 건네주었다. 하지만 역시나… 3개 중 하나는 해독에 실패하여 다시 롬바드의 메모리카드를 하나 더 구해 포터 박사에게 가져가야 한다."/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc"
+                    value="다시 한 번 #b포터#k 박사에게 롬바드의 메모리카드를 가져다 주었다. 다행히 해독에 성공하여 케이가 부탁한 #b해독된 메모리카드 3개#k를 모두 모았다. 이제 이걸 그녀에게 가져다 주면 되겠지?"/>
+            <string name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 격납고에 있는 케이에게 그녀가 부탁한 #b해독된 메모리카드#k를 모두 모아 가져다 주었다. 이걸로 케이가 어떤 신형 기계를 개발해 낼지 궁금한데…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1003502">
+        <imgdir name="info">
+            <string name="subject" value="행방불명된 수송선"/>
+            <string name="req" value="레벨 50, 전 직업 가능"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="지구방위본부 사령실에 있는 #b포터#k 박사로부터 격납고의 엔지니어 #b케이#k에게 편지 한 통을 전해줄 것을 부탁받았다. 시간내에 전해주지 않으면 안되니 서둘러야겠다. 그런데 과연 어떤 내용이 적혀 있을지 기대되는걸… 혹시 연애편지는 아닐까?"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc"
+                    value="지구방위본부 사령실에 있는 #b포터#k 박사로부터 받은 편지를 격납고의 엔지니어 #b케이#k에게 시간내에 무사히 전해주었다. 연애편지인줄 알고 기대하고 있었는데… 행방불명된 수송선의 위치가 적혀 있는 편지였다니 왠지 시시한걸…? 케이는 나에게 로스웰 초원 근처에 있는 것으로 조사된 수송선을 찾아내어 안에 있던 파일럿의 생사를 확인해 달라고 부탁했다."/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc"
+                    value="로스웰 초원 근처에서 고장난 것으로 보이는 수송선을 발견했다. 하지만 파일럿의 모습은 어디에도 보이지 않고… 안에서 한 통의 편지를 찾아낼 수 있었다. 이 편지라도 케이에게 가지고 돌아가 보자."/>
+            <string name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="e">
+            <int name="end" value="1"/>
+            <string name="desc"
+                    value="지구방위본부 격납고의 #b케이#k에게 고장난 수송선에서 찾아낸 편지를 전해주었다. 케이는 매우 슬픈 눈빛으로 살아 있었다는 것만이라도 확인할 수 있어 정말 다행이라고 말했다. 사라진 파일럿은 도대체 어디로 가버린 것일까…"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001500">
+        <imgdir name="info">
+            <string name="subject" value="寻找《上古魔书》"/>
+            <string name="req" value="等级55，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="在冰峰雪域见到了叫#b阿尔克斯特#k的学者。他说他最近在古籍中发现了他很感兴趣的内容。那就是关于在神秘岛某个地方隐藏的#b《上古魔书》#k的内容。《上古魔书》是在古代发生大战时出现的魔法书，但现在已经不知下落了……他还说那本书的作者的后代赫拉住在天空之城，所以我要去天空之城。"/>
+        </imgdir>
+        <imgdir name="hs">
+            <string name="desc" value="《上古魔书》作者的后代#b赫拉#k失踪已经很久了……在哪里能找她呢？"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="he">
+            <string name="desc" value="天空之城公园的#b老太太斯皮罗纳的助手就是赫拉#k！她说据记载那本书是在雪原遗失的……按照杰德告诉我的，我得要去雪原幽深山沟里的#b小墓地#k调查一下。"/>
+            <string name="prev" value="hs"/>
+        </imgdir>
+        <imgdir name="ks">
+            <string name="desc" value="在小墓地发现了#b老戒指#k。但是谁能告诉我这个东西是什么？没有别的办法。我只好去问#b阿尔卡斯特#k。"/>
+            <string name="prev" value="he"/>
+        </imgdir>
+        <imgdir name="ke">
+            <string name="desc" value="得先答应斯克德的请求，然后拿着那戒指去访问#b金银岛的四位贤者#k。"/>
+            <string name="prev" value="ks"/>
+        </imgdir>
+        <imgdir name="fe">
+            <string name="desc" value="在金银岛见过四位贤者后得到了有关《上古魔书》的四张地图片。那么我要回去看看阿尔卡斯特。"/>
+            <string name="prev" value="ke"/>
+        </imgdir>
+        <imgdir name="ms">
+            <string name="desc" value="听说配合四张地图片需要 #b记忆之粉#k……但他说天空之城塔入口的 #b阿尔法部队队员伊吉上等兵的手中有那个物品#k。"/>
+            <string name="prev" value="fe"/>
+        </imgdir>
+        <imgdir name="mw">
+            <string name="desc" value="伊吉上等兵跟我约好了，我给他#b3个狼人脚趾甲#k他就给我记忆之粉。听说狼人经常在雪原幽深山沟里出没…"/>
+            <string name="prev" value="ms"/>
+        </imgdir>
+        <imgdir name="mg">
+            <string name="desc" value="从伊吉上等兵受那得到了#b记忆之粉#k。我要拿着这个物品回去看阿尔卡斯特。"/>
+            <string name="prev" value="mw"/>
+        </imgdir>
+        <imgdir name="me">
+            <string name="desc" value="阿尔卡斯特用记忆之粉成功地配合了四张地图片。按照地图说，在#b天空之城塔里某个地方的雕像#k里隐藏了《上古魔书》…"/>
+            <string name="prev" value="mg"/>
+        </imgdir>
+        <imgdir name="fb">
+            <string name="desc" value="终于找到了《上古魔书》。这次回去给阿尔卡斯特这本书，我的任务才结束了吧？"/>
+            <string name="prev" value="me"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="虽然有很多困难的事情，但我还是找到《上古魔书》给了阿尔卡斯特。而且也收到了报酬，就是特别的披风。阿尔卡斯特说从今以后他要研究封印那本书的办法… 我也希望他早点儿发现封印之法…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001501">
+        <imgdir name="info">
+            <string name="subject" value="消失的赫拉"/>
+            <string name="req" value="等级55，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="按照阿尔卡斯特说的去天空之城访问了赫拉的家。但家里除了保姆#b珥玛#k以外谁也没见到。听说赫拉几个月前突然离家出走后就没有消息… 听说#b冰峰雪域#k德杰是赫拉的老朋友，我要去看他。"/>
+        </imgdir>
+        <imgdir name="h1">
+            <string name="desc" value="杰德也不知道赫拉的下落了。但除了他以外没有与赫拉有关的人。我不得不再次去问杰德。。。"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="h2">
+            <string name="desc" value="杰德说赫拉消失的原因可能与被偷的#b母亲的遗物#k有关系。同时告诉我赫拉的保姆有关于它的信息。"/>
+            <string name="prev" value="h1"/>
+        </imgdir>
+        <imgdir name="h3">
+            <string name="desc" value="从珥玛那听到了赫拉离家出走前多次说过关于#b老太太#k的内容。但是要获得关于老太太的信息，再要去看杰德。"/>
+            <string name="prev" value="h2"/>
+        </imgdir>
+        <imgdir name="h4">
+            <string name="desc" value="杰德说赫拉说过的老太太可能是天空之城公园怪物出没的某个地方的小屋，在那里居住的#b斯皮罗纳#k。让我去看她。"/>
+            <string name="prev" value="h3"/>
+        </imgdir>
+        <imgdir name="h5">
+            <string name="desc" value="#b斯皮罗纳#k的助手就是赫拉了！！！"/>
+            <string name="prev" value="h4"/>
+        </imgdir>
+        <imgdir name="h6">
+            <string name="desc"
+                    value="赫拉拜托我把#b项链#k转交给杰德。同时她告诉我几年前在家读过老旧的日记，那时候看到过在雪原幽深的山沟里某个地方《上古魔书》消失的纪录。有关它更仔细的信息从杰德打听得到……我要回去找杰德，告诉她赫拉的消息。"/>
+            <string name="prev" value="h5"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="交给杰德#b赫拉的项链#k。同时跟他说有《上古魔书》在雪原里消失的纪录。听我说后，他告诉我他几天前调查村落周围的地理时，在雪原幽深的山沟里看见过小墓地。让我去找那#b小墓地#k… 不过杰德听到赫拉没事的消息后看起来很放心。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001502">
+        <imgdir name="info">
+            <string name="subject" value="斯皮罗纳的黑水晶"/>
+            <string name="req" value="等级55，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc" value="听了杰德的话，为了找赫拉，就去天空之城公园后在那里的小屋里见到了#b斯皮罗纳#k。不过这位太太… 说什么也都不听。一直说话，他也听我说的吧…"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="这位太太… 很厉害？"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="我的人生经历中没有放弃的经验！"/>
+            <string name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="她应该认识赫拉… 我一定从她那获得赫拉的消息！"/>
+            <string name="prev" value="3"/>
+        </imgdir>
+        <imgdir name="5">
+            <string name="desc" value="这位奶奶太厉害！我最后再求一次！"/>
+            <string name="prev" value="4"/>
+        </imgdir>
+        <imgdir name="s1">
+            <string name="desc" value="斯皮罗纳终于跟我约好了，如果我找她几天前在雪原弄丢的#b黑水晶#k她就告诉我她关于赫拉知道的所有事。黑水晶在哪里呢？"/>
+        </imgdir>
+        <imgdir name="s2">
+            <string name="desc" value="在雪原的岩石下面发现了斯皮罗纳的#b黑水晶#k… 但是水晶好像被怪物破坏得很厉害。难道她怀疑我破坏了这水晶。"/>
+            <string name="prev" value="s1"/>
+        </imgdir>
+        <imgdir name="s3">
+            <string name="desc" value="哎哟… 看到破坏的黑水晶后斯皮罗纳非常生气了。她根本没听我的解释。我只好请跟斯皮罗纳一起住的那女人帮忙。"/>
+            <string name="prev" value="s2"/>
+        </imgdir>
+        <imgdir name="s4">
+            <string name="desc"
+                    value="她说现在怎么说也对她没用，但是如果有把黑水晶恢复原样需要的物品#b妖精之粉#k，斯皮罗纳的怒气也许可以小点。那物品是天空之城杂货店的#b妖精珂丽尔#k所有的."/>
+            <string name="prev" value="s3"/>
+        </imgdir>
+        <imgdir name="s5">
+            <string name="desc"
+                    value="#b妖精珂丽尔#k说如果我想得到#b妖精之粉#k应该收集#b100个星光精灵的星块，50个月光精灵的月块，30个日光精灵的日块#k来。这下可好我要是打精灵了吧…"/>
+            <string name="prev" value="s4"/>
+        </imgdir>
+        <imgdir name="s6">
+            <string name="desc" value="从#b妖精珂丽尔#k收到了#b妖精之粉#k。那么把这个物品给斯皮罗纳就可以了吧！"/>
+            <string name="prev" value="s5"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="斯皮罗纳收到#b妖精之粉#k后才肯听我说的话。同时告诉我她的助手就是#b赫拉#k！！没想到了她在这里！赫拉为了拯救被邪恶的魔法师虏走的母亲，为了学习所有强大能力而弄来这儿了… 那么这位老太太也是很厉害的魔法师吧？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001503">
+        <imgdir name="info">
+            <string name="subject" value="猎手 斯卡德"/>
+            <string name="req" value="等级55，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc" value="从杰德告诉我的小墓地里发现的#b老戒指#k。觉得这个戒指是找《上古魔书》的线索… 无论如何我要回去问#b阿尔卡斯特#k。"/>
+        </imgdir>
+        <imgdir name="k1">
+            <string name="desc" value="拿着#b老戒指#k去访问冰峰雪域的猎手斯卡德，他却抢走了戒指。"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="k2">
+            <string name="desc" value="#b斯卡德#k说最近狼皮的价格挺贵，我们约好如果我收集100个野狼之尾和100个白狼之尾来的话，他还我的戒指，而且告诉我他所知道的。"/>
+            <string name="prev" value="k1"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="给斯卡德野狼之尾后收到了#b老戒指#k。同时他告诉我他年轻的时候从金银岛的四位贤者那听说过有关这戒指的内容。他又说我最好去金银岛找#b四位贤者#k。不过我先去访问#b勇士部落#k的贤者…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001504">
+        <imgdir name="info">
+            <string name="subject" value="金银岛的四位贤者"/>
+            <string name="req" value="等级55，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="勇士部落的贤者#b武术教练#k看戒指后，跟我说了他有找《上古魔书》需要的线索。但他又说不能白给你那东西，要是我给他可以恢复力量的#b2个力量水晶#k，就可以给我那线索。"/>
+        </imgdir>
+        <imgdir name="f1">
+            <string name="desc"
+                    value="给武术教练2个力量水晶后才得到了#b老旧的地图片#k。听说这个地图分为四张。各地图分别由四名贤者保管着。而且他拜托我收集四张地图片后找《上古魔书》封印它。那么这次我要去#b魔法密林#k找贤者吧！"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="f2">
+            <string name="desc" value="魔法密林的贤者#b汉斯#k跟我约好了要是我给他#b2个智慧水晶#k，他就给我地图的碎片。"/>
+            <string name="prev" value="f1"/>
+        </imgdir>
+        <imgdir name="f3">
+            <string name="desc" value="给汉斯2个智慧水晶后收到了#b第二个地图片#k。那么我要去找#b射手村#k的贤者了。"/>
+            <string name="prev" value="f2"/>
+        </imgdir>
+        <imgdir name="f4">
+            <string name="desc" value="射手村的贤者#b赫丽娜#k跟我约好了要是我给他#b2个敏捷水晶#k，他就给我地图的碎片。"/>
+            <string name="prev" value="f3"/>
+        </imgdir>
+        <imgdir name="f5">
+            <string name="desc" value="给赫丽娜2个敏捷水晶收受到了#b第三个地图片#k。那么最后我要去找#b废弃都市#k的贤者。"/>
+            <string name="prev" value="f4"/>
+        </imgdir>
+        <imgdir name="f6">
+            <string name="desc" value="废弃都市的贤者#b达克鲁#k跟我约好了我给他#b2个幸运水晶#k就给我地图的碎片。"/>
+            <string name="prev" value="f5"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="从金银岛的四名贤者收到了#b四张老旧的地图碎片#k。从今以后我的任务就是找《上古魔书》，然后将它封印。现在我要去冰峰雪域找阿尔卡斯特。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1000902">
+        <imgdir name="info">
+            <string name="subject" value="约翰的最后礼物"/>
+            <string name="req" value="等级61，全职业都可以。"/>
+            <int name="island" value="1"/>
+        </imgdir>
+        <imgdir name="30">
+            <string name="desc"
+                    value="在明珠港又见到了水手约翰。约翰说他的母亲刚去世。他问我能不能帮他准备放在母亲的墓地前面的花环？我只好答应他收集会1000年持续发光而且不会凋谢的#b白花30束#k。但按照约翰说的，我这次也要去林中之城的奇怪的石像。那树林...我不想再进去呀…"/>
+        </imgdir>
+        <imgdir name="29">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集29束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="28">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集28束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="27">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集27束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="26">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集26束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="25">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集25束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="24">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集24束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="23">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集23束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="22">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集22束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="21">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集21束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="20">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集20束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="19">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集19束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="18">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集18束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="17">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集17束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="16">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集16束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="15">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集15束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="14">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集14束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="13">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集13束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="12">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集12束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="11">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集11束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="10">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集10束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="9">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集9束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="8">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集8束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="7">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集7束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="6">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集6束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="5">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集5束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集4束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集3束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集2束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="我给了约翰几束的#b白花#k。但还要收集1束。"/>
+            <int name="prev" value="30"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc"
+                    value="我给了约翰#b30束白花#k。那可是1000年都发光的花啊！要是卖给别人的话，可以赚很多钱吧？但是我以后再也不想进那树林里...他为了表示感谢给了我花样耳环。听说那是他母亲的遗物，但是看起来这不是件平凡的耳环...好像有什么秘密…"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001600">
+        <imgdir name="info">
+            <string name="subject" value="阿尔卡斯特和黑暗水晶"/>
+            <string name="req" value="等级60，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="从冰峰雪域的阿尔卡斯特那听说封印《上古魔书》需要#b黑暗水晶#k和#b星石#k。这次我也答应帮他找这些物品… 听说黑暗水晶的母矿从有邪恶心的怪物那能得到… 收集母矿后去天空之城的斯皮罗纳那里可以冶炼。"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="给阿尔卡斯特#b黑暗水晶#k和#b星石#k了。虽然阿尔卡斯特为了封印《上古魔书》消耗了一半的元气，但看起来他充满幸福。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="1001900">
+        <imgdir name="info">
+            <string name="subject" value="猎手斯卡得的儿子尼克"/>
+            <string name="req" value="等级 65, 所有职也都可以"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="受阿尔卡斯特的委托，又找到了当时找古代的书籍时被帮助的猎手斯卡得。 以前被废矿的怪物夺去妻子后他的孩子尼克为打退怪物进入废矿去了可是现在还没有消息…在废矿内部岩浆洞窟内可能有#b尼克遗物戒指#k需要找到……加上承诺儿子要收集100个#b猎犬的尖牙#k…！好像是一段相当艰难的旅程。"/>
+        </imgdir>
+        <imgdir name="g">
+            <string name="desc" value="岩浆洞窟内部在石像碎片下面 找到了好象是尼克的#b戒指#k。在戒指上面写着什么人的名字……斯卡得可能知道吧…"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="在岩浆洞窟里找到了尼克的遗物并且收集了猎犬的尖牙都给斯卡得了，尼克也满意吗? 得到斯克得祖传的披风，相当不错吧!"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="7000000">
+        <imgdir name="info">
+            <string name="subject" value="扎昆任务第一阶段。"/>
+            <string name="req" value="等级50，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc" value="在冰峰雪域的长老公馆得到可以进入扎昆迷宫的允许。听说在最里面有像想不到的怪物。。。那么我去找阿杜比斯问一下。"/>
+        </imgdir>
+        <imgdir name="fail">
+            <string name="desc" value="我努力了，但没有完成第一阶段任务。看来要挑战扎昆的大怪物是很不容易的。。。我一定好好准备后再去阿杜比斯那里挑战一下！"/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="幸亏我完成了第一阶段的任务，而且获得了为了召唤扎昆大怪物需要的道具的材料#b火石的母矿#k。听说在第二阶段可以获得另外材料。。。"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="7000001">
+        <imgdir name="info">
+            <string name="subject" value="扎昆任务第二阶段"/>
+            <string name="req" value="等级50，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc" value="听说在第二阶段可以获得为召唤扎昆大怪物需要的其他材料。听说通过所有的障碍后可以发现。那么我小心地出发！"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="我幸亏解决了第二阶段，也得到了为召唤扎昆大怪物需要的道具的材料#b火山的呼吸#k。那么这次把这个东西与#b火石的母矿#k一起冶炼就可以了吧？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="7000002">
+        <imgdir name="info">
+            <string name="subject" value="扎昆任务第三阶段"/>
+            <string name="req" value="等级50，全职业都可以。"/>
+            <int name="island" value="2"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc" value="阿杜比斯说，如果我收集#b30个僵尸丢失的金齿#k给他的话，他给我冶炼#b火山的呼吸#k和#b火石的母矿#k。在哪里能得到哪些物品？"/>
+        </imgdir>
+        <imgdir name="s2">
+            <string name="desc" value="阿杜比斯说，如果我收集#b30个僵尸丢失的金齿#k给他的话，他给我冶炼#b火山的呼吸#k和#b火石的母矿#k。在哪里能得到哪些物品？"/>
+        </imgdir>
+        <imgdir name="end">
+            <string name="desc" value="给阿杜比斯需要的物品后，得到冶炼的#b火山的呼吸#k和#b火石的母矿#k后得到的#b火焰之眼#k.那么把这个物品在祭台放下的话，大怪物就会出来？？？"/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="9000500">
+        <imgdir name="info">
+            <string name="subject" value="웃어른께 문안 인사를!"/>
+            <string name="req" value="제한 없음"/>
+            <int name="island" value="0"/>
+        </imgdir>
+        <imgdir name="s">
+            <string name="desc"
+                    value="메이플운영자 로부터 신정을 맞이하여 빅토리아 아일랜드의 각 마을에 있는 현자들에게 문안 인사를 하고 와 달라는 부탁을 받았다. 페리온의 #b주먹펴고 일어서#k님, 엘리니아의 #b하인즈#k님, 헤네시스의 #b헬레나#k님, 커닝시티의 #b다크로드#k님을 순서대로 만나고 인사를 드려야 한다."/>
+        </imgdir>
+        <imgdir name="1">
+            <string name="desc" value="페리온의 #b주먹펴고 일어서#k님을 찾아가 새해 문안 인사를 드렸다."/>
+            <string name="prev" value="s"/>
+        </imgdir>
+        <imgdir name="2">
+            <string name="desc" value="엘리니아의 #b하인즈#k님을 찾아가 새해 문안 인사를 드렸다."/>
+            <string name="prev" value="1"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="desc" value="헤네시스의 #b헬레나#k님을 찾아가 새해 문안 인사를 드렸다."/>
+            <string name="prev" value="2"/>
+        </imgdir>
+        <imgdir name="4">
+            <string name="desc" value="커닝시티의 #b다크로드#k님을 찾아가 새해 문안 인사를 드렸다."/>
+            <string name="prev" value="3"/>
+        </imgdir>
+        <imgdir name="5">
+            <string name="desc"
+                    value="다크로드로부터 받은 #b빨간색 복주머니#k를 가지고 메이플운영자에게 돌아갔다. 이것과 함께 몬스터가 떨어뜨리는 #b대나무 복조리#k 5개를 모아와 달라는데…"/>
+            <string name="prev" value="4"/>
+        </imgdir>
+        <imgdir name="e">
+            <string name="desc"
+                    value="빅토리아 아일랜드의 현자들에게 모두 안부 인사를 전하고 받은 #b빨간색 복주머니#k와 몬스터로부터 얻은 #b대나무 복조리#k를 모아 메이플운영자에게 전해주고 맛있는 떡국을 잔뜩 받았다."/>
+            <int name="end" value="1"/>
+        </imgdir>
+    </imgdir>
+</imgdir>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 被封账号的原因。 -->
+<imgdir name="BlockReason.img">
+    <imgdir name="1">
+        <string name="type" value="辱骂"/>
+        <string name="msg" value="以骂人或发送淫乱文辞的行为被中断连接的ID。"/>
+    </imgdir>
+    <imgdir name="2">
+        <string name="type" value="광고"/>
+        <string name="msg" value="비인가 광고활동 행위로 접속 중지된 아이디입니다."/>
+    </imgdir>
+    <imgdir name="3">
+        <string name="type" value="매매"/>
+        <string name="msg" value="캐시나 계정의 양도 및 매매, 아이템 현금거래 중 하나에 해당하는 행위로 접속 중지된 아이디입니다."/>
+    </imgdir>
+    <imgdir name="4">
+        <string name="type" value="매크로"/>
+        <string name="msg" value="매크로, 오토키보드, 멀티로더 등의 행위로 접속 중지된 아이디입니다."/>
+    </imgdir>
+    <imgdir name="5">
+        <string name="type" value="사기"/>
+        <string name="msg" value="운영자 사칭, 해킹 사이트 유포, 캐시 사기, 버그 악용 중 하나에 해당하는 행위로 접속 중지된 아이디입니다."/>
+    </imgdir>
+    <imgdir name="6">
+        <string name="type" value="캐시부정결제"/>
+        <string name="msg" value="접속하신 계정은 캐시부정결제(미성년자 결제, 도용)로 접속금지되었습니다. 자세한 내용은 홈페이지(고객센터)로 문의해주세요."/>
+    </imgdir>
+</imgdir>

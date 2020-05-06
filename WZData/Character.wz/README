@@ -1,0 +1,14 @@
+此目录下定义了能穿戴或者设置在角色身上的所有东西。
+Accessory : 配饰
+Cap : 帽子
+Coat ： 上衣
+Face : 脸型。
+Glove : 手套
+Hair : 目前不知是什么，可能是发型。
+Longcoat : 长袍
+Pants : 裤子
+PetEquip : 宠物装备
+Ring : 戒指
+Shield : 盾牌
+Shoes : 鞋子
+Weapon : 武器

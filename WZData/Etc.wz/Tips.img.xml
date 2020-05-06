@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 服务器发送到角色的的小贴士信息。 -->
+<imgdir name="Tips.img">
+    <imgdir name="info">
+        <imgdir name="0">
+            <int name="levelMin" value="1"/>
+            <int name="levelMax" value="5"/>
+            <int name="interval" value="30000"/>
+            <int name="all" value="20"/>
+            <string name="tip" value="novice"/>
+        </imgdir>
+        <imgdir name="1">
+            <int name="levelMin" value="6"/>
+            <int name="levelMax" value="10"/>
+            <int name="interval" value="60000"/>
+            <int name="all" value="40"/>
+            <string name="tip" value="novice2"/>
+        </imgdir>
+        <imgdir name="2">
+            <int name="levelMin" value="11"/>
+            <int name="levelMax" value="20"/>
+            <int name="interval" value="300000"/>
+            <int name="all" value="50"/>
+            <string name="tip" value="novice3"/>
+        </imgdir>
+        <imgdir name="3">
+            <int name="levelMin" value="21"/>
+            <int name="levelMax" value="30"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="60"/>
+            <string name="tip" value="novice4"/>
+        </imgdir>
+        <imgdir name="4">
+            <int name="levelMin" value="31"/>
+            <int name="levelMax" value="70"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="70"/>
+            <string name="tip" value="novice5"/>
+        </imgdir>
+        <imgdir name="5">
+            <int name="levelMin" value="71"/>
+            <int name="levelMax" value="120"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="80"/>
+            <string name="tip" value="novice6"/>
+        </imgdir>
+        <imgdir name="6">
+            <int name="levelMin" value="121"/>
+            <int name="levelMax" value="999"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="100"/>
+            <string name="tip" value="novice7"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="all">
+        <string name="0" value="管理员不会向玩家索取密码等个人信息，请不要随便告诉别人你的密码。"/>
+        <string name="1" value="客服电话：50504724；客服邮箱：mxd@poptang.com；官方网站地址：mxd.poptang.com"/>
+        <string name="2" value="点击右下角的目录选择“游戏设置”，可以设置开关聊天、交易、悄悄话等功能"/>
+        <string name="3" value="在商城购买的现金装备可以跟一般装备一起使用。双击该物品拖到背包里即可。"/>
+        <string name="4" value="现金装备和一般装备的一起使用时，角色表现的造型是现金装备，但是装备的属性是一般装备的"/>
+        <string name="5" value="在聊天窗输入‘/?’，可以查看使用‘/’的命令说明"/>
+        <string name="6" value="现金道具不能交易也不能扔掉，可以在商城购买道具直接赠送给朋友。现金不能交换金币，请提防欺诈行为。"/>
+    </imgdir>
+    <imgdir name="novice">
+        <string name="0" value="←↑→↓－移动角色、↑进入光点、Ctrl键－攻击、Alt键－跳跃、W键-查看大地图、M键-查看小地图、S键-查看角色能力值"/>
+        <string name="1" value="E键-角色装备、I键-打开背包、K键-打开技能窗、Z键－拣取物品、Q键－查看任务说明、R键－组队和好友、H键－悄悄话"/>
+        <string name="2" value="点击右下角的“键盘设定”可以调整快捷键的设置。"/>
+        <string name="3" value="小地图说明：蓝点－地图跳转点、黄点－自己的位置、红点－其他玩家、绿点－NCP位置、橙色点－与你组队的玩家"/>
+        <string name="4" value="大地图说明：大地图中有一个跳动手指，它所指的地方就是你所在的方位"/>
+        <string name="5" value="地图中白色光柱是地图跳转点，走到光柱中间，按↑键，可以到达其他地图"/>
+        <string name="6" value="每次升级都有5点能力点（AP）可以分配，按S键点击橙色箭头就可进行分配"/>
+        <string name="7" value="增加力量主要提高攻击力，是战士的关键属性；增加敏捷可以提高命中率和手技，也会适当增加攻击力和回避率，是弓箭手的关键属性；"/>
+        <string name="8" value="增加智力可以提高魔法攻击力、魔法防御力和手技，是魔法师关系关键属性；增加运气可以提高命中率、回避率以及手技，对所有职业都有益处，特别是飞侠。"/>
+        <string name="9" value="在安全的地方站着不动10秒，可以恢复一定的生命值和魔法值。"/>
+    </imgdir>
+    <imgdir name="novice2">
+        <string name="0" value="战士转职要求：等级10、力量35；弓箭手转职要求：等级10、敏捷25；飞侠转职要求：等级10、敏捷25；魔法师转职要求：等级8、智力20。"/>
+        <string name="1" value="转职后可以学到新的技能同时增加背包容量，但是每次战斗牺牲都会减少一定经验值。"/>
+        <string name="2" value="战士转职地点：金银岛勇士部落；弓箭手转职地点：金银岛射手村；飞侠转职地点：金银岛废弃都市；魔法师转职地点：金银岛魔法密林。"/>
+        <string name="3" value="鼠标右键点击其他玩家选择个人情报，可以看到该玩家的信息，并可以选择交易等功能。"/>
+        <string name="4" value="使用F1~F7键可以表现多种可爱表情。"/>
+        <string name="5" value="战斗中需要的药水和武器在村落中可以买到。有些道具有性别或职业的限制，购买时请注意。"/>
+        <string name="6" value="达到转职等级未转职，以后即使升级也无法获得技能点数。"/>
+        <string name="7" value="新手一旦离开彩虹岛就不能返回，外面的世界很危险，务必做好准备再出航。"/>
+    </imgdir>
+    <imgdir name="novice3">
+        <string name="0" value="技能分为主动技能和被动技能，点击主动技能拖到右下角的快捷键上就可以使用该技能，学会被动技能后，会自动应用到角色上。"/>
+        <string name="1" value="转职后每次升级都有3点技能点可以分配，按K键点击橙色箭头进行分配。"/>
+        <string name="2" value="每个角色每天只能执行一次人气度调整操作，对同角色一个月可以使用一次人气度功能。"/>
+        <string name="3" value="在各村落里可以转职，而且也能买到该村落职业所特有的装备。"/>
+        <string name="4" value="转职后，每次升级就可以得到技能点数，但是达到可以转职的等级后未转职，那即使升级也不会得到技能点数。"/>
+        <string name="5" value="按K就能打开技能界面，在其中分配技能点数。"/>
+        <string name="6" value="有时候打死强大的怪物可能会获得在商店买不到的珍贵物品。"/>
+        <string name="7" value="没有MP的话是不能使用消耗魔法的技能。"/>
+        <string name="8" value="在聊天界面上输入‘/交易 角色名’就打开交易窗。"/>
+        <string name="9" value="使用回城卷轴可以更快回到指定村落。"/>
+        <string name="10" value="飞标可以在各村落的武器店买到，都用完也不消失哦。"/>
+    </imgdir>
+    <imgdir name="novice4">
+        <string name="0" value="到30级可以进行第二次转职。"/>
+        <string name="1" value="30级以后获得的技能点数最好在第二次转职后分配。"/>
+        <string name="2" value="你未分配30等级以前获得的技能点数的话，是不能进行第二次转职的。"/>
+        <string name="3" value="有些技能不能与其他技能一起使用。"/>
+        <string name="4" value="使用加强卷轴能制造更好的武器和防具。"/>
+        <string name="5" value="在地下迷宫深处有个地摊，能买到其他村落买不到的特别药水。"/>
+        <string name="6" value="第二次转职时，战士可以选择剑客、准骑士、枪战士中的一个。"/>
+        <string name="7" value="第二次转职时，弓箭手可以选择猎人、弩弓手中的一个。"/>
+        <string name="8" value="第二次转职时，法师可以选火毒法师、冰雷法师、牧师中的一个。"/>
+        <string name="9" value="第二次转职时，飞侠可以选择刺客、侠客中一个。"/>
+        <string name="10" value="某些任务和道具是有等级限制的。"/>
+    </imgdir>
+    <imgdir name="novice5">
+        <string name="0" value="到70级可以进行第三次转职。"/>
+        <string name="1" value="70级以后获得的技能点数最好在第三次转职后分配。"/>
+        <string name="2" value="你未分配70级以前获得的技能点数的话，是不能进行第三次转职。"/>
+        <string name="3" value="有些任务可以重复挑战，当然奖励也能重复拿哦。"/>
+        <string name="4" value="在林中之城旅馆的桑那房里可以更快恢复HP和MP。"/>
+        <string name="5" value="魔法师的技能中有属性的魔法随着怪物的属性不同攻击力也不同"/>
+    </imgdir>
+    <imgdir name="novice6">
+        <string name="0" value="到120级可以进行第四次转职。"/>
+        <string name="1" value="120级以后获得的技能点数最好在第四次转职后分配。"/>
+        <string name="2" value="你未分配120级以前获得的技能点数，是不能做第四次转职。"/>
+    </imgdir>
+    <imgdir name="novice7"></imgdir>
+</imgdir>

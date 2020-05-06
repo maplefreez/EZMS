@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="ToolTipHelp.img">
+    <imgdir name="Game">
+        <imgdir name="Button">
+            <imgdir name="Shop">
+                <string name="Title" value="冒险岛ONLINE商城"/>
+                <string name="Desc" value="用现金可以购买既可爱又好看的装饰类道具、聊天道具、美发店会员卡、整形手术卡等多种的物品。"/>
+            </imgdir>
+            <imgdir name="Item">
+                <string name="Title" value="物品窗"/>
+                <string name="Desc" value="看所有物品列表的界面\n背包（物品窗）里有装备、消耗品、设置、其他道具。"/>
+            </imgdir>
+            <imgdir name="Equip">
+                <string name="Title" value="装备窗"/>
+                <string name="Desc" value="察看道具装备情况，穿、脱道具的界面\n和物品栏一起使用可装备道具。"/>
+            </imgdir>
+            <imgdir name="Stat">
+                <string name="Title" value="状态窗"/>
+                <string name="Desc" value="察看角色的详细情况和能力值的界面\n用AP可以提高多种能力值。"/>
+            </imgdir>
+            <imgdir name="Skill">
+                <string name="Title" value="技能窗"/>
+                <string name="Desc" value="可以察看各种技能的详细内容\n通过消耗技能点可以学习专门的技能。"/>
+            </imgdir>
+            <imgdir name="Chat">
+                <string name="Title" value="聊天窗"/>
+                <string name="Desc" value="与同区好友进行交流的界面。"/>
+            </imgdir>
+            <imgdir name="Menu">
+                <string name="Title" value="目录"/>
+                <string name="Desc" value="更改游戏设置和察看游戏情况的界面。\n可以更改游戏设置，系统参数可以察看\n任务情报，组队情况，社区信息。"/>
+            </imgdir>
+            <imgdir name="Whisper">
+                <string name="Title" value="悄悄话"/>
+                <string name="Desc" value="选择发送悄悄话的对象\n再次点击按钮就解除悄悄话状态。"/>
+            </imgdir>
+            <imgdir name="MapTransfer">
+                <imgdir name="Register">
+                    <string name="Title" value="增加"/>
+                    <string name="Desc" value="增加地图，最多增加5个。使用缩地石可以瞬间移动到目录中的地图。"/>
+                </imgdir>
+                <imgdir name="Delete">
+                    <string name="Title" value="删除"/>
+                    <string name="Desc" value="删除目录内的地图。"/>
+                </imgdir>
+                <imgdir name="Move">
+                    <string name="Title" value="移动"/>
+                    <string name="Desc" value="移动到指定图。如果指定的玩家和你在同一频道，可以移动到该玩家当前所在图，部分特殊地图和跨岛移动不能进行。"/>
+                </imgdir>
+            </imgdir>
+        </imgdir>
+        <imgdir name="UIWnd">
+            <imgdir name="Stat">
+                <imgdir name="0">
+                    <string name="Title" value="角色名"/>
+                    <string name="Desc" value="创建之后就不能更改。"/>
+                    <vector name="lt" x="8" y="32"/>
+                    <vector name="rb" x="55" y="47"/>
+                </imgdir>
+                <imgdir name="1">
+                    <string name="Title" value="职业分类"/>
+                    <string name="Desc"
+                            value="新手可以转职的职业有以下四种：战士，弓箭手，魔法师，飞侠。转职为战士，等级10级，力气35以上，在战士村转职；转职为弓箭手，等级10级，敏捷度25以上，在射手村转职；转职为魔法师，等级8级，智力20以上，在魔法密林转职；转职为飞侠，等级10级，敏捷度25以上，在废弃都市转职。"/>
+                    <vector name="lt" x="8" y="50"/>
+                    <vector name="rb" x="55" y="66"/>
+                </imgdir>
+                <imgdir name="2">
+                    <string name="Title" value="主要社区"/>
+                    <string name="Desc" value="该帐号加入的主要社区。"/>
+                    <vector name="lt" x="9" y="86"/>
+                    <vector name="rb" x="55" y="101"/>
+                </imgdir>
+                <imgdir name="3">
+                    <string name="Title" value="HP"/>
+                    <string name="Desc" value="表示生命状态的数值，下降到0角色就会死亡\n受到敌人的攻击或者使用特定技能时将消耗生命值，最大值为30,000。"/>
+                    <vector name="lt" x="8" y="104"/>
+                    <vector name="rb" x="55" y="119"/>
+                </imgdir>
+                <imgdir name="4">
+                    <string name="Title" value="MP"/>
+                    <string name="Desc" value="使用多种技能时需要的魔力值\n最大值为10,000点。"/>
+                    <vector name="lt" x="8" y="122"/>
+                    <vector name="rb" x="55" y="137"/>
+                </imgdir>
+                <imgdir name="5">
+                    <string name="Title" value="经验值"/>
+                    <string name="Desc" value="获得的经验数值\n战胜怪物或者完成任务后就能获得。"/>
+                    <vector name="lt" x="8" y="140"/>
+                    <vector name="rb" x="55" y="155"/>
+                </imgdir>
+                <imgdir name="6">
+                    <null name="Title"/>
+                    <null name="Desc"/>
+                    <vector name="lt" x="8" y="158"/>
+                    <vector name="rb" x="55" y="173"/>
+                </imgdir>
+                <imgdir name="7">
+                    <string name="Title" value="力量"/>
+                    <string name="Desc" value="装备重的武器或铠甲所需要的能力\n是决定战士攻击力的关键。"/>
+                    <vector name="lt" x="8" y="182"/>
+                    <vector name="rb" x="55" y="197"/>
+                </imgdir>
+                <imgdir name="8">
+                    <string name="Title" value="敏捷"/>
+                    <string name="Desc" value="敏捷值越高，命中率越高，敏捷\n是决定弓箭手攻击力的关键。"/>
+                    <vector name="lt" x="8" y="200"/>
+                    <vector name="rb" x="55" y="215"/>
+                </imgdir>
+                <imgdir name="9">
+                    <string name="Title" value="智力"/>
+                    <string name="Desc" value="智力值越高，魔法攻击的成功率就越高\n是决定魔法师魔力的关键\n增加智力值的方式有两种：等级增加或者使用AP增加MP。"/>
+                    <vector name="lt" x="8" y="218"/>
+                    <vector name="rb" x="55" y="233"/>
+                </imgdir>
+                <imgdir name="10">
+                    <string name="Title" value="运气"/>
+                    <string name="Desc" value="运气值越高，越敏捷也会增加n是决定飞侠攻击力和技能的关键\n这个值越高死亡时下降的经验值越少。"/>
+                    <vector name="lt" x="8" y="236"/>
+                    <vector name="rb" x="39" y="271"/>
+                </imgdir>
+                <imgdir name="11">
+                    <string name="Title" value="能力值"/>
+                    <string name="Desc"
+                            value="能力值可以提高力气，敏捷度，智力，运气和HP,MP的值。n消耗1点AP可以使力气，敏捷度，智力，运气的能力值各提高1点。n 提高HP和MP量的时候，随着角色等级的上升，能力值也不同。n 等级上升将得到5点AP。"/>
+                    <vector name="lt" x="7" y="267"/>
+                    <vector name="rb" x="84" y="280"/>
+                </imgdir>
+            </imgdir>
+            <imgdir name="StatDetail">
+                <imgdir name="0">
+                    <string name="Title" value="攻击力"/>
+                    <string name="Desc"
+                            value="这个值决定攻击的强度\n攻击力大小的决定因素：战士/魔法师是力气＋武器攻击力；弓箭手是敏捷度+武器攻击力；飞侠是力气、敏捷度、运气决定攻击力。\n以上的能力值加上武器的攻击就是一般攻击力。"/>
+                    <vector name="lt" x="10" y="11"/>
+                    <vector name="rb" x="74" y="27"/>
+                </imgdir>
+                <imgdir name="1">
+                    <string name="Title" value="防御力"/>
+                    <string name="Desc" value="防御一般攻击的能力值\n由角色装备的所有防御道具的防御能力来决定。"/>
+                    <vector name="lt" x="10" y="29"/>
+                    <vector name="rb" x="74" y="45"/>
+                </imgdir>
+                <imgdir name="2">
+                    <string name="Title" value="魔力"/>
+                    <string name="Desc" value="使用魔法成功率和魔法攻击力的能力值\n由角色装备道具的魔力和智力来决定。"/>
+                    <vector name="lt" x="10" y="47"/>
+                    <vector name="rb" x="74" y="63"/>
+                </imgdir>
+                <imgdir name="3">
+                    <string name="Title" value="魔法防御力"/>
+                    <string name="Desc" value="防御魔法攻击的能力值\n由角色装备的所有魔法防御道具的魔法防御力来决定。"/>
+                    <vector name="lt" x="10" y="65"/>
+                    <vector name="rb" x="74" y="81"/>
+                </imgdir>
+                <imgdir name="4">
+                    <string name="Title" value="命中率"/>
+                    <string name="Desc" value="决定一般攻击命中率的能力值\n命中率高一般攻击更有效\n由敏捷度和所装备的道具来决定。"/>
+                    <vector name="lt" x="10" y="83"/>
+                    <vector name="rb" x="74" y="99"/>
+                </imgdir>
+                <imgdir name="5">
+                    <string name="Title" value="回避率"/>
+                    <string name="Desc" value="回避一般攻击的能力值\n数值越高，回避攻击率越高\n由敏捷度，运气，道具装备的情况来决定。"/>
+                    <vector name="lt" x="10" y="101"/>
+                    <vector name="rb" x="74" y="117"/>
+                </imgdir>
+                <imgdir name="6">
+                    <null name="Title"/>
+                    <null name="Desc"/>
+                    <vector name="lt" x="10" y="119"/>
+                    <vector name="rb" x="74" y="135"/>
+                </imgdir>
+                <imgdir name="7">
+                    <string name="Title" value="移动速度"/>
+                    <string name="Desc" value="随着道具装备情况和技能的不同而改变。"/>
+                    <vector name="lt" x="10" y="137"/>
+                    <vector name="rb" x="74" y="153"/>
+                </imgdir>
+                <imgdir name="8">
+                    <string name="Title" value="跳跃力"/>
+                    <string name="Desc" value="可能跳跃的最大数值\n随着道具装备情况和技能的不同而改变。"/>
+                    <vector name="lt" x="10" y="155"/>
+                    <vector name="rb" x="74" y="171"/>
+                </imgdir>
+            </imgdir>
+        </imgdir>
+    </imgdir>
+    <imgdir name="Shop">
+        <imgdir name="Button">
+            <imgdir name="BuyAvatar">
+                <string name="Title" value="购买试穿商品"/>
+                <string name="Desc" value="买角色已装备的物品\n不包括原来所有的物品。"/>
+            </imgdir>
+            <imgdir name="DefaultAvatar">
+                <string name="Title" value="取消预览"/>
+                <string name="Desc" value="角色恢复原样"/>
+            </imgdir>
+            <imgdir name="Rebate">
+                <string name="Title" value="商品退购"/>
+                <string name="Desc" value="退购用点券购买的道具可按一定比率增加抵用券。"/>
+            </imgdir>
+            <imgdir name="ExEquip">
+                <string name="Title" value="增加装备窗"/>
+                <string name="Desc" value="增加4个（1列）装备栏的空格\n需要600点券。"/>
+            </imgdir>
+            <imgdir name="ExConsume">
+                <string name="Title" value="增加消费窗"/>
+                <string name="Desc" value="增加4个（1列）消费栏的空格\n需要600点券。"/>
+            </imgdir>
+            <imgdir name="ExInstall">
+                <string name="Title" value="增加设置窗"/>
+                <string name="Desc" value="增加4个（1列）设置栏的空格\n需要600点券。"/>
+            </imgdir>
+            <imgdir name="ExEtc">
+                <string name="Title" value="增加其他窗"/>
+                <string name="Desc" value="增加4个（1列）其他栏的空格\n需要600点券。"/>
+            </imgdir>
+            <imgdir name="Charge">
+                <string name="Title" value="点券充值"/>
+                <null name="Desc"/>
+            </imgdir>
+            <imgdir name="Check">
+                <string name="Title" value="剩余点券"/>
+                <string name="Desc" value="该帐号剩余的点券。"/>
+            </imgdir>
+            <imgdir name="Coupon">
+                <string name="Title" value="道具卡兑换"/>
+                <string name="Desc" value="把所有的道具利用卡换成道具。"/>
+            </imgdir>
+            <imgdir name="TakeoffAvatar">
+                <string name="Title" value="原型"/>
+                <string name="Desc" value="恢复角色原始造型"/>
+            </imgdir>
+        </imgdir>
+    </imgdir>
+</imgdir>
