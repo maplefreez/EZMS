@@ -126,7 +126,7 @@ public class PacketCreator {
         // 头信息。
         writeCommonEquipmentItemInfoHeader (writer, equipment);
         writer.writeByte (equipment.getRemainingenhance ());
-        writer.writeByte ((byte) equipment.getLevel ()); // 装备等级，貌似是需要几级才能戴在身上？
+        writer.writeByte ((byte) equipment.getUpgradeTimes()); // 装备已经强化的次数
         writer.writeShort(equipment.getExtrastr ());
         writer.writeShort(equipment.getExtradex ());
         writer.writeShort(equipment.getExtraint ());
@@ -134,14 +134,16 @@ public class PacketCreator {
         writer.writeShort(equipment.getExtraHP ());
         writer.writeShort(equipment.getExtraMP ());
 
+        /* 装备的要求信息，比如要求等级，要求敏捷等等，
+        都不用从服务器传回，客户端自有WZ数据。 */
         writer.writeShort(equipment.getExtraattack ());// 物理攻击
         writer.writeShort(equipment.getExtraMagic ());// 魔法攻击
         writer.writeShort(equipment.getExtraphydef ());// 物理防御
         writer.writeShort(equipment.getExtramgcdef ());// 魔法防御
 
-        writer.writeShort (equipment.getHitPercentage ());   // 不知道是什么。可能是命中率
+        writer.writeShort (equipment.getHitPercentage ());   // 命中率
         writer.writeShort (equipment.getExtradodge ()); // 回避率
-        writer.writeShort ((short) 0);  // TODO... equipment.getHands()不知道是什么。
+        writer.writeShort (equipment.getJuggle ());  // 手技
         writer.writeShort (equipment.getExtraspeed ());  // 速度
         writer.writeShort (equipment.getExtrajump ());   // 跳跃
         writer.writeMapleStoryASCIIString (equipment.getOwnerName ());  // 制作者信息。
@@ -159,7 +161,7 @@ public class PacketCreator {
 //            mplew.write(0);
 //        }
 
-        /* 装备耐久度。目前置位最大值。  */
+        /* 装备耐久度。目前置位最大值。此值貌似没用。  */
         long time = getItemElapseTime (-1);
         writer.writeLong (time);
     }

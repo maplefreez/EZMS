@@ -69,8 +69,8 @@ public class MapleEquipment extends MapleItem {
 	//额外增加的运气，来自卷轴强化
 	private short extraluk;
 
-    // 穿戴需要的等级。
-	private short level;
+    // 装备强化的次数。即砸了多少此卷。
+	private short upgradeTimes;
 
 	//额外提升的HP'
 	private short extraHP;
@@ -103,6 +103,9 @@ public class MapleEquipment extends MapleItem {
 
 	// 额外增加的暴击，来自卷轴强化
 	private byte extravicious;
+
+	// 提升角色的手技。
+	private byte juggle;
 
 	public MapleEquipment () { super (); }
 
@@ -287,11 +290,19 @@ public class MapleEquipment extends MapleItem {
         this.hitPercentage = hitPercentage;
     }
 
-    public short getLevel() {
-        return level;
+    public byte getJuggle() {
+        return juggle;
     }
 
-    public void setLevel(short level) {
-        this.level = level;
+    public void setJuggle(byte juggle) {
+        this.juggle = juggle;
+    }
+
+    public short getUpgradeTimes() {
+        return upgradeTimes;
+    }
+
+    public void setUpgradeTimes(short upgradeTimes) {
+        this.upgradeTimes = upgradeTimes;
     }
 }
