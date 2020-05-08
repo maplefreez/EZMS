@@ -65,7 +65,7 @@ public class PacketCreator {
         writer.writeByte (role.getSkin());
         writer.writeInt (role.getFace());
         writer.writeInt (role.getHair());
-        writer.writeLong (0);  // // Pet SN
+        writer.writeLong (0L);  // // Pet SN
         writer.writeByte (role.getLevel ());
         writer.writeShort (role.getJob());
         writer.writeShort (role.getStrength ());

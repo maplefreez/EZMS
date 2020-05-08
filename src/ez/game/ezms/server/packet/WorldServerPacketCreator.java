@@ -41,7 +41,7 @@ public class WorldServerPacketCreator extends PacketCreator {
         PacketStreamLEWriter writer = new PacketStreamLEWriter (256);
 
         writer.writeByte ((byte) SendPacketOptCode.LOGIN_WORLDSERVER.getCode ());
-        writer.writeInt (1);   // 频道ID。
+        writer.writeInt (2);   // 频道ID。暂时我还无法获取到这个ID。
         writer.writeByte ((byte) 0);
         writer.writeByte ((byte) 1);
         writer.writeInt (RandomHelper.nextInt());
@@ -85,21 +85,24 @@ public class WorldServerPacketCreator extends PacketCreator {
         List <MapleEquipment> commonEquipments =
                 role.getArmedEquipped ().getArmedEquipmentList (false);
         for (MapleEquipment eq : commonEquipments)
-            writeEquipmentItemInfo (writer, eq);
+            eq.writeVerbosePacketEntityInto (writer);
+//            writeEquipmentItemInfo (writer, eq);
         writer.writeByte ((byte) 0);
 
         /* 已经穿在身上的现金装备。 */
         List <MapleEquipment> cashEquipments =
                 role.getArmedEquipped ().getArmedEquipmentList (true);
         for (MapleEquipment cashEq : cashEquipments)
-            writeEquipmentItemInfo (writer, cashEq);
+            cashEq.writeVerbosePacketEntityInto (writer);
+//            writeEquipmentItemInfo (writer, cashEq);
         writer.writeByte ((byte) 0);
 
         /* 背包中的装备。 */
         writer.writeByte (role.getKnapsack().getEquipmentCapacity ());
         List <MapleEquipment> equipments = role.getKnapsack ().getEquipments ();
         for (MapleEquipment equipment : equipments)
-            writeEquipmentItemInfo (writer, equipment);
+            equipment.writePacketEntityInto (writer);
+//            writeEquipmentItemInfo (writer, equipment);
         writer.writeByte ((byte) 0);
 
         /* 背包中的消耗。 */

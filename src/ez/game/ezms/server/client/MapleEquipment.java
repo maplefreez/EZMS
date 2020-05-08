@@ -1,5 +1,9 @@
 package ez.game.ezms.server.client;
 
+import com.sun.xml.internal.ws.api.message.Packet;
+import ez.game.ezms.server.packet.MaplePacket;
+import ez.game.ezms.server.packet.MaplePacket.PacketStreamLEWriter;
+
 /**
  * 人物装备实体，先这么设计，后续会有很多改动。
  */
@@ -111,6 +115,59 @@ public class MapleEquipment extends MapleItem {
 
 	public MapleEquipment (long WZID) {
 	    super (WZID);
+    }
+
+
+    public byte [] getPacketEntity () {
+	    PacketStreamLEWriter writer = new PacketStreamLEWriter (3);
+        writePacketEntityInto (writer);
+        return writer.generate ().getByteArray();
+    }
+
+    public void writePacketEntityInto (PacketStreamLEWriter buffer) {
+	    buffer.writeByte (this.posCode);  // position code
+        buffer.writeInt ((int) super.getWZID ()); // WZ ID
+    }
+
+    /**
+     * 获取
+     * @return
+     */
+    public byte [] getVerbosePacketEntity () {
+        PacketStreamLEWriter writer = new PacketStreamLEWriter (256);
+        writeVerbosePacketEntityInto (writer);
+        return writer.generate ().getByteArray ();
+    }
+
+    public void writeVerbosePacketEntityInto (PacketStreamLEWriter writer) {
+//        writer.writeByte (this.posCode);
+//        writeCommonEquipmentItemInfoHeader (writer, equipment);
+        writePacketEntityInto (writer);
+        writer.writeByte ((byte) 0);
+        writer.writeLong (150842304000000000L); // ElapseTime
+
+        writer.writeByte (remainingenhance);
+        writer.writeByte ((byte) upgradeTimes); // 装备已经强化的次数
+        writer.writeShort (extrastr);
+        writer.writeShort (extradex);
+        writer.writeShort (extraint);
+        writer.writeShort (extraluk);
+        writer.writeShort (extraHP);
+        writer.writeShort (extraMP);
+
+        /* 装备的要求信息，比如要求等级，要求敏捷等等，
+        都不用从服务器传回，客户端自有WZ数据。 */
+        writer.writeShort (extraattack);// 物理攻击
+        writer.writeShort (extraMagic);// 魔法攻击
+        writer.writeShort (extraphydef);// 物理防御
+        writer.writeShort (extramgcdef);// 魔法防御
+
+        writer.writeShort (hitPercentage);   // 命中率
+        writer.writeShort (extradodge); // 回避率
+        writer.writeShort (juggle);  // 手技
+        writer.writeShort (extraspeed);  // 速度
+        writer.writeShort (extrajump);   // 跳跃
+        writer.writeMapleStoryASCIIString (ownerName);  // 制作者信息。
     }
 
     public boolean getIsCash() {

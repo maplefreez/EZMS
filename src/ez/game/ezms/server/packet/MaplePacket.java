@@ -61,7 +61,7 @@ public class MaplePacket {
          *              缓冲大小在运行中会根据写入数据
          *              情况自扩大，直到2^31-1大小。
          */
-        PacketStreamLEWriter(int size) {
+        public PacketStreamLEWriter(int size) {
             buffer = new byte [size];
             idx = 0x0;
         }
