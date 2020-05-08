@@ -4,6 +4,7 @@ import ez.game.ezms.conf.ServerConfig;
 import ez.game.ezms.constance.DefaultConf;
 import ez.game.ezms.mina.MapleCodecFactory;
 import ez.game.ezms.server.channel.WorldChannel;
+import ez.game.ezms.server.client.MapleClient;
 import ez.game.ezms.server.world.handle.WorldServerHandler;
 
 import org.apache.mina.core.buffer.IoBuffer;
@@ -17,6 +18,8 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 /**
  * 世界服务器实例。比如“蓝蜗牛”、“白雪人”、“章鱼怪”等。
@@ -26,6 +29,22 @@ import java.net.InetSocketAddress;
 public class WorldServer {
 
     private WorldChannel [] channelList;
+
+    /**
+     * 登录此世界服务器的角色。角色ID -> 客户端实体。
+     * 最初由LoginServer收到客户端登入世界服务器请求后加入此
+     * 表中。
+     */
+    private ConcurrentHashMap <Integer, MapleClient> loginRoles;
+
+    /**
+     * 暂时存放将要登录的账号，因为用户仍然没有选定角色，所以此时只能
+     * 以账号ID作为key，客户端实体作为value。待客户端与世界服务器
+     * 成功握手并开始进入世界时，此处的实体会被移动到loginRoles容器。
+     *
+     * LoginServer的RoleListReq响应会将实体写入此容器。
+     */
+    private ConcurrentHashMap <Integer, MapleClient> rolesWillLogin;
 
     /**
      * 世界服务器的中文名字，比如“蓝蜗牛”，“红螃蟹”;
@@ -108,6 +127,7 @@ public class WorldServer {
         this.isRunning = false;
         this.isInitialized = false;
         this.serverName = name;
+        this.loginRoles = new ConcurrentHashMap <> ();
     }
 
     /**
@@ -190,6 +210,42 @@ public class WorldServer {
     }
 
     /**
+     * 在登录世界以前，先将客户端实体存入此世界服务器。
+     * 此时先存入暂存容器。
+     */
+    public void beforeRoleLogin (MapleClient client) {
+        this.rolesWillLogin.put (client.getRole().getID(), client);
+    }
+
+    /**
+     * 客户端成功与世界服务器握手后将尝试进入地图，此时世界服务器
+     * 会将暂存容器中的客户端实例移入登录容器。
+     * @param client
+     */
+    public boolean roleLoginServer (MapleClient client) {
+        int accountID = client.getAccountDBID ();
+        this.rolesWillLogin.remove (accountID);
+
+        int channelID = client.getChannelID ();
+        WorldChannel channelEntity = this.getWorldChannel (channelID);
+        if (channelEntity == null) return false;
+
+        // TODO... 做一些频道的登记工作。
+
+        this.loginRoles.put (client.getRole ().getID (), client);
+        return true;
+    }
+
+    /**
+     * 根据角色ID查找角色的客户端实体。
+     * 若不存在返回NULL。
+     * @return
+     */
+    public MapleClient getLoginRoleByRoleID (int ID) {
+        return this.loginRoles.get (ID);
+    }
+
+    /**
      * 根据Channel的ID得到实例。
      * ID从0开始。最多20个。
      *
@@ -245,7 +301,7 @@ public class WorldServer {
         return this.isUsage;
     }
 
-    private boolean getIsRunning () {
+    public boolean getIsRunning () {
         return this.isRunning;
     }
 

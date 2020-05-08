@@ -47,7 +47,6 @@ public class LoginHandler extends IoHandlerAdapter {
         MapleClient client = new MapleClient (sendCypher, recvCypher, session);
 
         session.setAttribute (ServerConstants.CLIENT_ENTITY_KEY, client);
-//        LoginServer.getEntity ().addClient (client.getAccountDBID (), client);
 
         // 创建握手报文
         MaplePacket packet = LoginServerPacketCreator.createShakeHands();

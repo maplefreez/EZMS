@@ -1,6 +1,8 @@
 package ez.game.ezms.server.client;
 
 
+import ez.game.ezms.server.world.WorldServer;
+import ez.game.ezms.server.world.WorldServerSet;
 import ez.game.ezms.tools.MapleAESOFB;
 import org.apache.mina.core.session.IoSession;
 
@@ -93,6 +95,10 @@ public class MapleClient {
     public void enterWorldAndChannel (byte serverID, byte channelID) {
         this.worldID = serverID;
         this.channelID = channelID;
+        WorldServer server = WorldServerSet.getWorldServer (worldID);
+
+        /* 目前只是暂时进入。 */
+        if (server != null) server.beforeRoleLogin (this);
     }
 
     public byte getWorldID () {

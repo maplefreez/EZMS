@@ -45,6 +45,7 @@ public class RoleListReq implements OptionFunc {
             return;
         }
 
+        /* 两者写入客户端实体。 */
         client.enterWorldAndChannel ((byte) serverID, (byte) channelID);
 
         /* 查找数据库中当前服务器用户创建的角色信息。 */

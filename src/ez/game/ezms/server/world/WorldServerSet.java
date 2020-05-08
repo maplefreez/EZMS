@@ -44,10 +44,23 @@ public final class WorldServerSet {
     };
 
     /**
+     * 根据世界服务器的ID得到服务器实体。若不存在或者
+     * 服务器没有成功运行，则返回NULL。
+     *
+     * @return  世界服务器实体
+     */
+    public static WorldServer getWorldServer (int ID) {
+        if (ID >= serverSet.length || ID <= 0) return null;
+
+        WorldServer server = serverSet [ID];
+        return server.getIsRunning () ? server : null;
+    }
+
+    /**
      * 当前正在运行的或者已经完成初始化的所有服务器。
      */
-    private static volatile List<WorldServer> aliveServers
-            = new ArrayList <> (serverSet.length);
+//    private static volatile List <WorldServer> aliveServers
+//            = new ArrayList <> (serverSet.length);
 
     /**
      * 别从外部创建此实例。用不着。
@@ -96,12 +109,14 @@ public final class WorldServerSet {
      */
     public static boolean run () {
         int serverID = 0;
+        int count = 0;
 
         for (; serverID < serverSet.length; ++ serverID) {
             WorldServer server = serverSet [serverID];
             try {
                 server.run ();
-                aliveServers.add (server);
+//                aliveServers.add (server);
+                count ++;
             } catch (IOException ex) {
                 // 此WorldServer失败，不影响运行下一个。
                 // 但失败的必须从容器中删除。
@@ -109,7 +124,7 @@ public final class WorldServerSet {
             }
         }
 
-        return ! aliveServers.isEmpty ();
+        return count > 0;
     }
 
 

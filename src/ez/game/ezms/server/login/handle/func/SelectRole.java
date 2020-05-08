@@ -17,10 +17,16 @@ import org.apache.mina.core.session.IoSession;
  */
 public class SelectRole implements OptionFunc {
 
+    /**
+     * 报文格式：
+     *
+     * @param message
+     * @param session
+     */
     @Override
     public void process (byte [] message, IoSession session) {
         PacketStreamLEReader reader = new PacketStreamLEReader (message);
-        int roleID = reader.readInt ();
+        int roleID = reader.readInt (); // 角色ID，数据库ID。
 
         MapleClient client = null;
         try {
@@ -30,8 +36,17 @@ public class SelectRole implements OptionFunc {
             return;
         }
 
+        // 世界服务器编码。
         int worldID = client.getWorldID ();
-        WorldServer worldServer = WorldServerSet.serverSet [worldID];
+        WorldServer worldServer = WorldServerSet.getWorldServer (worldID);
+
+        if (worldServer == null) {
+            /* 此处是失败报文。不应该会运行于此。 */
+            return;
+        }
+
+        /* 登录到具体的频道。 */
+        worldServer.roleLoginServer (client);
 
         /* 创建世界服务器地址报文并发送。 */
         MaplePacket packet = LoginServerPacketCreator.createWorldServerAddress (
