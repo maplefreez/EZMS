@@ -34,8 +34,8 @@ public class Start {
      * 1、部分全局变量初始化。
      * 2、主配置文件加载。
      * 3、数据源加载（MySQL数据库）
-     * 4、世界服务器（WorldServer）
-     * 5、登录服务器（LoginServer）
+     * 4、登录服务器（LoginServer）
+     * 5、世界服务器（WorldServer）
      * 6、频道服务器组（ChannelServer）
      *
      * 注：此方法只能调用一次。
@@ -54,7 +54,10 @@ public class Start {
      */
     private static void initializeDataSource () {
         /* MySQL数据库连接池。 */
-        DBDataSource.getOrInitializeDBDataSource ();
+        if (null == DBDataSource.getOrInitializeDBDataSource ()) {
+            System.out.println ("Cannot initalize database pool, Process will exit.");
+            System.exit (0);
+        }
 
         /* WZ 数据 */
         try {
@@ -63,6 +66,7 @@ public class Start {
             /* 在失败的情况下应该直接结束，
             * 服务器运行不正常。 */
             ex.printStackTrace ();
+            System.err.println ("Cannot load WZ Data. Process will exit.");
             System.exit (0);
         }
 
@@ -77,7 +81,10 @@ public class Start {
         try {
             loginServer = LoginServer.initialize (mainConfig);
         } catch (LoginServerException ex) {
-            // 日志输出。
+            /* 异常直接退出。 */
+            ex.printStackTrace ();
+            System.err.println ("Cannot initialize LoginServer, process will exit.");
+            System.exit (0);
         }
     }
 
@@ -149,7 +156,7 @@ public class Start {
 
     /**
      * 入口函数。
-     * @param args
+     * @param args  参数暂不使用。
      */
     public static void main (String [] args) {
         initialize ();

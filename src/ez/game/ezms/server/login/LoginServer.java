@@ -30,11 +30,6 @@ import java.util.HashMap;
  * 单例模式运行。
  */
 public class LoginServer {
-//    /**
-//     * 此键用于存储client实例，每个Client实例保存在session中，
-//     * 暂且在此处定义这个键值。
-//     */
-//    public final static String CLIENT_ENTITY_KEY = "ClientEntity";
 
     /**
      * 单例
@@ -120,11 +115,9 @@ public class LoginServer {
         // 配置工作。
         singleton.setUserMaxOnline (conf.getInt ("user.maxonline", 140));
         singleton.setServerName(conf.getString ("server.name", "EZMS"));
-//        flag = ServerProperties.getProperty("flag", (byte) 3);
         singleton.setMaintain(conf.getBoolean ("server.maintain", false));
         singleton.setMaxCharacters (conf.getInt ("user.maxcharacter", 30));
         singleton.setAutoRegister (conf.getBoolean ("server.autoreg", false));
-//        checkMacs = Boolean.parseBoolean(ServerProperties.getProperty("checkMacs", "false"));
         singleton.setPort (conf.getShort ("server.login.port", DefaultConf.DEF_LOGINSRV_PORT));
 
         return singleton;
@@ -148,8 +141,6 @@ public class LoginServer {
      * @throws LoginServerException
      */
     public void run () throws LoginServerException {
-//        LoginServer server = LoginServer.getEntity ();
-
         //// 此处使用Apache mina库。
         IoBuffer.setUseDirectBuffer(false);
         IoBuffer.setAllocator(new SimpleBufferAllocator());
