@@ -104,10 +104,6 @@ public final class MapleClient {
     public void enterWorldAndChannel (byte serverID, byte channelID) {
         this.worldID = serverID;
         this.channelID = channelID;
-        WorldServer server = WorldServerSet.getWorldServer (worldID);
-
-        /* 目前只是暂时进入。 */
-        if (server != null) server.beforeRoleLogin (this);
     }
 
     public byte getWorldID () {
@@ -132,6 +128,14 @@ public final class MapleClient {
 
     public MapleAESOFB getSendCrypto() {
         return sndCypher;
+    }
+
+    public void setSndCypher(MapleAESOFB sndCypher) {
+        this.sndCypher = sndCypher;
+    }
+
+    public void setRcvCypher(MapleAESOFB rcvCypher) {
+        this.rcvCypher = rcvCypher;
     }
 
     public void setAccountEntity (MapleAccount account) {

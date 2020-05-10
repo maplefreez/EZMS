@@ -52,6 +52,8 @@ public class RoleListReq implements OptionFunc {
 
         /* 查找数据库中当前服务器用户创建的角色信息。 */
         List<MapleRole> roles = searchRolesInfo (account.getId (), serverID);
+        account.setRoles (roles);
+
         MaplePacket packet = LoginServerPacketCreator.createListCharacter (roles);
         session.write (packet.getByteArray ());
     }

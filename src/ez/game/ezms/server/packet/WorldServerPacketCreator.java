@@ -15,16 +15,20 @@ public class WorldServerPacketCreator extends PacketCreator {
 
     /**
      * 创建握手报文。
+     * @param recvIV  解密秘钥
+     * @param sndIV   加密秘钥
      *
-     * @return
+     * @return 报文
      */
-    public static MaplePacket createShakeHands (MapleClient client) {
+    public static MaplePacket createShakeHands (byte [] recvIV, byte [] sndIV) {
         PacketStreamLEWriter packet = new PacketStreamLEWriter (16);
         packet.writeShort ((short) 0x0E); // 13 = MSEA, 14 = GlobalMS, 15 = EMS
         packet.writeShort (ServerConstants.MAPLE_VERSION);
         packet.writeMapleStoryASCIIString (ServerConstants.MAPLE_PATCH);
-        packet.writeByteArray (client.getReceiveIV ());
-        packet.writeByteArray (client.getSendIV ());
+        packet.writeByteArray (recvIV);
+        packet.writeByteArray (sndIV);
+//        packet.writeByteArray (client.getReceiveIV ());
+//        packet.writeByteArray (client.getSendIV ());
         packet.writeByte (ServerConstants.MAPLE_LOCATECODE); // 7 = MSEA, 8 = GlobalMS, 5 = Test Server
 
         /* 组装登录验证的握手分组，并且发回给用户。 */

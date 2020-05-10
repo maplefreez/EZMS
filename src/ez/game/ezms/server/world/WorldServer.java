@@ -38,15 +38,6 @@ public class WorldServer {
      */
     private ConcurrentHashMap <Integer, MapleClient> loginRoles;
 
-    /** 账号ID -> 客户端实体。
-     * 暂时存放将要登录的账号，因为用户仍然没有选定角色，所以此时只能
-     * 以账号ID作为key，客户端实体作为value。待客户端与世界服务器
-     * 成功握手并开始进入世界时，此处的实体会被移动到loginRoles容器。
-     *
-     * LoginServer的RoleListReq响应会将实体写入此容器。
-     */
-    private ConcurrentHashMap <Integer, MapleClient> rolesWillLogin;
-
     /**
      * 世界服务器的中文名字，比如“蓝蜗牛”，“红螃蟹”;
      */
@@ -209,15 +200,6 @@ public class WorldServer {
     }
 
     /**
-     * 在登录世界以前，先将客户端实体存入此世界服务器。
-     * 此时先存入暂存容器。先由账号ID作为键。
-     */
-    public void beforeRoleLogin (MapleClient client) {
-        MapleAccount account = client.getAccountEntity ();
-        this.rolesWillLogin.put (account.getId (), client);
-    }
-
-    /**
      * 角色从此服务器退出。服务器将此客户端实例从服务器
      * 容器中移除。两个容器中的实例都会尝试删除。
      */
@@ -227,7 +209,6 @@ public class WorldServer {
 
         /* 移除 */
         this.loginRoles.remove (role.getID ());
-        this.rolesWillLogin.remove (account.getId ());
     }
 
     /**
@@ -242,7 +223,7 @@ public class WorldServer {
         MapleAccount account = client.getAccountEntity ();
 
         /* 移除预登录容器。 */
-        this.rolesWillLogin.remove (account.getId ());
+        WorldServerSet.removeCacheClientByID(role.getID ());
         int channelID = client.getChannelID ();
         WorldChannel channelEntity = this.getWorldChannel (channelID);
         if (channelEntity == null) return false;

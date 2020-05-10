@@ -190,6 +190,35 @@ public class MapleRole implements Cloneable {
         }
     }
 
+    /**
+     * 从数据库加载五个种类的背包物品信息。
+     */
+    public void loadAllItemsFromDB () {
+
+    }
+
+    /**
+     * 从数据库加载角色的装备信息（仅穿戴在身上的）。
+     */
+    public void loadArmedEquipmentFromDB () {
+
+    }
+
+    /**
+     * 从数据库加载角色的任务信息。
+     */
+    public void loadQuestDataFromDB () {
+
+    }
+
+    /**
+     * 从数据库加载角色的技能信息。
+     */
+    public void loadSkillDataFromDB () {
+
+    }
+
+
 
     /**
      * 创建一个默认的角色，有很多属性都会进行初始化。

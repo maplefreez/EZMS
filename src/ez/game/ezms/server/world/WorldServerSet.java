@@ -1,10 +1,14 @@
 package ez.game.ezms.server.world;
 
 import ez.game.ezms.conf.ServerConfig;
+import ez.game.ezms.server.client.MapleAccount;
+import ez.game.ezms.server.client.MapleClient;
+import ez.game.ezms.server.client.MapleRole;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 所有的世界服务器都在此处初始化和定义，
@@ -15,6 +19,34 @@ public final class WorldServerSet {
      * 已经完成初始化的服务器数。
      */
     private static volatile int initializedCount;
+
+    /** 角色ID -> 客户端实体。
+     */
+    private static ConcurrentHashMap <Integer, MapleClient> rolesWillLogin;
+    static {
+        rolesWillLogin = new ConcurrentHashMap <> ();
+    }
+
+    /**
+     * 在登录世界以前，先将客户端实体存入此世界服务器。
+     * 此时先存入暂存容器。先由账号ID作为键。
+     */
+    public static void beforeRoleLogin (MapleClient client) {
+        MapleAccount account = client.getAccountEntity ();
+        rolesWillLogin.put (account.getCurrentLoginRole ().getID (), client);
+    }
+
+    /**
+     * 角色登录到指定的世界服务器。根据角色ID得到客户端实体。调用此函数将
+     * 容器中的客户端实体移除。
+     */
+    public static MapleClient removeCacheClientByID (int roleID) {
+        MapleClient client = rolesWillLogin.get (roleID);
+
+        /* 移除 */
+        rolesWillLogin.remove (roleID);
+        return client;
+    }
 
     /**
      * 存储所有服务器的实例。不要出现null占位。
@@ -47,20 +79,15 @@ public final class WorldServerSet {
      * 根据世界服务器的ID得到服务器实体。若不存在或者
      * 服务器没有成功运行，则返回NULL。
      *
+     * @param ID   从0开始。
      * @return  世界服务器实体
      */
     public static WorldServer getWorldServer (int ID) {
-        if (ID >= serverSet.length || ID <= 0) return null;
+        if (ID >= serverSet.length || ID < 0) return null;
 
         WorldServer server = serverSet [ID];
         return server.getIsRunning () ? server : null;
     }
-
-    /**
-     * 当前正在运行的或者已经完成初始化的所有服务器。
-     */
-//    private static volatile List <WorldServer> aliveServers
-//            = new ArrayList <> (serverSet.length);
 
     /**
      * 别从外部创建此实例。用不着。

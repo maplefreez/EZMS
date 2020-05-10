@@ -75,7 +75,9 @@ public class MaplePacketEncoder implements ProtocolEncoder {
         } else {
             // 若仍然没有完成握手，则什么加密都不做，直接发送原始报文。
             // 目前只有握手时才会来到这个部分。
-            client.setHasShakeHand (true);
+            // LoginServer可以直接设置握手标志位，但WorldServer设置不了，
+            // 因为握手结束时还拿不到客户端实体。所以WorldServer不设置。
+            if (client != null) client.setHasShakeHand (true);
             out.write(IoBuffer.wrap ((byte[]) message));
         }
     }

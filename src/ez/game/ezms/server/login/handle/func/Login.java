@@ -48,6 +48,7 @@ public class Login implements OptionFunc {
             /* 验证成功 */
             /* 信息填充到client。 */
             MapleAccount account = new MapleAccount (acc);
+            account.setPassword (null);  // 清除密码。不存在服务端。
             client.setAccountEntity (account);
             /* 回送登录成功消息。 */
             pushLoginSuccessMessage (client);

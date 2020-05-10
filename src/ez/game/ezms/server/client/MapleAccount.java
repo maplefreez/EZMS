@@ -65,12 +65,25 @@ public class MapleAccount extends Account {
      * @param idx   索引，保证idx 范围 [0, 2]，调用者务必谨慎。
      * @return  返回下一个可以插入的位置。若插入满了返回-1.
      */
-    public int setRole (MapleRole role, int idx) {
+    private int setRole (MapleRole role, int idx) {
         int slot1 = getRoleSlotToBeSet ();
         if (idx > 2 || idx < 0) return slot1;
 
         if (slot1 >= 0) this.roles [idx ++] = role;
         return idx > 2 ? -1 : idx;
+    }
+
+    /**
+     * 将最多三个角色实例设置到三个角色槽。
+     *
+     * @param rs
+     */
+    public void setRoles (List <MapleRole> rs) {
+        int i = 0;
+        for (MapleRole r : rs) {
+            setRole(r, i ++);
+            if (i >= 3) return;
+        }
     }
 
     /**

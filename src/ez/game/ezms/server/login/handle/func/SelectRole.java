@@ -3,6 +3,7 @@ package ez.game.ezms.server.login.handle.func;
 import ez.game.ezms.constance.ServerConstants;
 import ez.game.ezms.server.client.MapleAccount;
 import ez.game.ezms.server.client.MapleClient;
+import ez.game.ezms.server.client.MapleRole;
 import ez.game.ezms.server.login.LoginServer;
 import ez.game.ezms.server.packet.LoginServerPacketCreator;
 import ez.game.ezms.server.packet.MaplePacket;
@@ -49,8 +50,8 @@ public class SelectRole implements OptionFunc {
         MapleAccount account = client.getAccountEntity ();
         account.loginRole (roleID);
 
-        /* 登录到具体的世界服务器。 */
-        worldServer.beforeRoleLogin (client);
+        /* 准备登录进世界服务器。先暂存在此。 */
+        WorldServerSet.beforeRoleLogin (client);
 
         /* 创建世界服务器地址报文并发送。 */
         MaplePacket packet = LoginServerPacketCreator.createWorldServerAddress (

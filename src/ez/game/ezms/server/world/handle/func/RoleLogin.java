@@ -1,6 +1,7 @@
 package ez.game.ezms.server.world.handle.func;
 
 
+import com.mysql.fabric.Server;
 import ez.game.ezms.constance.ServerConstants;
 import ez.game.ezms.server.client.MapleAccount;
 import ez.game.ezms.server.client.MapleClient;
@@ -9,6 +10,10 @@ import ez.game.ezms.server.packet.WorldServerPacketCreator;
 import ez.game.ezms.server.packet.MaplePacket;
 import ez.game.ezms.server.packet.OptionFunc;
 import ez.game.ezms.server.packet.PacketStreamLEReader;
+import ez.game.ezms.server.world.WorldServer;
+import ez.game.ezms.server.world.WorldServerSet;
+import ez.game.ezms.server.world.handle.WorldServerHandler;
+import ez.game.ezms.tools.MapleAESOFB;
 import org.apache.mina.core.session.IoSession;
 
 /**
@@ -40,22 +45,45 @@ public class RoleLogin implements OptionFunc {
         PacketStreamLEReader reader = new PacketStreamLEReader (message);
         int roleID = reader.readInt ();
 
-        MapleClient client = (MapleClient) session.getAttribute (ServerConstants.CLIENT_ENTITY_KEY);
-
-            /* 从数据库加载所有的用户数据。 */
-        MapleRole role = MapleRole.loadAllRoleDataFromDB (roleID);
-        if (role == null || client == null) {
+        MapleClient client = WorldServerSet.removeCacheClientByID (roleID);
+        if (client == null) {
             // 处理异常情况。
             return;
         }
 
-        MapleAccount account = client.getAccountEntity ();
+        MapleRole role = client.getAccountEntity ().getCurrentLoginRole ();
+        if (role == null) {
+            // 处理异常情况。
+            return;
+        }
 
-        /* TODO... 加入client中。 */
-        account.loginRole (role);
+        setTags (client, session);
+
+        /* 从数据库加载所有的用户数据。 */
+        role.loadAllItemsFromDB ();
+        role.loadSkillDataFromDB ();
+        role.loadQuestDataFromDB ();
 
         /* TODO... 发送基本角色信息。 */
         MaplePacket packet = WorldServerPacketCreator.enterWorldServer (role, role.getWorldID ());
         session.write (packet.getByteArray ());
     }
+
+
+    /**
+     * 设置相关标志位。
+     *
+     * @param client
+     * @param session
+     */
+    private void setTags (MapleClient client, IoSession session) {
+        MapleAESOFB recv = (MapleAESOFB) session.getAttribute (WorldServerHandler.RECVIV_KEY);
+        MapleAESOFB send = (MapleAESOFB) session.getAttribute (WorldServerHandler.SENDIV_KEY);
+        client.setHasShakeHand (true);
+        client.setRcvCypher (recv);
+        client.setSndCypher (send);
+
+        session.setAttribute (ServerConstants.CLIENT_ENTITY_KEY, client);
+    }
+
 }
