@@ -83,12 +83,14 @@ public final class LoginServerPacketCreator extends PacketCreator {
         packet.writeByte ((byte) SendPacketOptCode.LOGIN_RESULT.getCode ());
         packet.writeByte ((byte) 0);  // 这是原因，0为成功。
 
-        packet.writeInt (account.getId ());
-        // 早期版本角色性别由帐号控制
-        packet.writeByte (account.getGender () ? (byte) 1 : (byte) 0);
-        packet.writeByte (account.getGMlevel () > 0 ? (byte) 1 : (byte) 0);
-        packet.writeMapleStoryASCIIString (account.getAccount ());
-        packet.writeInt (account.getId ());
+        packet.writeByteArray (account.getPacketEntity ());
+
+//        packet.writeInt (account.getId ());
+//        // 早期版本角色性别由帐号控制
+//        packet.writeByte (account.getGender () ? (byte) 1 : (byte) 0);
+//        packet.writeByte (account.getGMlevel () > 0 ? (byte) 1 : (byte) 0);
+//        packet.writeMapleStoryASCIIString (account.getAccount ());
+//        packet.writeInt (account.getId ());
         packet.writeByte ((byte) 0);
 
         return packet.generate ();

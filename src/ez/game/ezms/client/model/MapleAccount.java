@@ -1,6 +1,7 @@
 package ez.game.ezms.client.model;
 
 import ez.game.ezms.client.MapleRole;
+import ez.game.ezms.server.packet.MaplePacket.PacketStreamLEWriter;
 import ez.game.ezms.sql.models.Account;
 
 import java.util.ArrayList;
@@ -101,6 +102,14 @@ public class MapleAccount extends Account {
     }
 
     /**
+     * 用在报文中的gender，男为0，女为1.
+     * @return
+     */
+    public byte getGenderCode () {
+        return (byte) (super.getGender () ? 0 : 1);
+    }
+
+    /**
      * 通过角色ID得到角色实体。
      * @return
      */
@@ -143,6 +152,25 @@ public class MapleAccount extends Account {
         // 若得到的是null，绝对不正常！ 正常情况下此处不可能出现null。
         MapleRole role = this.getRoleByID (roleID);
         loginRole (role);
+    }
+
+    /**
+     * 获取此实例的报文实体。即此实例在报文中的
+     * 序列化数据。序列化字段：
+     * ID，性别编码，GM等级，账号字符串，ID.
+     *
+     * @return  返回byte数组。
+     */
+    public byte [] getPacketEntity () {
+        PacketStreamLEWriter writer = new PacketStreamLEWriter (10
+                + super.getAccount ().length ());
+        writer.writeInt (super.getId ());
+        // 早期版本角色性别由帐号控制
+        writer.writeByte (this.getGenderCode ());
+        writer.writeByte (super.getGMlevel () > 0 ? (byte) 1 : (byte) 0);
+        writer.writeMapleStoryASCIIString (super.getAccount ());
+        writer.writeInt (super.getId ());
+        return writer.generate ().getByteArray ();
     }
 
     /**
