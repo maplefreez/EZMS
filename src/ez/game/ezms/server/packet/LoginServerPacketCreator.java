@@ -3,10 +3,7 @@ package ez.game.ezms.server.packet;
 import ez.game.ezms.SendPacketOptCode;
 import ez.game.ezms.constance.ServerConstants;
 import ez.game.ezms.server.channel.WorldChannel;
-import ez.game.ezms.server.client.MapleClient;
-import ez.game.ezms.server.client.MapleEquipment;
-import ez.game.ezms.server.client.MapleRole;
-import ez.game.ezms.server.client.MapleRoleEquipped;
+import ez.game.ezms.server.client.*;
 import ez.game.ezms.server.world.WorldServer;
 import ez.game.ezms.tools.HexTool;
 import ez.game.ezms.tools.RandomHelper;
@@ -77,20 +74,20 @@ public final class LoginServerPacketCreator extends PacketCreator {
      * @return 报文实体.
      */
     public static MaplePacket createLoginSuccess (MapleClient client) {
+        MapleAccount account = client.getAccountEntity ();
         /* 鄙人认为此处不应该直接操作packet，
         * 而应该使用一个Creator之类的辅助类才好。 */
-        PacketStreamLEWriter packet = new PacketStreamLEWriter (13 + 2 + client.getAccount ().length ());
+        PacketStreamLEWriter packet = new PacketStreamLEWriter (13 + 2 + account.getAccount ().length ());
 
         packet.writeByte ((byte) SendPacketOptCode.LOGIN_RESULT.getCode ());
         packet.writeByte ((byte) 0);  // 这是原因，0为成功。
 
-        packet.writeInt (client.getAccountDBID ());
+        packet.writeInt (account.getId ());
         // 早期版本角色性别由帐号控制
-        packet.writeByte (client.getAccountGender () ? (byte) 1 : (byte) 0);
-        // 给客户端判断是否GM,是GM客户端会给/找人命令加地图ID,有删除人物按钮,被封印后能使用技能,其他未知
-        packet.writeByte (client.getAccountGMLevel () > 0 ? (byte) 1 : (byte) 0);
-        packet.writeMapleStoryASCIIString (client.getAccount ());
-        packet.writeInt (client.getAccountDBID ());
+        packet.writeByte (account.getGender () ? (byte) 1 : (byte) 0);
+        packet.writeByte (account.getGMlevel () > 0 ? (byte) 1 : (byte) 0);
+        packet.writeMapleStoryASCIIString (account.getAccount ());
+        packet.writeInt (account.getId ());
         packet.writeByte ((byte) 0);
 
         return packet.generate ();

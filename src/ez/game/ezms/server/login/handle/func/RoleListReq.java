@@ -1,6 +1,7 @@
 package ez.game.ezms.server.login.handle.func;
 
 import ez.game.ezms.constance.ServerConstants;
+import ez.game.ezms.server.client.MapleAccount;
 import ez.game.ezms.server.client.MapleClient;
 import ez.game.ezms.server.client.MapleEquipment;
 import ez.game.ezms.server.client.MapleRole;
@@ -45,11 +46,12 @@ public class RoleListReq implements OptionFunc {
             return;
         }
 
+        MapleAccount account = client.getAccountEntity ();
         /* 两者写入客户端实体。 */
         client.enterWorldAndChannel ((byte) serverID, (byte) channelID);
 
         /* 查找数据库中当前服务器用户创建的角色信息。 */
-        List<MapleRole> roles = searchRolesInfo (client.getAccountDBID(), serverID);
+        List<MapleRole> roles = searchRolesInfo (account.getId (), serverID);
         MaplePacket packet = LoginServerPacketCreator.createListCharacter (roles);
         session.write (packet.getByteArray ());
     }

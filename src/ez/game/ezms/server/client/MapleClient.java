@@ -7,14 +7,19 @@ import ez.game.ezms.tools.MapleAESOFB;
 import org.apache.mina.core.session.IoSession;
 
 /**
- * 此对象创建于每个对话开始时，并且结束于每个对话结束。
- * 会话中的所有相关信息将会存在于此。
- * 目前主要是用作一个包装类，包装mina的session对象。
+ * 此对象是客户端的抽象，一个客户端包含一个已经登录的
+ * 账号，并且能包含服务器与客户端的通信会话信息。是服务器
+ * 与客户端交互的接口。
  */
-public class MapleClient {
+public final class MapleClient {
 
+    /* 通信用加密解密秘钥。AES */
     private MapleAESOFB sndCypher;
     private MapleAESOFB rcvCypher;
+
+    /**
+     * 通信会话。
+     */
     private IoSession session;
 
     /**
@@ -22,11 +27,15 @@ public class MapleClient {
      */
     private boolean hasShakeHand;
 
-
     /**
-     * 数据库中的账号ID，表accounts的主键。
+     * 代表客户端登录的账号。角色信息都包含于此。
      */
-    private int accountDBID;
+    public MapleAccount account;
+
+//    /**
+//     * 数据库中的账号ID，表accounts的主键。
+//     */
+//    private int accountDBID;
 
     /**
      * 账号登记的性别，早期冒险岛
@@ -35,25 +44,25 @@ public class MapleClient {
      * true -> 男(male)
      * false -> 女(female)
      */
-    private boolean accountGender;
+//    private boolean accountGender;
 
-    /**
-     * 登录的角色账号，一个Session同一时间只能登录
-     * 一个账号，当然，也可以切换，届时大部分账号属性都
-     * 会更改。
-     */
-    private String account;
+//    /**
+//     * 登录的角色账号，一个Session同一时间只能登录
+//     * 一个账号，当然，也可以切换，届时大部分账号属性都
+//     * 会更改。
+//     */
+//    private String account;
 
     /**
      * 即将要登录的角色或者当前正登录的角色。
      */
-    private MapleRole role;
+//    private MapleRole role;
 
     /**
      * 角色的GM等级，目前还没有完成这部分
      * 设计。
      */
-    private int accountGMLevel;
+//    private int accountGMLevel;
 
     /**
      * 当前登录到的世界服务器ID。默认0xFF
@@ -125,45 +134,11 @@ public class MapleClient {
         return sndCypher;
     }
 
-    public int getAccountDBID() {
-        return accountDBID;
-    }
-
-    public void setAccountDBID(int accountDBID) {
-        this.accountDBID = accountDBID;
-    }
-
-    public boolean getAccountGender() {
-        return accountGender;
-    }
-
-    public void setAccountGender(boolean accountGender) {
-        this.accountGender = accountGender;
-    }
-
-    public int getAccountGMLevel() {
-        return accountGMLevel;
-    }
-
-    public void setAccountGMLevel(int accountGMLevel) {
-        this.accountGMLevel = accountGMLevel;
-    }
-
-
-    public MapleRole getRole() {
-        return role;
-    }
-
-    public void setRole(MapleRole role) {
-        this.role = role;
-    }
-
-
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
+    public void setAccountEntity (MapleAccount account) {
         this.account = account;
+    }
+
+    public MapleAccount getAccountEntity () {
+        return this.account;
     }
 }

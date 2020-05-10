@@ -4,7 +4,9 @@ import ez.game.ezms.conf.ServerConfig;
 import ez.game.ezms.constance.DefaultConf;
 import ez.game.ezms.mina.MapleCodecFactory;
 import ez.game.ezms.server.channel.WorldChannel;
+import ez.game.ezms.server.client.MapleAccount;
 import ez.game.ezms.server.client.MapleClient;
+import ez.game.ezms.server.client.MapleRole;
 import ez.game.ezms.server.world.handle.WorldServerHandler;
 
 import org.apache.mina.core.buffer.IoBuffer;
@@ -19,7 +21,6 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedDeque;
 
 /**
  * 世界服务器实例。比如“蓝蜗牛”、“白雪人”、“章鱼怪”等。
@@ -37,7 +38,7 @@ public class WorldServer {
      */
     private ConcurrentHashMap <Integer, MapleClient> loginRoles;
 
-    /**
+    /** 账号ID -> 客户端实体。
      * 暂时存放将要登录的账号，因为用户仍然没有选定角色，所以此时只能
      * 以账号ID作为key，客户端实体作为value。待客户端与世界服务器
      * 成功握手并开始进入世界时，此处的实体会被移动到loginRoles容器。
@@ -148,7 +149,6 @@ public class WorldServer {
             dropRate = mainConf.getInt ("server.world.droprate",1);
             statLimit = mainConf.getInt ("server.world.statlimit", 999);
             loginLimit = mainConf.getInt ("server.world.loginlimit", 999);
-//            serverName = mainConf.getString ("server.world.name", "花蘑菇");  // 此处不再使用。
             port = mainConf.getShort ("server.world.port", DefaultConf.DEF_CHANNEL_PORT_START);
             ip = mainConf.getString ("server.world.interface", "127.0.0.1");
             /* 各个频道初始化。 */
@@ -196,7 +196,6 @@ public class WorldServer {
                 ") is now listening at port " + port);
     }
 
-
     /**
      * 统计服务器所有频道的在线人数。
      *
@@ -211,28 +210,49 @@ public class WorldServer {
 
     /**
      * 在登录世界以前，先将客户端实体存入此世界服务器。
-     * 此时先存入暂存容器。
+     * 此时先存入暂存容器。先由账号ID作为键。
      */
     public void beforeRoleLogin (MapleClient client) {
-        this.rolesWillLogin.put (client.getRole().getID(), client);
+        MapleAccount account = client.getAccountEntity ();
+        this.rolesWillLogin.put (account.getId (), client);
+    }
+
+    /**
+     * 角色从此服务器退出。服务器将此客户端实例从服务器
+     * 容器中移除。两个容器中的实例都会尝试删除。
+     */
+    public void roleLogoutServer (MapleClient client) {
+        MapleAccount account = client.getAccountEntity ();
+        MapleRole role = account.getCurrentLoginRole ();
+
+        /* 移除 */
+        this.loginRoles.remove (role.getID ());
+        this.rolesWillLogin.remove (account.getId ());
     }
 
     /**
      * 客户端成功与世界服务器握手后将尝试进入地图，此时世界服务器
      * 会将暂存容器中的客户端实例移入登录容器。
+     * 由角色ID作为键。
+     *
      * @param client
+     * @param role   欲登录的对象，由客户端选中。
      */
-    public boolean roleLoginServer (MapleClient client) {
-        int accountID = client.getAccountDBID ();
-        this.rolesWillLogin.remove (accountID);
+    public boolean roleLoginServer (MapleClient client, MapleRole role) {
+        MapleAccount account = client.getAccountEntity ();
 
+        /* 移除预登录容器。 */
+        this.rolesWillLogin.remove (account.getId ());
         int channelID = client.getChannelID ();
         WorldChannel channelEntity = this.getWorldChannel (channelID);
         if (channelEntity == null) return false;
 
-        // TODO... 做一些频道的登记工作。
+        // 账号登记。
+        account.loginRole (role);
+        // 世界服务器登记。
+        this.loginRoles.put (role.getID (), client);
+        // TODO... 频道登记。
 
-        this.loginRoles.put (client.getRole ().getID (), client);
         return true;
     }
 

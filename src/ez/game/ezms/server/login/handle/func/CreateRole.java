@@ -1,10 +1,7 @@
 package ez.game.ezms.server.login.handle.func;
 
 import ez.game.ezms.constance.ServerConstants;
-import ez.game.ezms.server.client.MapleClient;
-import ez.game.ezms.server.client.MapleEquipment;
-import ez.game.ezms.server.client.MapleRole;
-import ez.game.ezms.server.client.MapleRoleEquipped;
+import ez.game.ezms.server.client.*;
 //import ez.game.ezms.server.login.LoginServer;
 import ez.game.ezms.server.packet.LoginServerPacketCreator;
 import ez.game.ezms.server.packet.MaplePacket;
@@ -28,11 +25,12 @@ public class CreateRole implements OptionFunc {
             return;
         }
 
+        MapleAccount account = client.getAccountEntity ();
         MapleRole role = fillSubmitData (body);
         vinus (role);
         // 其他重要
-        role.setAccountID (client.getAccountDBID ());
-        role.setGender (client.getAccountGender ());
+        role.setAccountID (account.getId ());
+        role.setGender (account.getGender ());
         role.setWorldID (client.getWorldID ());
 
         boolean res = insertRoleInfo2DB (role);

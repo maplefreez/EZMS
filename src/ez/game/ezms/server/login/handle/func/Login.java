@@ -1,6 +1,7 @@
 package ez.game.ezms.server.login.handle.func;
 
 import ez.game.ezms.constance.ServerConstants;
+import ez.game.ezms.server.client.MapleAccount;
 import ez.game.ezms.server.packet.OptionFunc;
 import ez.game.ezms.server.client.MapleClient;
 //import ez.game.ezms.server.login.LoginServer;
@@ -46,7 +47,8 @@ public class Login implements OptionFunc {
         if (acc != null && pwd.equals (acc.getPassword ())) {
             /* 验证成功 */
             /* 信息填充到client。 */
-            setInfo4Client (acc, client);
+            MapleAccount account = new MapleAccount (acc);
+            client.setAccountEntity (account);
             /* 回送登录成功消息。 */
             pushLoginSuccessMessage (client);
             /* 推送服务器及其下各个频道信息。 */
@@ -55,13 +57,6 @@ public class Login implements OptionFunc {
             // 验证失败。
             pushLoginFailedMessage (acc, client);
         }
-    }
-
-    private void setInfo4Client (Account acc, MapleClient client) {
-        client.setAccount (acc.getAccount ());
-        client.setAccountDBID (acc.getId ());
-        client.setAccountGender (acc.getGender ());
-        client.setAccountGMLevel (acc.getGMlevel ());
     }
 
     private void pushLoginSuccessMessage (MapleClient client) {
