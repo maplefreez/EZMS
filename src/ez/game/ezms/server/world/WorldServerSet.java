@@ -1,13 +1,10 @@
 package ez.game.ezms.server.world;
 
 import ez.game.ezms.conf.ServerConfig;
-import ez.game.ezms.server.client.MapleAccount;
-import ez.game.ezms.server.client.MapleClient;
-import ez.game.ezms.server.client.MapleRole;
+import ez.game.ezms.client.model.MapleAccount;
+import ez.game.ezms.client.MapleClient;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**

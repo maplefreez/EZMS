@@ -1,5 +1,6 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client.model;
 
+import ez.game.ezms.client.MapleRole;
 import ez.game.ezms.sql.models.Account;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class MapleAccount extends Account {
      * 当选中角色之后，角色将被置于0索引处。
      * 剩余的位置将被置为空。
      */
-    private MapleRole [] roles;
+    private MapleRole[] roles;
     private final static int CURRENT_ROLE_INDEX = 0;
 
     /**

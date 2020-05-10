@@ -1,10 +1,10 @@
 package ez.game.ezms.server.packet;
 
 
-import ez.game.ezms.server.client.MapleEquipment;
-import ez.game.ezms.server.client.MapleItem;
-import ez.game.ezms.server.client.MapleRole;
-import ez.game.ezms.server.client.MapleRoleEquipped;
+import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.client.model.MapleItem;
+import ez.game.ezms.client.MapleRole;
+import ez.game.ezms.client.panel.MapleRoleEquipped;
 import ez.game.ezms.server.packet.MaplePacket.PacketStreamLEWriter;
 
 /**

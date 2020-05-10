@@ -1,4 +1,6 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client.model;
+
+import ez.game.ezms.client.MapleItemType;
 
 /**
  * 冒险岛中的各种物品，包括

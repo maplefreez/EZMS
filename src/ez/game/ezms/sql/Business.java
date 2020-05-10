@@ -1,9 +1,9 @@
 package ez.game.ezms.sql;
 
-import ez.game.ezms.server.client.MapleEquipment;
-import ez.game.ezms.server.client.MapleItem;
-import ez.game.ezms.server.client.MapleItemType;
-import ez.game.ezms.server.client.MapleRole;
+import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.client.model.MapleItem;
+import ez.game.ezms.client.MapleItemType;
+import ez.game.ezms.client.MapleRole;
 import ez.game.ezms.sql.models.Account;
 
 import java.sql.*;

@@ -1,4 +1,4 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client;
 
 /**
  * 各种物品的类别宏定义：

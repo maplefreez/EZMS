@@ -4,9 +4,9 @@ import ez.game.ezms.conf.ServerConfig;
 import ez.game.ezms.constance.DefaultConf;
 import ez.game.ezms.mina.MapleCodecFactory;
 import ez.game.ezms.server.channel.WorldChannel;
-import ez.game.ezms.server.client.MapleAccount;
-import ez.game.ezms.server.client.MapleClient;
-import ez.game.ezms.server.client.MapleRole;
+import ez.game.ezms.client.model.MapleAccount;
+import ez.game.ezms.client.MapleClient;
+import ez.game.ezms.client.MapleRole;
 import ez.game.ezms.server.world.handle.WorldServerHandler;
 
 import org.apache.mina.core.buffer.IoBuffer;

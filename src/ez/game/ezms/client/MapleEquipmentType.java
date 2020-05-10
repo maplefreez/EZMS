@@ -1,4 +1,4 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client;
 
 /**
  * 装备类别，是什么类别的装备。

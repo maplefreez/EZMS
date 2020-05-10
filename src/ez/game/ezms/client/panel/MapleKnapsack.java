@@ -1,4 +1,7 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client.panel;
+
+import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.client.model.MapleItem;
 
 import java.util.ArrayList;
 import java.util.List;

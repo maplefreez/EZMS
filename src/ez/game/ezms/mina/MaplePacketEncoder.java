@@ -21,7 +21,7 @@
 package ez.game.ezms.mina;
 
 import ez.game.ezms.constance.ServerConstants;
-import ez.game.ezms.server.client.MapleClient;
+import ez.game.ezms.client.MapleClient;
 //import ez.game.ezms.server.login.LoginServer;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;

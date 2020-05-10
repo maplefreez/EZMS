@@ -2,10 +2,9 @@ package ez.game.ezms.server.packet;
 
 import ez.game.ezms.SendPacketOptCode;
 import ez.game.ezms.constance.ServerConstants;
-import ez.game.ezms.server.client.MapleClient;
-import ez.game.ezms.server.client.MapleEquipment;
-import ez.game.ezms.server.client.MapleItem;
-import ez.game.ezms.server.client.MapleRole;
+import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.client.model.MapleItem;
+import ez.game.ezms.client.MapleRole;
 import ez.game.ezms.server.packet.MaplePacket.PacketStreamLEWriter;
 import ez.game.ezms.tools.RandomHelper;
 

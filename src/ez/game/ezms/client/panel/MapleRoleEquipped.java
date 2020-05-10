@@ -1,8 +1,8 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client.panel;
+
+import ez.game.ezms.client.model.MapleEquipment;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -103,7 +103,7 @@ public class MapleRoleEquipped {
      * 所有穿戴在身上的装备都在此处存储，
      * 以位置编码作为索引。
      */
-    private MapleEquipment [] equipped;
+    private MapleEquipment[] equipped;
     /**
      * 所有穿戴在身上的现金道具，都在此处
      * 存储，以位置代码作为索引。

@@ -1,8 +1,11 @@
 package ez.game.ezms.server.login.handle.func;
 
 import ez.game.ezms.constance.ServerConstants;
-import ez.game.ezms.server.client.*;
+import ez.game.ezms.client.*;
 //import ez.game.ezms.server.login.LoginServer;
+import ez.game.ezms.client.model.MapleAccount;
+import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.client.panel.MapleRoleEquipped;
 import ez.game.ezms.server.packet.LoginServerPacketCreator;
 import ez.game.ezms.server.packet.MaplePacket;
 import ez.game.ezms.server.packet.OptionFunc;

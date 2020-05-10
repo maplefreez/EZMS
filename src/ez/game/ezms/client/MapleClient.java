@@ -1,8 +1,7 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client;
 
 
-import ez.game.ezms.server.world.WorldServer;
-import ez.game.ezms.server.world.WorldServerSet;
+import ez.game.ezms.client.model.MapleAccount;
 import ez.game.ezms.tools.MapleAESOFB;
 import org.apache.mina.core.session.IoSession;
 

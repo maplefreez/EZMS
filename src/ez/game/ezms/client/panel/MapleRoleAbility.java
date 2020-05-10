@@ -1,4 +1,4 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client.panel;
 
 /**
  * 角色能力面板的所有属性。

@@ -1,6 +1,10 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client;
 
-import ez.game.ezms.server.packet.MaplePacket;
+import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.client.model.MapleItem;
+import ez.game.ezms.client.panel.MapleKnapsack;
+import ez.game.ezms.client.panel.MapleRoleAbility;
+import ez.game.ezms.client.panel.MapleRoleEquipped;
 import ez.game.ezms.sql.Business;
 
 import java.util.List;

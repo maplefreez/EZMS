@@ -1,7 +1,5 @@
-package ez.game.ezms.server.client;
+package ez.game.ezms.client.model;
 
-import com.sun.xml.internal.ws.api.message.Packet;
-import ez.game.ezms.server.packet.MaplePacket;
 import ez.game.ezms.server.packet.MaplePacket.PacketStreamLEWriter;
 
 /**

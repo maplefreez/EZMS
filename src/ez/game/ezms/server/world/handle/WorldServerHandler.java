@@ -1,8 +1,7 @@
 package ez.game.ezms.server.world.handle;
 
 import ez.game.ezms.constance.ServerConstants;
-import ez.game.ezms.mina.MaplePacketDecoder;
-import ez.game.ezms.server.client.MapleClient;
+import ez.game.ezms.client.MapleClient;
 //import ez.game.ezms.server.packet.LoginServerPacketCreator;
 import ez.game.ezms.server.packet.MaplePacket;
 import ez.game.ezms.server.packet.OptionFunc;

@@ -1,7 +1,7 @@
 package ez.game.ezms.wz.model.cache;
 
-import ez.game.ezms.server.client.MapleEquipmentType;
-import ez.game.ezms.server.client.MapleRoleEquipped;
+import ez.game.ezms.client.MapleEquipmentType;
+import ez.game.ezms.client.panel.MapleRoleEquipped;
 import ez.game.ezms.wz.*;
 
 /**
