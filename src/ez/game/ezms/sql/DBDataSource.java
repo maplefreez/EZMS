@@ -62,7 +62,8 @@ public final class DBDataSource {
             fileReader.close ();
         } catch (IOException ex) {
             System.out.println (ex.getMessage ());
-            return null;
+            System.err.println("Process shutdown!");
+            System.exit (0);
         }
 
         /* 初始化连接池。 使用的是Apache common-DBCP2 */
@@ -70,7 +71,8 @@ public final class DBDataSource {
             ds = BasicDataSourceFactory.createDataSource(props);
         } catch (Exception ex) {
             ex.printStackTrace ();
-            return null;
+            System.err.println("Process shutdown!");
+            System.exit (0);
         }
 
         return ds;
