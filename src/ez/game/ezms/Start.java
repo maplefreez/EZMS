@@ -71,7 +71,8 @@ public class Start {
         }
 
         /* 从XML加载WZ数据。 */
-        MapleWZDataCache.loadAllWZData ();
+        MapleWZDataCache.loadAllItemsWZData();
+        MapleWZDataCache.loadMapWZData ();
     }
 
     /**

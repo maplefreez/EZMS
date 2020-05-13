@@ -2,6 +2,7 @@ package ez.game.ezms.wz;
 
 import ez.game.ezms.wz.model.cache.MapleWZEquipment;
 import ez.game.ezms.wz.model.cache.MapleWZItem;
+import ez.game.ezms.wz.model.cache.MapleWZMap;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -21,10 +22,21 @@ public final class MapleWZDataCache {
      * 所有的装备信息，包括现金装备及普通装备。
      */
     private static HashMap <Long, MapleWZEquipment> equipments;
+
+    /**
+     * 所有的地图数据。
+     */
+    private static HashMap <Integer, MapleWZMap> maps;
+
     /**
      * 装备类的数据访问接口。
      */
     private static MapleDataProvider equipmentDataInterface;
+
+    /**
+     * 地图类的数据访问接口。
+     */
+    private static MapleDataProvider mapDataInterface;
 
     /**
      * 初始化数据接口。若已经完成初始化，则不再初始化。
@@ -37,6 +49,56 @@ public final class MapleWZDataCache {
     public static void initializeDataInterfaces () {
         if (equipmentDataInterface == null) equipmentDataInterface
                 = MapleDataProviderFactory.getDataProvider ("Character.wz/");
+        if (mapDataInterface == null) mapDataInterface
+                = MapleDataProviderFactory.getDataProvider ("Map.wz/Map");
+    }
+
+    /**
+     * 加载所有的地图数据到内存。
+     */
+    public static void loadMapWZData () {
+        int loadEntityCount = 0;
+        final String [] subDirToBeLoad = {
+                "Map0" /* 彩虹岛*/, "Map1" /* 金银岛*/,
+                "Map2" /* 天空之城*/, "Map8" /* */,
+                "Map9" /* 神秘岛？*/
+        };
+
+        if (maps != null) return;
+        maps = new HashMap <> (489);
+
+        for (String subDir: subDirToBeLoad) {
+            System.out.print ("Start loading " + subDir + " Data from WZ XML...");
+            loadEntityCount = loadMapsDataFromSubDir (subDir);
+            System.out.println (loadEntityCount + " finished!");
+        }
+    }
+
+    private static int loadMapsDataFromSubDir (String subDirName) {
+        // Map.wz/<subDirName>/地图实体。
+        MapleDataDirectoryEntry entry  = mapDataInterface.getFile ()
+                .getSubDirByName (subDirName);
+
+        // 没有查到WZ数据，报错并通过。在正式运行时不能触发这条。
+        if (entry == null) {
+            System.err.println ("Error in loading " + subDirName
+                    + " data from WZ, missing WZ XML file?");
+            return 0;
+        }
+
+        // 目录下的文件列表。
+        List<MapleDataFileEntry> files = entry.getFiles ();
+        for (MapleDataFileEntry file : files) {
+            // 路径为    ./<server.wzpath>/Map.wz/<subDirName>/$file.getName ()，
+            // 此处得到DOM对象。
+            int wzID = (int) getWZIDByFileName (file.getName ());
+            MapleData xmlDom = mapDataInterface.getData (entry.getName ()
+                    + "/" + file.getName ());
+            MapleWZMap mapEntity = new MapleWZMap (wzID, xmlDom);
+            maps.put (wzID, mapEntity);
+        }
+
+        return maps.size ();
     }
 
     /**
@@ -44,7 +106,7 @@ public final class MapleWZDataCache {
      * 内存。内存会消耗得非常快。
      *
      */
-    public static void loadAllWZData () {
+    public static void loadAllItemsWZData() {
         long loadEntityCount = 0;
         /* 目前只加载如下目录的装备信息。 */
         final String [] subDirToBeLoad = {
@@ -71,11 +133,13 @@ public final class MapleWZDataCache {
      */
     private static long loadEquipmentsDataFromSubDir (String subDirName) {
         // Character.wz/<subDirName>/目录实体。
-        MapleDataDirectoryEntry entry  = equipmentDataInterface.getFile ().getSubDirByName (subDirName);
+        MapleDataDirectoryEntry entry  = equipmentDataInterface.getFile ()
+                .getSubDirByName (subDirName);
 
         // 没有查到WZ数据，报错并通过。在正式运行时不能触发这条。
         if (entry == null) {
-            System.err.println ("Error in loading " + subDirName + " data from WZ, missing WZ XML file?");
+            System.err.println ("Error in loading " + subDirName
+                    + " data from WZ, missing WZ XML file?");
             return 0;
         }
 

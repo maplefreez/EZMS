@@ -1,5 +1,7 @@
 package ez.game.ezms.wz.model.cache;
 
+import ez.game.ezms.wz.MapleData;
+
 import java.awt.Point;
 
 /**
@@ -43,4 +45,8 @@ public class MapleWZMapPortal {
      * 名称。即name字段值。
      */
     private String toMapPortalName;
+
+    public MapleWZMapPortal (MapleData data) {
+        // TODO...
+    }
 }
