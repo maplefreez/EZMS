@@ -1,6 +1,7 @@
 package ez.game.ezms.wz.model.cache;
 
 import ez.game.ezms.wz.MapleData;
+import ez.game.ezms.wz.MapleDataTool;
 
 import java.awt.Point;
 
@@ -47,6 +48,41 @@ public class MapleWZMapPortal {
     private String toMapPortalName;
 
     public MapleWZMapPortal (MapleData data) {
-        // TODO...
+        MapleData value = data.getChildByPath ("pn");
+        if (value != null)
+            this.name = MapleDataTool.getString (value);
+        else
+            System.err.println ("Error occurred in portal");
+
+        value = data.getChildByPath ("pt");
+        if (value != null)
+            this.type = (byte) MapleDataTool.getInt (value);
+        else
+            System.err.println ("Error occurred in portal");
+
+        this.location = new Point ();
+        value = data.getChildByPath ("x");
+        if (value != null)
+            this.location.x = MapleDataTool.getInt (value);
+        else
+            System.err.println ("Error occurred in portal");
+        value = data.getChildByPath ("y");
+        if (value != null)
+            this.location.y = MapleDataTool.getInt (value);
+        else
+            System.err.println ("Error occurred in portal");
+
+        value = data.getChildByPath ("tm");
+        if (value != null)
+            this.toMapID = MapleDataTool.getInt (value);
+        else
+            System.err.println ("Error occurred in portal");
+
+        value = data.getChildByPath ("tn");
+        if (value != null)
+            this.toMapPortalName = MapleDataTool.getString (value);
+        else
+            System.err.println ("Error occurred in portal");
     }
+
 }

@@ -97,14 +97,14 @@ public class MapleWZMap {
         MapleData entities = data.getChildByPath ("portal");
 
         if (entities != null) {
-            List<MapleData> entityList = entities.getChildren();
+            List<MapleData> entityList = entities.getChildren ();
             int count = entityList.size ();
             if (count > 0) {
                 int idx = 0;
                 if (this.portalList == null)
                     this.portalList = new MapleWZMapPortal[count];
                 for (MapleData entity : entityList) {
-                    MapleWZMapPortal portal = new MapleWZMapPortal (data);
+                    MapleWZMapPortal portal = new MapleWZMapPortal (entity);
                     this.portalList [idx ++] = portal;
                 }
             } else return 0;
