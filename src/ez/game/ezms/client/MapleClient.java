@@ -105,6 +105,19 @@ public final class MapleClient {
         this.channelID = channelID;
     }
 
+    /**
+     * 返回当前使用此会话登录的角色。若
+     * 此会话没有登录角色或者没有登录账号
+     * 或者其他错误，会返回NULL。
+     *
+     * @return 当前登录的角色实体。
+     */
+    public MapleRole getCurrentRole () {
+        if (this.account != null)
+            return account.getCurrentLoginRole ();
+        return null;
+    }
+
     public byte getWorldID () {
         return worldID;
     }

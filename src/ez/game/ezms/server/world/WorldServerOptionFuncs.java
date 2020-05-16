@@ -1,10 +1,7 @@
 package ez.game.ezms.server.world;
 
 import ez.game.ezms.server.packet.OptionFunc;
-import ez.game.ezms.server.world.handle.func.EnterMap;
-import ez.game.ezms.server.world.handle.func.LifeMove;
-import ez.game.ezms.server.world.handle.func.Nop;
-import ez.game.ezms.server.world.handle.func.RoleLogin;
+import ez.game.ezms.server.world.handle.func.*;
 
 public class WorldServerOptionFuncs {
 
@@ -45,7 +42,19 @@ public class WorldServerOptionFuncs {
 
             /* 0x18  角色、NPC及怪物移动的处理。
              */
-            new LifeMove ()
+            new LifeMove (),
+
+            Nop.nop,  // 25
+            Nop.nop,  // 26
+            Nop.nop,  // 27
+            Nop.nop,  // 28
+            Nop.nop,  // 29
+            Nop.nop,  // 30
+
+            /* 0x1F ( = 31)  角色说话。通过对话输入栏说话。
+             * 此处也处理来自GM角色的命令。
+             */
+            new Voice ()
     };
 
     public static OptionFunc mapOptionCode2Function (int optCode) {
