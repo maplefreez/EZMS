@@ -2,8 +2,8 @@ package ez.game.ezms.wz.model.cache;
 
 import ez.game.ezms.wz.MapleData;
 import ez.game.ezms.wz.MapleDataTool;
-import ez.game.ezms.wz.MapleDataType;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,16 +44,16 @@ public class MapleWZMap {
     private boolean hasHideMiniMap;
 
     /**
-     * 地图中的怪物列表。若是村落或者没有怪物
-     * 的地图，不需要初始化此容器。
+     * 地图中的怪物和NPC列表。若地图中没有NPC和怪物，此
+     * 容器不需要初始化。索引即是实例在WZ文件中定义的name。
      */
-    private MapleWZMapMonster [] monsterList;
+    private MapleWZMapLife [] lifeList;
 
     /**
      * 地图中的NPC列表。若地图是没有NPC的地图，
      * 不需要初始化此容器。
      */
-    private MapleWZMapNPC [] npcList;
+//    private MapleWZMapNPC [] npcList;
 
     /**
      * 地图中的传送口列表。地图中不可能没有传送口
@@ -67,6 +67,9 @@ public class MapleWZMap {
      * @param data  此地图实例的xml数据实体。
      */
     public MapleWZMap (int wzID, MapleData data) {
+//        System.out.print ("\n   Start loading map " + data.getName ());
+
+        // 地图信息
         this.WZID = (wzID);
         MapleData value = data.getChildByPath ("info/town");
         if (value != null)
@@ -88,9 +91,12 @@ public class MapleWZMap {
         if (value != null)
             this.forcedReturnMapID = MapleDataTool.getInt (value);
 
+        // 传送口信息
         loadPortalData (data);
-        loadNPC (data);
-        loadMonster (data);
+
+        // NPC和怪物信息
+        loadNPCAndMonster (data);
+//        System.out.print ("  Done!");
     }
 
     private int loadPortalData (MapleData data) {
@@ -113,14 +119,29 @@ public class MapleWZMap {
         return this.portalList.length;
     }
 
-    private int loadNPC (MapleData data) {
-        // TODO...
-        return 0;
-    }
+    private int loadNPCAndMonster (MapleData data) {
+        MapleData entities = data.getChildByPath ("life");
+        int lifeCount = 0;
 
-    private int loadMonster (MapleData data) {
-        // TODO...
-        return 0;
+        /* 载入Life各个节点。 */
+        if (entities != null) {
+            List<MapleData> entityList = entities.getChildren ();
+            int count = entityList.size ();
+            if (count > 0) {
+                /* 初始化NPC和怪物数组。 */
+                this.lifeList = new MapleWZMapLife [count];
+                for (MapleData entity : entityList) {
+                    MapleData type = entity.getChildByPath ("type");
+                    if (type == null) continue; // 连type都没有，不需要初始化。
+
+                    MapleWZMapLife lifeOne = new MapleWZMapLife (entity);
+                    this.lifeList [lifeOne.getCode ()] = lifeOne;
+                    ++ lifeCount;
+                }
+            } else return 0;
+        } else return 0;
+
+        return lifeCount;
     }
 
     public int getForcedReturnMapID() {
@@ -139,12 +160,8 @@ public class MapleWZMap {
         return hasHideMiniMap;
     }
 
-    public MapleWZMapMonster[] getMonsterList() {
-        return monsterList;
-    }
-
-    public MapleWZMapNPC[] getNpcList() {
-        return npcList;
+    public MapleWZMapLife [] getLifeList() {
+        return lifeList;
     }
 
     public MapleWZMapPortal[] getPortalList() {
