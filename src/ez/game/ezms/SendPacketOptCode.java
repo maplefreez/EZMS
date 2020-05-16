@@ -37,6 +37,10 @@ public enum SendPacketOptCode {
     /* ---------------- WorldServer用 -----------------*/
     LOGIN_WORLDSERVER (43),
 
+    /* 发送消息给客户端。
+     */
+    MESSAGE_SEND (0x28),
+
     WARP_MAP (43),
     ;
 

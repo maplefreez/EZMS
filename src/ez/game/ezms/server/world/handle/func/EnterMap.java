@@ -27,11 +27,11 @@ public class EnterMap implements OptionFunc {
         int toMapID = reader.readInt ();
         String portalName = reader.readMapleASCIIString ();
 
-        {  // DEBUG.
-            System.out.println("type: " + type);
-            System.out.println("toMapID: " + toMapID);
-            System.out.println("portalName: " + portalName);
-        }
+//        {  // DEBUG.
+//            System.out.println("type: " + type);
+//            System.out.println("toMapID: " + toMapID);
+//            System.out.println("portalName: " + portalName);
+//        }
 
         MapleClient client = (MapleClient) session.getAttribute (ServerConstants.CLIENT_ENTITY_KEY);
         if (client == null) return;

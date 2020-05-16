@@ -62,7 +62,7 @@ public class RoleLogin implements OptionFunc {
         role.loadQuestDataFromDB ();
 
         /* TODO... 发送基本角色信息。 */
-        MaplePacket packet = WorldServerPacketCreator.enterWorldServer (role, role.getWorldID ());
+        MaplePacket packet = WorldServerPacketCreator.enterWorldServer (client, role);
         session.write (packet.getByteArray ());
     }
 
@@ -76,6 +76,10 @@ public class RoleLogin implements OptionFunc {
     private void setTags (MapleClient client, IoSession session) {
         MapleAESOFB recv = (MapleAESOFB) session.getAttribute (WorldServerHandler.RECVIV_KEY);
         MapleAESOFB send = (MapleAESOFB) session.getAttribute (WorldServerHandler.SENDIV_KEY);
+
+        /* 将原来的LoginServer会话换成WorldServer的会话。 */
+        client.changeSession (session);
+
         client.setHasShakeHand (true);
         client.setRcvCypher (recv);
         client.setSndCypher (send);

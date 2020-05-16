@@ -15,8 +15,14 @@ import org.apache.mina.core.session.IoSession;
  */
 public class EnterSpecifiedMap implements CommandFunc {
 
+    @Override
     public String getCommandName () {
         return "@!entermap";
+    }
+
+    @Override
+    public String getDescription () {
+        return this.getCommandName () + " <mapID>";
     }
 
     @Override
@@ -39,7 +45,13 @@ public class EnterSpecifiedMap implements CommandFunc {
 
         /* 获取地图。 */
         MapleWZMap toMap = MapleWZDataCache.getMapByWZID (toMapID);
-        if (toMap == null) return false;
+        if (toMap == null) {
+            // 报告客户端找不到地图。
+            MaplePacket msgPacket = WorldServerPacketCreator.sendMessage (client,
+                    "Cannot find map " + toMapID, 5);
+            session.write (msgPacket.getByteArray ());
+            return false;
+        }
 
         /* 发送报文。 */
         MaplePacket packet = WorldServerPacketCreator.enterMap (client, role, toMap);

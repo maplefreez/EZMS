@@ -18,6 +18,13 @@ public interface CommandFunc {
     String getCommandName ();
 
     /**
+     * 返回此命令的描述信息。
+     *
+     * @return
+     */
+    String getDescription ();
+
+    /**
      * 执行此命令时发生的动作。
      *
      * @param args  命令行参数。若不需要参数可以直接传入null。

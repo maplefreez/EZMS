@@ -2,9 +2,9 @@ package ez.game.ezms.server.world.command;
 
 import ez.game.ezms.client.MapleClient;
 import ez.game.ezms.server.world.command.func.EnterSpecifiedMap;
+import ez.game.ezms.server.world.command.func.ListCommands;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * 命令引擎，GM命令都来自于此。
@@ -55,11 +55,16 @@ public final class CommandEngine {
         return false;
     }
 
+    public Iterator <CommandFunc> getCommandList () {
+        return this.funcs.values().iterator ();
+    }
+
     private static CommandEngine initialize () {
         engineSingleton = new CommandEngine ();
 
         /* 注册命令。 */
         engineSingleton.registerCommand (new EnterSpecifiedMap ());
+        engineSingleton.registerCommand (new ListCommands ());
 
         return engineSingleton;
     }

@@ -42,13 +42,16 @@ public class WorldServerPacketCreator extends PacketCreator {
      * 玩家登录进入世界服务器。当玩家点选某个角色时
      * 由此报文响应。
      *
+     * @param client   主要提供当前角色登录的世界ID和频道ID。
+     * @param role  角色的各种属性及背包信息等。
+     *
      * @return
      */
-    public static MaplePacket enterWorldServer (MapleRole role, int WorldID) {
+    public static MaplePacket enterWorldServer (MapleClient client, MapleRole role) {
         PacketStreamLEWriter writer = new PacketStreamLEWriter (256);
 
         writer.writeByte ((byte) SendPacketOptCode.LOGIN_WORLDSERVER.getCode ());
-        writer.writeInt (2);   // 频道ID。暂时我还无法获取到这个ID。
+        writer.writeInt (client.getChannelID ());   // 频道ID。暂时我还无法获取到这个ID。
         writer.writeByte ((byte) 0);
         writer.writeByte ((byte) 1);
         writer.writeInt (RandomHelper.nextInt());
@@ -62,6 +65,41 @@ public class WorldServerPacketCreator extends PacketCreator {
         return writer.generate ();
     }
 
+
+    /**
+     * 发送消息到客户端，创建消息报文。
+     *
+     * 开发者ez注：type参数应该做成枚举。
+     *
+     * @param client  客户端实体。
+     * @param toBeSent  欲发送的消息字符串。非空
+     * @param type   类型，目前知道的类型如下：
+     *               0 -- 通知
+     *               1 -- 小弹窗（右下角）
+     *               2 -- Mega
+     *               3 -- smega
+     *               4 -- 头顶说话？
+     *               5 -- 聊天栏红色字。
+     * @return 报文实体。
+     */
+    public static MaplePacket sendMessage (MapleClient client, String toBeSent, int type) {
+        PacketStreamLEWriter writer = new PacketStreamLEWriter (4 + toBeSent.length ());
+        writer.writeByte ((byte) SendPacketOptCode.MESSAGE_SEND.getCode ());
+        writer.writeByte ((byte) type);
+//        if (type == 4) {
+//            mplew.write(1); // 1-开启 0-关闭
+//        }
+        writer.writeMapleStoryASCIIString (toBeSent);
+//        switch (type) {
+//            case 3:
+//                mplew.write(channel - 1);
+//                mplew.write(megaEar ? 1 : 0);
+//                break;
+//            default:break;
+//        }
+        return writer.generate ();
+    }
+
     /**
      * 角色进入地图。
      *
@@ -71,7 +109,6 @@ public class WorldServerPacketCreator extends PacketCreator {
      * @return
      */
     public static MaplePacket enterMap (MapleClient client, MapleRole role, MapleWZMap toMap) {
-        PacketStreamLEWriter writer = new PacketStreamLEWriter (23);
         // v062
 //        mplew.writeShort(SendPacketOpcode.WARP_TO_MAP.getValue()); // 0x49
 //        mplew.writeInt(chr.getClient().getChannel() - 1);
@@ -85,7 +122,8 @@ public class WorldServerPacketCreator extends PacketCreator {
 //        mplew.writeLong(questMask);
 
         // v027
-        writer.writeByte ((byte) SendPacketOptCode.LOGIN_WORLDSERVER.getCode ());
+        PacketStreamLEWriter writer = new PacketStreamLEWriter (23);
+        writer.writeByte ((byte) SendPacketOptCode.WARP_MAP.getCode ());
         writer.writeInt(client.getChannelID ());
         writer.writeByte ((byte) toMap.getPortalList ().length);
         writer.writeByte ((byte) 0);

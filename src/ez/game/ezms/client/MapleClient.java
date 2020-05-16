@@ -130,6 +130,17 @@ public final class MapleClient {
         return session;
     }
 
+    /**
+     * 将原Session关闭，并且换上新的会话。
+     * 这个函数目前只在RoleLogin处被调用。
+     *
+     * @param session  欲更换的Session。
+     */
+    public void changeSession (IoSession session) {
+        if (session != null) this.session.close ();
+        this.session = session;
+    }
+
     public boolean getHasShakeHand () {
         return hasShakeHand;
     }
