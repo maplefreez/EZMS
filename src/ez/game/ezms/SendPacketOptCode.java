@@ -35,7 +35,9 @@ public enum SendPacketOptCode {
     ROLE_CREATED (12),
 
     /* ---------------- WorldServer用 -----------------*/
-    LOGIN_WORLDSERVER (43)
+    LOGIN_WORLDSERVER (43),
+
+    WARP_MAP (43),
     ;
 
     /**

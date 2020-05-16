@@ -1,12 +1,16 @@
 package ez.game.ezms.server.packet;
 
 import ez.game.ezms.SendPacketOptCode;
+import ez.game.ezms.client.MapleClient;
+import ez.game.ezms.client.model.MapleAccount;
 import ez.game.ezms.constance.ServerConstants;
 import ez.game.ezms.client.model.MapleEquipment;
 import ez.game.ezms.client.model.MapleItem;
 import ez.game.ezms.client.MapleRole;
 import ez.game.ezms.server.packet.MaplePacket.PacketStreamLEWriter;
 import ez.game.ezms.tools.RandomHelper;
+import ez.game.ezms.wz.model.cache.MapleWZMap;
+import ez.game.ezms.wz.model.cache.MapleWZMapPortal;
 
 import java.util.List;
 
@@ -54,6 +58,50 @@ public class WorldServerPacketCreator extends PacketCreator {
         writer.writeShort ((short) 0xFFFF);    // 二进制 111
 
         appendRoleData (writer, role);
+
+        return writer.generate ();
+    }
+
+    /**
+     * 角色进入地图。
+     *
+     * @param role       角色实体。
+     * @param fromPortal 从此传送口实例进入地图。
+     * @param fromMap    从此地图离开。
+     * @return
+     */
+    public static MaplePacket enterMap (MapleClient client, MapleRole role, MapleWZMap toMap) {
+        PacketStreamLEWriter writer = new PacketStreamLEWriter (23);
+        // v062
+//        mplew.writeShort(SendPacketOpcode.WARP_TO_MAP.getValue()); // 0x49
+//        mplew.writeInt(chr.getClient().getChannel() - 1);
+//        mplew.writeShort(0x2);
+//        mplew.writeShort(0);
+//        mplew.writeInt(to.getId());
+//        mplew.write(spawnPoint);
+//        mplew.writeShort(chr.getHp()); // hp (???)
+//        mplew.write(0);
+//        long questMask = 0x1ffffffffffffffL;
+//        mplew.writeLong(questMask);
+
+        // v027
+        writer.writeByte ((byte) SendPacketOptCode.LOGIN_WORLDSERVER.getCode ());
+        writer.writeInt(client.getChannelID ());
+        writer.writeByte ((byte) toMap.getPortalList ().length);
+        writer.writeByte ((byte) 0);
+        writer.writeInt (toMap.getWZID ());
+        writer.writeByte ((byte) 0); // 暂时如此，初始start point怎么选择？
+        writer.writeShort (role.getHP ());
+
+//        writer.writeByte ((byte) SendPacketOptCode.LOGIN_WORLDSERVER.getCode ());
+//        writer.writeInt (2);   // 频道ID。暂时我还无法获取到这个ID。
+//        writer.writeByte ((byte) 0);
+//        writer.writeByte ((byte) 1);
+//        writer.writeInt (RandomHelper.nextInt());
+//        writer.writeInt (RandomHelper.nextInt());
+//        writer.writeInt (RandomHelper.nextInt());
+//        writer.writeInt (0);
+//        writer.writeShort ((short) 0xFFFF);    // 二进制 111
 
         return writer.generate ();
     }

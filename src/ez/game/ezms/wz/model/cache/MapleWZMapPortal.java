@@ -85,4 +85,23 @@ public class MapleWZMapPortal {
             System.err.println ("Error occurred in portal");
     }
 
+    public Point getLocation() {
+        return location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public byte getType() {
+        return type;
+    }
+
+    public int getToMapID() {
+        return toMapID;
+    }
+
+    public String getToMapPortalName() {
+        return toMapPortalName;
+    }
 }

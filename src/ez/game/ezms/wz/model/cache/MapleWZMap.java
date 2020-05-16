@@ -4,6 +4,7 @@ import ez.game.ezms.wz.MapleData;
 import ez.game.ezms.wz.MapleDataTool;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -60,6 +61,10 @@ public class MapleWZMap {
      * 定义，至少要有落脚点（type=1）。
      */
     private MapleWZMapPortal [] portalList;
+    /**
+     * 从传送口名（pn）到传送口实体的映射。查询常用。
+     */
+    private HashMap <String, MapleWZMapPortal> portalDirection;
 
     /**
      * 构造函数
@@ -107,16 +112,34 @@ public class MapleWZMap {
             int count = entityList.size ();
             if (count > 0) {
                 int idx = 0;
+                /* 容器初始化。 */
                 if (this.portalList == null)
                     this.portalList = new MapleWZMapPortal[count];
+                if (this.portalDirection == null)
+                    this.portalDirection = new HashMap <> (count);
+
+                /* 加载数据。 */
                 for (MapleData entity : entityList) {
                     MapleWZMapPortal portal = new MapleWZMapPortal (entity);
                     this.portalList [idx ++] = portal;
+                    putIntoPortalDirection (portal); // 加入查询字典。
                 }
             } else return 0;
         } else return 0;
 
         return this.portalList.length;
+    }
+
+    public MapleWZMapPortal getPortalByName (String name) {
+        if (this.portalDirection == null) return null;
+        return this.portalDirection.get (name);
+    }
+
+    /**
+     * 加载传送口字典。映射：pn -> MapleWZMapPortal
+     */
+    private void putIntoPortalDirection (MapleWZMapPortal portal) {
+        portalDirection.put (portal.getName (), portal);
     }
 
     private int loadNPCAndMonster (MapleData data) {
@@ -150,6 +173,10 @@ public class MapleWZMap {
 
     public int getReturnMapID() {
         return returnMapID;
+    }
+
+    public int getWZID() {
+        return WZID;
     }
 
     public boolean isTown() {

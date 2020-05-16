@@ -3,6 +3,7 @@ package ez.game.ezms.wz;
 import ez.game.ezms.wz.model.cache.MapleWZEquipment;
 import ez.game.ezms.wz.model.cache.MapleWZItem;
 import ez.game.ezms.wz.model.cache.MapleWZMap;
+import ez.game.ezms.wz.model.cache.MapleWZMapPortal;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -95,6 +96,10 @@ public final class MapleWZDataCache {
             MapleData xmlDom = mapDataInterface.getData (entry.getName ()
                     + "/" + file.getName ());
             MapleWZMap mapEntity = new MapleWZMap (wzID, xmlDom);
+            if (wzID == 910000000) {
+                System.out.println ();
+            }
+
             maps.put (wzID, mapEntity);
         }
 
@@ -163,6 +168,16 @@ public final class MapleWZDataCache {
         if (splitPair.length >= 1)
             return Long.parseLong (splitPair [0]);
         return 0L;  // 暂时不知道有什么更好.
+    }
+
+    /**
+     * 根据WZ文件中定义的ID得到地图实体。
+     * 此函数查不到 WZID是999999999的地图。
+     *
+     * @return 存在则非空。
+     */
+    public static MapleWZMap getMapByWZID (int WZID) {
+        return maps.get (WZID);
     }
 
 }

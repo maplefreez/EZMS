@@ -6,6 +6,7 @@ import ez.game.ezms.client.panel.MapleKnapsack;
 import ez.game.ezms.client.panel.MapleRoleAbility;
 import ez.game.ezms.client.panel.MapleRoleEquipped;
 import ez.game.ezms.sql.Business;
+import ez.game.ezms.wz.model.cache.MapleWZMap;
 
 import java.util.List;
 
@@ -117,7 +118,8 @@ public class MapleRole implements Cloneable {
     private MapleKnapsack knapsack;
 
     /**
-     * 未知。
+     * 进入游戏世界后，角色应该站在什么位置。
+     * 这个位置在WZ中每个地图都有定义。
      */
     private byte initSpawnPoint;
 
@@ -259,6 +261,17 @@ public class MapleRole implements Cloneable {
     public void wearEquipments (List <MapleEquipment> equipments) {
         for (MapleEquipment equipment : equipments)
             this.wearEquipment (equipment, equipment.getIsCash ());
+    }
+
+    /**
+     * 角色进入地图。
+     */
+    public void enterMap (MapleWZMap fromMap, MapleWZMap toMap) {
+        this.mapID = toMap.getWZID ();
+    }
+
+    public void enterMap (int fromMapID, int toMapID) {
+        this.mapID = toMapID;
     }
 
     public void pickUpEquipment (MapleEquipment equipment) {

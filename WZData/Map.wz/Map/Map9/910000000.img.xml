@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 自由市场入口。 -->
 <imgdir name="910000000.img">
     <imgdir name="info">
         <int name="version" value="10"/>
