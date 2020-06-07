@@ -3,6 +3,7 @@ package ez.game.ezms.server.world.command;
 import ez.game.ezms.client.MapleClient;
 import ez.game.ezms.server.world.command.func.EnterSpecifiedMap;
 import ez.game.ezms.server.world.command.func.ListCommands;
+import ez.game.ezms.server.world.command.func.UpdateRoleStatus;
 
 import java.util.*;
 
@@ -65,6 +66,7 @@ public final class CommandEngine {
         /* 注册命令。 */
         engineSingleton.registerCommand (new EnterSpecifiedMap ());
         engineSingleton.registerCommand (new ListCommands ());
+        engineSingleton.registerCommand (UpdateRoleStatus.getOrInitialize ());
 
         return engineSingleton;
     }

@@ -31,7 +31,7 @@ public class ListCommands implements CommandFunc {
         while (allFuncs.hasNext ()) {
             CommandFunc func = allFuncs.next ();
             builder.append (func.getDescription ());
-            builder.append (';');
+            builder.append ("\r\n");
         }
 
         IoSession session = client.getSession ();

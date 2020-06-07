@@ -2,6 +2,7 @@ package ez.game.ezms.server.packet;
 
 import ez.game.ezms.SendPacketOptCode;
 import ez.game.ezms.client.MapleClient;
+import ez.game.ezms.client.MapleRoleState;
 import ez.game.ezms.client.model.MapleAccount;
 import ez.game.ezms.constance.ServerConstants;
 import ez.game.ezms.client.model.MapleEquipment;
@@ -75,8 +76,8 @@ public class WorldServerPacketCreator extends PacketCreator {
      * @param toBeSent  欲发送的消息字符串。非空
      * @param type   类型，目前知道的类型如下：
      *               0 -- 通知
-     *               1 -- 小弹窗（右下角）
-     *               2 -- Mega
+     *               1 -- 弹窗
+     *               2 -- Mega, 蓝白色广播
      *               3 -- smega
      *               4 -- 头顶说话？
      *               5 -- 聊天栏红色字。
@@ -97,6 +98,22 @@ public class WorldServerPacketCreator extends PacketCreator {
 //                break;
 //            default:break;
 //        }
+        return writer.generate ();
+    }
+
+    /**
+     * 更新角色当前背包持有的冒险币数。
+     *
+     * @param value  冒险币增加数量。
+     * @return  报文实体。
+     */
+    public static MaplePacket updateRoleMeso (int value) {
+        PacketStreamLEWriter writer = new PacketStreamLEWriter (10);
+
+        writer.writeByte ((byte) SendPacketOptCode.UPDATE_ROLE_STATUS.getCode ()); // 25 = 0x19
+        writer.writeByte ((byte) (0)); // 常量。
+        writer.writeInt (MapleRoleState.MESOS.getFlag ()); // flag，标志位。
+        writer.writeInt (value);  // 增加的金币数值。
         return writer.generate ();
     }
 

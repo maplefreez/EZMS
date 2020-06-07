@@ -42,6 +42,11 @@ public enum SendPacketOptCode {
     MESSAGE_SEND (0x28),
 
     WARP_MAP (43),
+
+    /* 更新角色状态。
+     */
+    UPDATE_ROLE_STATUS (0x19)
+
     ;
 
     /**
