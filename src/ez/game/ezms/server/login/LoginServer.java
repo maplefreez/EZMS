@@ -6,8 +6,8 @@
 
 package ez.game.ezms.server.login;
 
+import ez.game.ezms.conf.LoginServerConfig;
 import ez.game.ezms.conf.ServerConfig;
-import ez.game.ezms.constance.DefaultConf;
 import ez.game.ezms.exception.LoginServerException;
 import ez.game.ezms.mina.MapleCodecFactory;
 import ez.game.ezms.server.login.handle.LoginHandler;
@@ -28,96 +28,48 @@ import java.net.InetSocketAddress;
  * 单例模式运行。
  */
 public class LoginServer {
-
     /**
      * 单例
      */
     private static LoginServer singleton;
 
     /**
-     * 最大在线人数。
+     * 来自配置文件的配置数据。若此字段不为空，
+     * 则调用initialize()不会重新载入配置数据。
      */
-    private int userMaxOnline;
-
-    /**
-     * Server中文名。
-     */
-    private String serverName;
-
-    /**
-     * 是否是维护模式，
-     * 此模式下只能管理员登录。
-     */
-    private boolean isMaintain;
-
-    /**
-     * 是否支持账号自动注册。
-     */
-    private boolean autoRegister;
-
-    /**
-     * 一个频道上能创建的最大角色数。
-     */
-    private int maxCharacters;
-
-    /**
-     * LoginServer监听的TCP端口号。
-     */
-    private int port;
-
-    /**
-     * 用于存储所有链接上LoginServer的会话。
-     * 在没有成功登录前，对话
-     * 将暂时存储在这个位置。
-     *
-     * key是在SessionOpened()事件中生成的随机键,
-     * 目前暂且存储在其Session中的“ClientID”键上。
-     */
-//    private HashMap <Integer, MapleClient> clientList;
+    private LoginServerConfig confData;
 
     /**
      * 接收链接的accept.
      */
     private IoAcceptor acceptor;
 
-    private LoginServer () {
-//        clientList = new HashMap <> ();
-    }
-
-//    public MapleClient getClient (int key) {
-//        return clientList.get (key);
-//    }
+    private LoginServer () { }
 
     /**
-     * 将新的client插入表中。
-     * @param key
-     * @param client
+     * 初始化登入服务器。
+     *
+     * @return
      */
-//    public void addClient (Integer key, MapleClient client) {
-//        clientList.put (key, client);
-//    }
+    public void initialize (ServerConfig conf) throws LoginServerException {
+        if (this.confData != null) return;
+        this.confData = new LoginServerConfig (conf);
+    }
 
     /**
      * 初始化LoginServer服务器，只能进行一次初始化工作。
-     * 多次初始化抛出Exception。
+     * 多次调用此函数初始化将抛出Exception。
      *
      * @param conf   来自配置文件"srvconfig.conf"
      * @return   初始化成功时返回实例引用。
      * @throws LoginServerException
      */
-    public static LoginServer initialize (ServerConfig conf) throws LoginServerException {
+    public static LoginServer initializeSingleton(ServerConfig conf) throws LoginServerException {
         if (singleton != null)
             throw new LoginServerException ("Error in initialize LoginServer. Shouldn't be twice!");
         singleton = new LoginServer ();
 
-        // 配置工作。
-        singleton.setUserMaxOnline (conf.getInt ("user.maxonline", 140));
-        singleton.setServerName(conf.getString ("server.name", "EZMS"));
-        singleton.setMaintain(conf.getBoolean ("server.maintain", false));
-        singleton.setMaxCharacters (conf.getInt ("user.maxcharacter", 30));
-        singleton.setAutoRegister (conf.getBoolean ("server.autoreg", false));
-        singleton.setPort (conf.getShort ("server.login.port", DefaultConf.DEF_LOGINSRV_PORT));
-
+        singleton.initialize (conf);
         return singleton;
     }
 
@@ -147,14 +99,15 @@ public class LoginServer {
         acceptor.getFilterChain ().addLast ("codec", new ProtocolCodecFilter(new MapleCodecFactory ()));
         acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 30);
 
+        short port = confData.getPort ();
+
         try {
             acceptor.setHandler(new LoginHandler ());
             acceptor.bind(new InetSocketAddress (port));
             ((SocketSessionConfig) acceptor.getSessionConfig()).setTcpNoDelay(true);
-
             System.out.println ("LoginServer is now listening at port " + port);
         } catch (IOException e) {
-            System.err.println("Cannot bind port " + port + ": " + e);
+            System.err.println("LoginServer cannot bind port " + port + ": " + e);
         }
     }
 
@@ -168,53 +121,7 @@ public class LoginServer {
         singleton = null;
     }
 
-
-    public int getUserMaxOnline() {
-        return userMaxOnline;
-    }
-
-    private void setUserMaxOnline(int userMaxOnline) {
-        this.userMaxOnline = userMaxOnline;
-    }
-
-
-    public String getServerName () {
-        return serverName;
-    }
-
-    private void setServerName (String serverName) {
-        this.serverName = serverName;
-    }
-
-    public boolean isMaintain() {
-        return isMaintain;
-    }
-
-    private void setMaintain(boolean maintain) {
-        isMaintain = maintain;
-    }
-
-    public boolean isAutoRegister() {
-        return autoRegister;
-    }
-
-    private void setAutoRegister(boolean autoRegister) {
-        this.autoRegister = autoRegister;
-    }
-
-    public int getMaxCharacters() {
-        return maxCharacters;
-    }
-
-    private void setMaxCharacters(int maxCharacters) {
-        this.maxCharacters = maxCharacters;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    private void setPort(int port) {
-        this.port = port;
+    public LoginServerConfig getConfData() {
+        return confData;
     }
 }

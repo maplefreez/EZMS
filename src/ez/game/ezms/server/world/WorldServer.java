@@ -1,7 +1,7 @@
 package ez.game.ezms.server.world;
 
 import ez.game.ezms.conf.ServerConfig;
-import ez.game.ezms.constance.DefaultConf;
+import ez.game.ezms.conf.DefaultConf;
 import ez.game.ezms.mina.MapleCodecFactory;
 import ez.game.ezms.server.channel.WorldChannel;
 import ez.game.ezms.client.model.MapleAccount;

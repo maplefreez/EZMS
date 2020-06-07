@@ -80,7 +80,7 @@ public class Start {
      */
     private static void initializeLoginServer () {
         try {
-            loginServer = LoginServer.initialize (mainConfig);
+            loginServer = LoginServer.initializeSingleton (mainConfig);
         } catch (LoginServerException ex) {
             /* 异常直接退出。 */
             ex.printStackTrace ();

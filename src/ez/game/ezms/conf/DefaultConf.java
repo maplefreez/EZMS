@@ -1,4 +1,4 @@
-package ez.game.ezms.constance;
+package ez.game.ezms.conf;
 
 public class DefaultConf {
 
