@@ -1,6 +1,7 @@
 package ez.game.ezms.client.panel;
 
 import ez.game.ezms.client.model.MapleEquipment;
+import ez.game.ezms.server.packet.MaplePacket;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -162,6 +163,39 @@ public class MapleRoleEquipped {
                 if (eq != null) retList.add (eq);
         }
         return retList;
+    }
+
+    /**
+     * 获取此实例的所有装备的报文实体，此函数只构造一个
+     * 简略的报文实体，每个项（即每个已穿戴的装备）格式如下：
+     *   位置代码（1B） + 装备编码（4B）.
+     *
+     * 此函数包含非现金装备和现金装备的信息。
+     *
+     * @return 字节序列。
+     */
+    public byte [] getArmedListPacketEntity () {
+        MaplePacket.PacketStreamLEWriter writer = new MaplePacket.PacketStreamLEWriter (80);
+        this.getArmedListPacketEntity (writer);
+        return writer.generate ().getByteArray ();
+    }
+
+    public void getArmedListPacketEntity (MaplePacket.PacketStreamLEWriter writer) {
+        /* 非现金装备。 */
+        for (MapleEquipment equipment : this.equipped) {
+            if (equipment == null) continue;
+            writer.writeByte(equipment.getPosCode ());
+            writer.writeInt((int) equipment.getWZID ());
+        }
+        writer.writeByte ((byte) 0);
+
+        /* 现金装备。 */
+        for (MapleEquipment equipment : this.equippedCash) {
+            if (equipment == null) continue;
+            writer.writeByte(equipment.getPosCode ());
+            writer.writeInt ((int) equipment.getWZID());
+        }
+        writer.writeByte ((byte) 0);
     }
 
 

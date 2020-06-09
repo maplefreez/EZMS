@@ -75,7 +75,7 @@ public class Login implements OptionFunc {
         /* 循环报告各个世界服务器。注意这里每一个服务器是一个单独的
          报文，单独发送。别所有服务器都挤到一个报文中。 */
         for (WorldServer server : WorldServerSet.serverSet) {
-            MaplePacket retPacket = LoginServerPacketCreator.createServerLoadStatusPacket(server);
+            MaplePacket retPacket = LoginServerPacketCreator.createServerLoadStatusPacket (server);
             session.write(retPacket.getByteArray());
         }
         /* 列表结束标志报文。 */

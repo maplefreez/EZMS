@@ -11,7 +11,6 @@ import org.apache.mina.core.session.IoSession;
  * 与客户端交互的接口。
  */
 public final class MapleClient {
-
     /* 通信用加密解密秘钥。AES */
     private MapleAESOFB sndCypher;
     private MapleAESOFB rcvCypher;
@@ -30,38 +29,6 @@ public final class MapleClient {
      * 代表客户端登录的账号。角色信息都包含于此。
      */
     public MapleAccount account;
-
-//    /**
-//     * 数据库中的账号ID，表accounts的主键。
-//     */
-//    private int accountDBID;
-
-    /**
-     * 账号登记的性别，早期冒险岛
-     * 的性别是挂在账号上的，一个账号
-     * 上所有的人物都会是同一个性别。
-     * true -> 男(male)
-     * false -> 女(female)
-     */
-//    private boolean accountGender;
-
-//    /**
-//     * 登录的角色账号，一个Session同一时间只能登录
-//     * 一个账号，当然，也可以切换，届时大部分账号属性都
-//     * 会更改。
-//     */
-//    private String account;
-
-    /**
-     * 即将要登录的角色或者当前正登录的角色。
-     */
-//    private MapleRole role;
-
-    /**
-     * 角色的GM等级，目前还没有完成这部分
-     * 设计。
-     */
-//    private int accountGMLevel;
 
     /**
      * 当前登录到的世界服务器ID。默认0xFF

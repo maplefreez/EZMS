@@ -37,7 +37,7 @@ public class EnterMap implements OptionFunc {
         if (client == null) return;
 
         MapleRole role = client.getAccountEntity ().getCurrentLoginRole ();
-        int mapID = role.getMapID ();
+        int mapID = role.getBasicInfo ().getMapID ();
 
         MapleWZMap current = MapleWZDataCache.getMapByWZID (mapID);
         MapleWZMapPortal portalFrom = current.getPortalByName (portalName);

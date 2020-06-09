@@ -115,7 +115,8 @@ public class CreateRole implements OptionFunc {
      * 初始道具或者初始点券等等。
      */
     private void vinus (MapleRole role) {
-        // 目前什么都不做。
+        // 目前用于测试，给角色加人气。
+        role.getBasicInfo ().setFame ((byte) 60); // 设置人气
     }
 
 }

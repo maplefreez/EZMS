@@ -171,7 +171,7 @@ public class WorldServerPacketCreator extends PacketCreator {
     private static void appendRoleData (PacketStreamLEWriter writer, MapleRole role) {
         writeRoleInfoLoginWorld (writer, role);  // 角色状态  (116 - 25 = 91)
         writer.writeByte ((byte) 0); // 好友数相关，貌似是当前好友数量。
-        writer.writeInt ((int) role.getMesos ());   // 鄙人实在不懂此处来个金币数是什么意思。
+        writer.writeInt ((int) role.getBasicInfo ().getMesos ());   // 鄙人实在不懂此处来个金币数是什么意思。
 
         appendKnapsackItems (writer, role);  // 背包物品信息  (325 - 121 = 204才对，目前是321, 少4byte.)
         appendSkillInfo (writer, role);     // 技能信息 (2Byte)

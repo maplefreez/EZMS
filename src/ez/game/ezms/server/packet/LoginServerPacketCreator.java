@@ -123,7 +123,7 @@ public final class LoginServerPacketCreator extends PacketCreator {
             writer.writeByte ((byte) server.getServerID ());
             // 频道ID
             writer.writeByte ((byte) channelID);
-            writer.writeByte ((byte) 0);  // 常量
+            writer.writeByte ((byte) 0);  // 常量，隔开各个频道实体。
         }
 
         return writer.generate ();
@@ -155,19 +155,17 @@ public final class LoginServerPacketCreator extends PacketCreator {
         writer.writeByte ((byte) SendPacketOptCode.ROLE_CREATED.getCode ());
         writer.writeByte (isFail ? (byte) 0 : (byte) 1);
 
-//        {
-//            /* 这里是为了调试而临时加的代码。*/
-//            role.setID (1);
-//        }
-
-        writeNewRoleInfo (writer, role);
+        /* 新创建角色的基本信息。 */
+//        writeNewRoleInfo (writer, role); // 去掉，由下面的代码代替。
+        role.getBasicInfo ().getPacketEntity (writer);
+        role.getArmedEquipped ().getArmedListPacketEntity (writer);
 
         return writer.generate ();
     }
 
-    private static void writeNewRoleInfo (PacketStreamLEWriter writer, MapleRole role) {
-        writeRoleInfo (writer, role);
-    }
+//    private static void writeNewRoleInfo (PacketStreamLEWriter writer, MapleRole role) {
+//        writeRoleInfo (writer, role);
+//    }
 
     /**
      * 创建世界服务器状态报文。
@@ -214,8 +212,12 @@ public final class LoginServerPacketCreator extends PacketCreator {
         writer.writeInt (0);
         writer.writeByte ((byte) roles.size ());
         /* 将各个角色加入。 */
-        for (MapleRole role : roles)
-            writeRoleInfo (writer, role);
+        for (MapleRole role : roles) {
+            role.getBasicPacketEntity (writer);
+            /* 穿戴在身上的装备列表实体。 */
+            role.getArmedEquipped ().getArmedListPacketEntity (writer);
+        }
+
         return writer.generate ();
     }
 

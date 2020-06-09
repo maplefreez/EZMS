@@ -58,7 +58,7 @@ public class EnterSpecifiedMap implements CommandFunc {
         session.write (packet.getByteArray ());
 
         /* 更改状态。 */
-        role.enterMap (role.getMapID (), toMapID);
+        role.enterMap (role.getBasicInfo().getMapID (), toMapID);
         return true;
     }
 }

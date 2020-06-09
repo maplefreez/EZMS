@@ -142,13 +142,13 @@ public class Business {
             pStmt.setShort (9, role.getMP());
             pStmt.setShort (10, role.getMaxHP());
             pStmt.setShort (11, role.getMaxMP());
-            pStmt.setLong (12, role.getMesos());
+            pStmt.setLong (12, role.getBasicInfo ().getMesos());
             pStmt.setShort (13, role.getJob ());
             pStmt.setByte (14, role.getSkin());
-            pStmt.setByte (15, role.getGender() ? (byte)1 : (byte)0);
+            pStmt.setByte (15, role.getGenderCode ()); // 男存0，女存1
             pStmt.setInt (16, role.getHair());
             pStmt.setInt (17, role.getFace());
-            pStmt.setInt (18, role.getMapID());
+            pStmt.setInt (18, role.getBasicInfo ().getMapID());
             pStmt.setInt (19, 25);
 
             pStmt.executeUpdate ();
@@ -198,7 +198,8 @@ public class Business {
         Connection conn = ds.getConnection ();
         ResultSet returnSet;
         try {
-            PreparedStatement pStmt = conn.prepareStatement("select * from EZMS_ROLES where accountID=? and worldserverID=?;");
+            PreparedStatement pStmt = conn.prepareStatement("select * from EZMS_ROLES " +
+                    "where accountID=? and worldserverID=? order by `createdate`;");
             pStmt.setInt (1, accountID);
             pStmt.setInt (2, serverID);
             returnSet = pStmt.executeQuery ();
@@ -209,7 +210,7 @@ public class Business {
         }
     }
 
-    private static List <MapleRole> fillRolesDataFromSearchResult(ResultSet resultSet) throws SQLException {
+    private static List <MapleRole> fillRolesDataFromSearchResult (ResultSet resultSet) throws SQLException {
         List <MapleRole> roles = new ArrayList <> (3);
         while (resultSet.next ()) {
             MapleRole role = fillRoleDataFromOneResult (resultSet);
@@ -230,6 +231,7 @@ public class Business {
         role.setLevel (resultSet.getByte (5));
         role.setJob (resultSet.getShort ("jobID"));
 
+        /* 以下是基础信息。 */
         role.setStrength (resultSet.getShort ("strength"));
         role.setDexterity (resultSet.getShort ("dexterity"));
         role.setIntelligence (resultSet.getShort ("intelligence"));
@@ -240,14 +242,13 @@ public class Business {
         role.setMP (resultSet.getShort ("MP"));
         role.setMaxMP (resultSet.getShort ("maxMP"));
 
-        role.setRemainingAP (resultSet.getShort ("AP"));
-//            role.setRemainingSP (resultSet.getShort ("SP"));
-
-        role.setExperience (resultSet.getInt ("experience"));
-
-        role.setFame (resultSet.getShort ("fame"));
-        role.setMapID (resultSet.getInt ("locatemapID"));
-        role.setInitSpawnPoint (resultSet.getByte ("spawnpoint"));
+        role.getBasicInfo ().setRemainingAP (resultSet.getShort ("AP"));
+        // 由于低版本不区分技能点，各个阶段职业的技能点目前一并存储在这个字段。
+        role.getBasicInfo ().setRemainingSP (resultSet.getShort ("SP0"));
+        role.getBasicInfo ().setExperience (resultSet.getInt ("experience"));
+        role.getBasicInfo ().setFame (resultSet.getShort ("fame"));
+        role.getBasicInfo ().setMapID (resultSet.getInt ("locatemapID"));
+        role.getBasicInfo ().setInitSpawnPoint (resultSet.getByte ("spawnpoint"));
         return role;
     }
 

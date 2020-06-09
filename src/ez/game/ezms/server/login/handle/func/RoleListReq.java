@@ -107,14 +107,14 @@ public class RoleListReq implements OptionFunc {
         role.setMP ((short) 1000);
         role.setMaxMP ((short) 1532);
 
-        role.setRemainingAP ((short) 0);
-        role.setRemainingSP ((short) 0);
-
-        role.setExperience (1024);
-
-        role.setFame ((byte) 1);
-        role.setMapID (102000000);
-        role.setInitSpawnPoint ((byte) 0);
+//        role.setRemainingAP ((short) 0);
+//        role.setRemainingSP ((short) 0);
+//
+//        role.setExperience (1024);
+//
+//        role.setFame ((byte) 1);
+//        role.setMapID (102000000);
+//        role.setInitSpawnPoint ((byte) 0);
         return role;
     }
 

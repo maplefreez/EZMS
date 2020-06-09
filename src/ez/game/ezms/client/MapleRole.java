@@ -3,8 +3,9 @@ package ez.game.ezms.client;
 import ez.game.ezms.client.model.MapleEquipment;
 import ez.game.ezms.client.model.MapleItem;
 import ez.game.ezms.client.panel.MapleKnapsack;
-import ez.game.ezms.client.panel.MapleRoleAbility;
+import ez.game.ezms.client.panel.MapleRoleBasicInfo;
 import ez.game.ezms.client.panel.MapleRoleEquipped;
+import ez.game.ezms.server.packet.MaplePacket;
 import ez.game.ezms.sql.Business;
 import ez.game.ezms.wz.model.cache.MapleWZMap;
 
@@ -75,53 +76,17 @@ public class MapleRole implements Cloneable {
     /**
      * 角色能力面板的各项属性。
      */
-    private MapleRoleAbility ability;
+    private MapleRoleBasicInfo basicInfo;
 
     /**
      * 穿戴装备，E键面板。
      */
-    private MapleRoleEquipped waring;
-
-    /**
-     * 当前冒险币持有量，不包括仓库。
-     * 虽然在下不知道这个变量是什么的
-     * 缩写。
-     */
-    private long mesos;
-
-    /**
-     * 剩余技能点（skill point）。
-     * 注意，在数据库中这个字段存储的是五个字段，
-     * 分别对应五个职业阶段，但在低版本冒险岛中
-     * 技能点并不区分是来自哪一个阶段的职业。
-     */
-    private short remainingSP;
-
-    /**
-     * 经验值。
-     */
-    private int experience;
-
-    /**
-     * 人气，声望。
-     */
-    private short fame;
-
-    /**
-     * 当前所在地图的ID；
-     */
-    private int mapID;
+    private MapleRoleEquipped armed;
 
     /**
      * 角色背包。
      */
     private MapleKnapsack knapsack;
-
-    /**
-     * 进入游戏世界后，角色应该站在什么位置。
-     * 这个位置在WZ中每个地图都有定义。
-     */
-    private byte initSpawnPoint;
 
     /**
      * 不清楚这个是什么，只知道是时间戳64bits。
@@ -130,14 +95,14 @@ public class MapleRole implements Cloneable {
 
 
     public MapleRole () {
-        this.ability = new MapleRoleAbility ();
-        this.waring = new MapleRoleEquipped();
+        this.basicInfo = new MapleRoleBasicInfo ();
+        this.armed = new MapleRoleEquipped ();
         this.knapsack = new MapleKnapsack ();
     }
 
-    public MapleRole (MapleRoleAbility ability) {
-        this.ability = ability;
-        this.waring = new MapleRoleEquipped();
+    public MapleRole (MapleRoleBasicInfo basicInfo) {
+        this.basicInfo = basicInfo;
+        this.armed = new MapleRoleEquipped();
         this.knapsack = new MapleKnapsack ();
     }
 
@@ -189,7 +154,7 @@ public class MapleRole implements Cloneable {
                 break;
             case ARMED :
                 MapleEquipment equipment = (MapleEquipment) item;
-                this.waring.setEquipmentByPosCode (equipment, equipment.getIsCash ());
+                this.armed.setEquipmentByPosCode (equipment, equipment.getIsCash ());
                 break;
             default :
                 break;
@@ -224,6 +189,34 @@ public class MapleRole implements Cloneable {
 
     }
 
+    /**
+     * 获取本实例的报文实体。用于传送此实例的报文，是
+     * 实例的一种序列化。
+     * 此报文实体只是包含角色基本信息及基本能力属性（MapleRoleAbility）的序列化
+     *
+     * @return 字节序列
+     */
+    public void getBasicPacketEntity (MaplePacket.PacketStreamLEWriter writer) {
+        writer.writeInt (this.ID);
+        /* 鄙人不甚清楚，这里为什么一定要固定长度字符串。不足长度部分都要添加0. */
+        writer.writeFixedLengthASCIIString (this.roleName, 0x13);
+        writer.writeByte (this.getGenderCode ());  // 男=0； 女= 1
+        writer.writeByte (this.skin);
+        writer.writeInt (face);
+        writer.writeInt (hair);
+        writer.writeLong (0L);  // Pet SN
+        writer.writeByte (level);
+        writer.writeShort (job);
+
+        // 能力信息。
+        this.basicInfo.getPacketEntity (writer);
+    }
+
+    public byte [] getBasicPacketEntity () {
+        MaplePacket.PacketStreamLEWriter writer = new MaplePacket.PacketStreamLEWriter (64);
+        this.getBasicPacketEntity (writer);
+        return writer.generate ().getByteArray ();
+    }
 
 
     /**
@@ -233,12 +226,13 @@ public class MapleRole implements Cloneable {
      * @return 新建的实例。
      */
     public static MapleRole createDefaultRole () {
-        MapleRoleAbility ability = MapleRoleAbility.createDefaultAbilityEntity ();
+        MapleRoleBasicInfo ability = MapleRoleBasicInfo.createDefaultAbilityEntity ();
         MapleRole role = new MapleRole (ability);
 
-        role.mapID = (0); // 设置初始地图。
-        role.job = 0;  // 设置初始职业.
-        role.mesos = (600); // 至少给点初始金币。
+        role.basicInfo.setMapID (0); // 设置初始地图。
+        role.basicInfo.setMesos (600); // 至少给点初始金币。
+
+        role.job = 0;  // 设置初始职业，新手为0.
         role.level = 1;
 
         return role;
@@ -252,7 +246,7 @@ public class MapleRole implements Cloneable {
      * @return
      */
     public void wearEquipment (MapleEquipment equipment, boolean isCash) {
-        this.waring.setEquipmentByPosCode (equipment, isCash);
+        this.armed.setEquipmentByPosCode (equipment, isCash);
     }
 
     /**
@@ -267,11 +261,11 @@ public class MapleRole implements Cloneable {
      * 角色进入地图。
      */
     public void enterMap (MapleWZMap fromMap, MapleWZMap toMap) {
-        this.mapID = toMap.getWZID ();
+        this.basicInfo.setMapID (toMap.getWZID ());
     }
 
     public void enterMap (int fromMapID, int toMapID) {
-        this.mapID = toMapID;
+        this.basicInfo.setMapID (toMapID);
     }
 
     public void pickUpEquipment (MapleEquipment equipment) {
@@ -320,17 +314,17 @@ public class MapleRole implements Cloneable {
         MapleEquipment equipment = new MapleEquipment (blouseID);
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        waring.setBlouse(equipment, isCash);
+        armed.setBlouse(equipment, isCash);
     }
 
     public void setBlouse (MapleEquipment equipment, boolean isCash) {
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        this.waring.setBlouse (equipment, isCash);
+        this.armed.setBlouse (equipment, isCash);
     }
 
     public MapleEquipment getBlouse (boolean isCash) {
-        return this.waring.getBlouse(isCash);
+        return this.armed.getBlouse(isCash);
     }
 
     /**
@@ -342,17 +336,17 @@ public class MapleRole implements Cloneable {
         MapleEquipment equipment = new MapleEquipment (trousersID);
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        waring.setTrousers (equipment, isCash);
+        armed.setTrousers (equipment, isCash);
     }
 
     public void setTrousers (MapleEquipment equipment, boolean isCash) {
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        this.waring.setTrousers (equipment, isCash);
+        this.armed.setTrousers (equipment, isCash);
     }
 
     public MapleEquipment getTrousers (boolean isCash) {
-        return this.waring.getTrousers (isCash);
+        return this.armed.getTrousers (isCash);
     }
 
     /**
@@ -364,17 +358,17 @@ public class MapleRole implements Cloneable {
         MapleEquipment equipment = new MapleEquipment (shoesID);
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        waring.setShoes (equipment, isCash);
+        armed.setShoes (equipment, isCash);
     }
 
     public void setShoes (MapleEquipment equipment, boolean isCash) {
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        this.waring.setShoes (equipment, isCash);
+        this.armed.setShoes (equipment, isCash);
     }
 
     public MapleEquipment getShoes (boolean isCash) {
-        return this.waring.getShoes (isCash);
+        return this.armed.getShoes (isCash);
     }
 
     /**
@@ -386,17 +380,17 @@ public class MapleRole implements Cloneable {
         MapleEquipment equipment = new MapleEquipment (weaponID);
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        waring.setWeapon (equipment, isCash);
+        armed.setWeapon (equipment, isCash);
     }
 
     public void setWeapon (MapleEquipment equipment, boolean isCash) {
         /* 设置状态为穿上 */
         equipment.setStatus ((byte) 1);
-        this.waring.setWeapon (equipment, isCash);
+        this.armed.setWeapon (equipment, isCash);
     }
 
     public MapleEquipment getWeapon (boolean isCash) {
-        return this.waring.getWeapon (isCash);
+        return this.armed.getWeapon (isCash);
     }
 
 //    public MapleEquipment [] getArmedEquipmentList (boolean isCash) {
@@ -404,7 +398,7 @@ public class MapleRole implements Cloneable {
 //    }
 
     public MapleRoleEquipped getArmedEquipped () {
-        return this.waring;
+        return this.armed;
     }
 
     public void setRoleName(String roleName) {
@@ -476,125 +470,129 @@ public class MapleRole implements Cloneable {
     }
 
     public short getStrength() {
-        return ability.getStrength ();
+        return basicInfo.getStrength ();
     }
 
     public void setStrength(short strength) {
-        this.ability.setStrength(strength);
+        this.basicInfo.setStrength(strength);
     }
 
     public short getLuck() {
-        return ability.getLuck ();
+        return basicInfo.getLuck ();
     }
 
     public void setLuck(short luck) {
-        this.ability.setLuck (luck);
+        this.basicInfo.setLuck (luck);
     }
 
     public short getIntelligence() {
-        return ability.getIntelligence ();
+        return basicInfo.getIntelligence ();
     }
 
     public void setIntelligence(short intelligence) {
-        this.ability.setIntelligence(intelligence);
+        this.basicInfo.setIntelligence(intelligence);
     }
 
     public short getDexterity() {
-        return ability.getDexterity();
+        return basicInfo.getDexterity();
     }
 
     public void setDexterity(short dexterity) {
-        this.ability.setDexterity(dexterity);
+        this.basicInfo.setDexterity(dexterity);
     }
 
     public short getHP() {
-        return ability.getHP ();
+        return basicInfo.getHP ();
     }
 
     public void setHP(short HP) {
-        this.ability.setHP (HP);
+        this.basicInfo.setHP (HP);
     }
 
     public short getMaxHP() {
-        return ability.getMaxHP ();
+        return basicInfo.getMaxHP ();
     }
 
     public void setMaxHP(short maxHP) {
-        this.ability.setMaxHP (maxHP);
+        this.basicInfo.setMaxHP (maxHP);
     }
 
     public short getMP() {
-        return ability.getMP ();
+        return basicInfo.getMP ();
     }
 
     public void setMP(short MP) {
-        this.ability.setMP (MP);
+        this.basicInfo.setMP (MP);
+    }
+
+    public MapleRoleBasicInfo getBasicInfo() {
+        return basicInfo;
     }
 
     public short getMaxMP() {
-        return ability.getMaxMP ();
+        return basicInfo.getMaxMP ();
     }
 
     public void setMaxMP(short maxMP) {
-        ability.setMaxMP (maxMP);
+        basicInfo.setMaxMP (maxMP);
     }
 
-
-    public long getMesos() {
-        return mesos;
-    }
-
-    public void setMesos(long mesos) {
-        this.mesos = mesos;
-    }
-
-    public short getRemainingAP() {
-        return ability.getRemainingAP();
-    }
-
-    public void setRemainingAP(short remainingAP) {
-        this.ability.setRemainingAP(remainingAP);
-    }
-
-    public short getRemainingSP() {
-        return remainingSP;
-    }
-
-    public void setRemainingSP(short remainingSP) {
-        this.remainingSP = remainingSP;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
-
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-    public short getFame() {
-        return fame;
-    }
-
-    public void setFame(short fame) {
-        this.fame = fame;
-    }
-
-    public int getMapID() {
-        return mapID;
-    }
-
-    public void setMapID(int mapID) {
-        this.mapID = mapID;
-    }
-
-    public byte getInitSpawnPoint() {
-        return initSpawnPoint;
-    }
-
-    public void setInitSpawnPoint(byte initSpawnPoint) {
-        this.initSpawnPoint = initSpawnPoint;
-    }
+//
+//    public long getMesos() {
+//        return mesos;
+//    }
+//
+//    public void setMesos(long mesos) {
+//        this.mesos = mesos;
+//    }
+//
+//    public short getRemainingAP() {
+//        return ability.getRemainingAP();
+//    }
+//
+//    public void setRemainingAP(short remainingAP) {
+//        this.ability.setRemainingAP(remainingAP);
+//    }
+//
+//    public short getRemainingSP() {
+//        return remainingSP;
+//    }
+//
+//    public void setRemainingSP(short remainingSP) {
+//        this.remainingSP = remainingSP;
+//    }
+//
+//    public int getExperience() {
+//        return experience;
+//    }
+//
+//    public void setExperience(int experience) {
+//        this.experience = experience;
+//    }
+//
+//    public short getFame() {
+//        return fame;
+//    }
+//
+//    public void setFame(short fame) {
+//        this.fame = fame;
+//    }
+//
+//    public int getMapID() {
+//        return mapID;
+//    }
+//
+//    public void setMapID(int mapID) {
+//        this.mapID = mapID;
+//    }
+//
+//    public byte getInitSpawnPoint() {
+//        return initSpawnPoint;
+//    }
+//
+//    public void setInitSpawnPoint(byte initSpawnPoint) {
+//        this.initSpawnPoint = initSpawnPoint;
+//    }
 
     public long getDate() {
         return date;
