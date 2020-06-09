@@ -30,7 +30,7 @@ public class WorldServerStatusReq implements OptionFunc {
         WorldServer server = WorldServerSet.serverSet [serverId];
 
         long loginedPlayerCount = server.countLoginRole ();
-        long playerCountLimit = server.getLoginLimit ();
+        long playerCountLimit = server.getConfData ().getLoginMaxCount ();
         int statusCode = 0;  // 正常登陆的状态是0.
 
         if (loginedPlayerCount >= playerCountLimit) {

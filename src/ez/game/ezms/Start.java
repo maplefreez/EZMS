@@ -41,6 +41,10 @@ public class Start {
      * 注：此方法只能调用一次。
      */
     private static void initialize () {
+        /* 退出线程。 */
+        Runtime.getRuntime().addShutdownHook (
+                new Thread (new Shutdown ()));
+
         loadMainConfigFile ();
         initializeDataSource ();
         initializeLoginServer ();
@@ -170,4 +174,19 @@ public class Start {
          * 服务器实体。 只是假设而已。 */
     }
 
+    /**
+     * 退出线程
+     */
+    static class Shutdown implements Runnable {
+
+        @Override
+        public void run () {
+
+        }
+
+        public Shutdown () { }
+    }
+
+
 }
+

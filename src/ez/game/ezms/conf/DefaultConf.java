@@ -12,4 +12,9 @@ public class DefaultConf {
      * 每增加一个频道，端口号+1。
      */
     public static short DEF_CHANNEL_PORT_START = 7575;
+
+    /**
+     * 一个世界服务器下默认开启多少频道服务器。
+     */
+    public static byte DEF_CHANNEL_COUNT = 3;
 }

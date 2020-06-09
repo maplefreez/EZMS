@@ -19,7 +19,6 @@ public final class ConfigKeys {
 
 
     /* ------------- LoginServer 配置键 ------------- */
-
     /* 能允许的客户端最大链接数。 */
     public static final String LOGIN_MAX_ONLINE = "server.login.maxonline";
 
@@ -33,6 +32,30 @@ public final class ConfigKeys {
     public static final String LOGIN_BIND_PORT = "server.login.port";
 
     /* ------------- WorldServer 配置键 ------------- */
+    public static final String WORLD_MESO_RATE = "server.world.mesorate";
+
+    public static final String WORLD_EXP_RATE = "server.world.exprate";
+
+    public static final String WORLD_DROP_RATE = "server.world.droprate";
+
+    /* 角色单个能力值属性的最大值。 */
+    public static final String WORLD_STATE_MAX = "server.world.statmax";
+
+    /* 世界服务器下的频道总数。 */
+    public static final String WORLD_CHANNEL_COUNT = "server.world.channelnum";
+
+    /* 此世界服务器允许登录的最大用户数。目前给予各个频道服务器
+    * 的名额策略是平分。 */
+    public static final String WORLD_MAX_LOGIN = "server.world.maxlogin";
+
+    /* ------- ChannelServer相关 ----------- */
+    /* 频道服务器所监听的IP， 这里只定义键前缀，不同频道将频道ID追加在
+    * 此键后，如频道ID为5（第六频道），则键为"server.world.interface.5" */
+    public static final String WORLD_CHANNEL_IP_PREFIX = "server.channel.interface.";
+
+    /* 频道服务器所监听的端口号， 这里只定义键前缀，不同频道将频道ID追加在
+     * 此键后，如频道ID为4（第五频道），则键为"server.world.interface.4" */
+    public static final String WORLD_CHANNEL_PORT_PREFIX = "server.channel.port.";
 
     /* 不可实例化。 */
     private ConfigKeys () {}

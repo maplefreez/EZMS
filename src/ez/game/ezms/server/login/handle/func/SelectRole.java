@@ -1,8 +1,10 @@
 package ez.game.ezms.server.login.handle.func;
 
+import ez.game.ezms.conf.ChannelConfig;
 import ez.game.ezms.constance.ServerConstants;
 import ez.game.ezms.client.model.MapleAccount;
 import ez.game.ezms.client.MapleClient;
+import ez.game.ezms.server.channel.WorldChannel;
 import ez.game.ezms.server.packet.LoginServerPacketCreator;
 import ez.game.ezms.server.packet.MaplePacket;
 import ez.game.ezms.server.packet.OptionFunc;
@@ -48,12 +50,16 @@ public class SelectRole implements OptionFunc {
         MapleAccount account = client.getAccountEntity ();
         account.loginRole (roleID);
 
+        int channelSelected = client.getChannelID ();
+        WorldChannel channel = worldServer.getWorldChannel (channelSelected);
+        ChannelConfig channelConf = channel.getConfData ();
+
         /* 准备登录进世界服务器。先暂存在此。 */
         WorldServerSet.beforeRoleLogin (client);
 
         /* 创建世界服务器地址报文并发送。 */
         MaplePacket packet = LoginServerPacketCreator.createWorldServerAddress (
-                worldServer.getIP(), worldServer.getPort(), roleID);
+                channelConf.getIP (), channelConf.getPort (), roleID);
         session.write (packet.getByteArray ());
     }
 }

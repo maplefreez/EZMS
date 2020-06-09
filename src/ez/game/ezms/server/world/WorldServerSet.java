@@ -51,7 +51,7 @@ public final class WorldServerSet {
      */
     public static final WorldServer [] serverSet = {
             new WorldServer (true, 0, "蓝蜗牛"),
-            new WorldServer (true, 1, "蘑菇仔"),
+//            new WorldServer (true, 1, "蘑菇仔"),
 //            new WorldServer (true, 2, "绿水灵"),
 //            new WorldServer (true, 3, "漂漂猪"),
 //            new WorldServer (true, 4, "小青蛇"),
