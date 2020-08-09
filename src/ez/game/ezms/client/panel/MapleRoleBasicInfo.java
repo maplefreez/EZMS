@@ -1,6 +1,9 @@
 package ez.game.ezms.client.panel;
 
+import ez.game.ezms.client.MapleRole;
+import ez.game.ezms.client.MapleRoleState;
 import ez.game.ezms.server.packet.MaplePacket;
+import ez.game.ezms.sql.Business;
 
 /**
  * 角色基础信息，包括能力值四项、人气、
@@ -54,6 +57,10 @@ public class MapleRoleBasicInfo {
      */
     private short MaxMP;
 
+    /**
+     * 职业
+     */
+    private short job;
 
     /**
      * 当前冒险币持有量，不包括仓库。
@@ -81,6 +88,26 @@ public class MapleRoleBasicInfo {
     private short fame;
 
     /**
+     * 角色等级
+     */
+    private byte level;
+
+    /**
+     * 肤色
+     */
+    private byte skin;
+
+    /**
+     * 脸型
+     */
+    private int face;
+
+    /**
+     * 头型（还是发色？）
+     */
+    private int hair;
+
+    /**
      * 当前所在地图的ID；
      */
     private int mapID;
@@ -90,6 +117,18 @@ public class MapleRoleBasicInfo {
      * 这个位置在WZ中每个地图都有定义。
      */
     private byte initSpawnPoint;
+
+    /**
+     * 修改掩码，若修改了某个状态值，此字段指示的位将会被设置。
+     * 某些字段无法囊括将使用isOtherFieldWrote指示，但不再具体
+     * 指示哪个字段被修改。
+     */
+    private volatile int writeMask;
+
+    /**
+     * 指示mapID，initSpawnPoint，两个字段是否被修改。
+     */
+    private volatile boolean isOtherFieldWrote;
 
 
     /**
@@ -116,6 +155,13 @@ public class MapleRoleBasicInfo {
      * @param writer  写入此缓冲区中。
      */
     public void getPacketEntity (MaplePacket.PacketStreamLEWriter writer) {
+        writer.writeByte (level);
+        writer.writeByte (this.skin);
+        writer.writeInt (face);
+        writer.writeInt (hair);
+        writer.writeLong (0L);  // Pet SN
+        writer.writeShort (job);
+
         writer.writeShort (strength);
         writer.writeShort (dexterity);
         writer.writeShort (intelligence);
@@ -141,6 +187,23 @@ public class MapleRoleBasicInfo {
         MaplePacket.PacketStreamLEWriter writer = new MaplePacket.PacketStreamLEWriter (32);
         getPacketEntity (writer);
         return writer.generate ().getByteArray ();
+    }
+
+    /**
+     * 将此实例更新回MySQL，此函数并非强制更新，仅仅按已经写入了数据进行更新。
+     * TODO...
+     * @param role   角色ID。
+     */
+    public void tryWriteBack2DB (MapleRole role) {
+        /* 由MapleRoleState定义的字段被修改了。 */
+        if (this.writeMask != 0x00) {
+            // 目前将字段全部写回，不区分是哪个字段被修改。
+            Business.updateRoleBasicInfo2DB (role, this, true);
+        }
+
+        if (this.isOtherFieldWrote) {
+            // 目前将字段全部写回，不区分是哪个字段被修改。
+        }
     }
 
     public long getMesos() {
@@ -261,5 +324,61 @@ public class MapleRoleBasicInfo {
 
     public void setMaxMP(short maxMP) {
         MaxMP = maxMP;
+    }
+
+    public short getJob() {
+        return job;
+    }
+
+    public void setJob(short job) {
+        this.job = job;
+    }
+
+    public byte getLevel() {
+        return level;
+    }
+
+    public void setLevel(byte level) {
+        this.level = level;
+    }
+
+    public byte getSkin() {
+        return skin;
+    }
+
+    public void setSkin(byte skin) {
+        this.skin = skin;
+    }
+
+    public int getFace() {
+        return face;
+    }
+
+    public void setFace(int face) {
+        this.face = face;
+    }
+
+    public int getHair() {
+        return hair;
+    }
+
+    public void setHair(int hair) {
+        this.hair = hair;
+    }
+
+    public int getWriteMask() {
+        return writeMask;
+    }
+
+    public void setWriteMask(int writeMask) {
+        this.writeMask = writeMask;
+    }
+
+    public boolean isOtherFieldWrote() {
+        return isOtherFieldWrote;
+    }
+
+    public void setOtherFieldWrote(boolean otherFieldWrote) {
+        isOtherFieldWrote = otherFieldWrote;
     }
 }

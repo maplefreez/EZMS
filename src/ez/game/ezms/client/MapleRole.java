@@ -15,6 +15,13 @@ import java.util.List;
  * 冒险岛角色实体。
  * 一个账号可以在任意一个世界服务器（蓝蜗牛、章鱼怪等）
  * 创建多个角色。
+ *
+ * 关于内存与数据库的同步问题：
+ *   目前如下几个字段不会经常更改，更改的场景大都是在使用
+ * 现金道具或者GM的命令更改，修改频度低些，所以以下属性在
+ * 修改时使用全写回策略，即修改内存后马上修改MySQL：
+ *   ID、roleName，gender，skin， face， hair， level， job
+ *
  */
 public class MapleRole implements Cloneable {
     /**
@@ -33,29 +40,9 @@ public class MapleRole implements Cloneable {
     private boolean gender;
 
     /**
-     * 肤色
-     */
-    private byte skin;
-
-    /**
-     * 脸型
-     */
-    private int face;
-
-    /**
-     * 头型（还是发色？）
-     */
-    private int hair;
-
-    /**
      * 未知字段
      */
     private long unknown;
-
-    /**
-     * 角色等级
-     */
-    private byte level;
 
 
     /**
@@ -68,10 +55,6 @@ public class MapleRole implements Cloneable {
      */
     private byte worldID;
 
-    /**
-     * 职业
-     */
-    private short job;
 
     /**
      * 角色能力面板的各项属性。
@@ -92,6 +75,12 @@ public class MapleRole implements Cloneable {
      * 不清楚这个是什么，只知道是时间戳64bits。
      */
     private long date;
+
+//    /**
+//     * 用于记录此角色的属性是否有改动，此标志位只用于标志：
+//     *
+//     */
+//    private volatile boolean isInfoWrited;
 
 
     public MapleRole () {
@@ -125,6 +114,20 @@ public class MapleRole implements Cloneable {
     }
 
     /**
+     * 将此角色的数据写入数据库，此函数并非强制所有数据
+     * 写入，仅仅写入修改部分。
+     * 注：非异步函数。
+     */
+    public void tryWriteBack2DB () {
+        // 基础信息
+        this.basicInfo.tryWriteBack2DB (this);
+
+        // TODO...
+        // 装备窗（E），穿戴的装备。
+        // 背包信息.
+    }
+
+    /**
      * 捡起多个物品。
      *
      * @param items 物品集合。
@@ -135,30 +138,23 @@ public class MapleRole implements Cloneable {
             pickUpOneItem (item);
     }
 
-    public void pickUpOneItem (MapleItem item) {
-        switch (item.getType ()) {
-            case EQUIP :
-                this.knapsack.getEquipments().add((MapleEquipment) item);
-                break;
-            case CONSUMPTION :
-                this.knapsack.getConsumables().add (item);
-                break;
-            case OTHERS :
-                this.knapsack.getOthers().add(item);
-                break;
-            case SETUP :
-                this.knapsack.getSets().add(item);
-                break;
-            case CASH :
-                this.knapsack.getCashItems ().add ((MapleEquipment) item);
-                break;
-            case ARMED :
-                MapleEquipment equipment = (MapleEquipment) item;
-                this.armed.setEquipmentByPosCode (equipment, equipment.getIsCash ());
-                break;
-            default :
-                break;
-        }
+    /**
+     * 捡起一个装备。
+     * @param item
+     */
+    public MapleItem pickUpOneItem (MapleItem item) {
+        return this.knapsack.pickUpOneItem (item);
+    }
+
+    /**
+     * 扔出某个物品，
+     * @param category  物品的类别。包括四项，由MapleItemType定义。
+     * @param pos  物品所在背包中的位置索引，从0开始。超出最大索引则什么都不做，返回null。
+     *
+     * @return  返回被丢弃的物品实体。
+     */
+    public MapleItem throwOutItem (MapleItemType category, int pos) {
+        return this.knapsack.throwOutItem (category, pos);
     }
 
     /**
@@ -201,12 +197,10 @@ public class MapleRole implements Cloneable {
         /* 鄙人不甚清楚，这里为什么一定要固定长度字符串。不足长度部分都要添加0. */
         writer.writeFixedLengthASCIIString (this.roleName, 0x13);
         writer.writeByte (this.getGenderCode ());  // 男=0； 女= 1
-        writer.writeByte (this.skin);
-        writer.writeInt (face);
-        writer.writeInt (hair);
-        writer.writeLong (0L);  // Pet SN
-        writer.writeByte (level);
-        writer.writeShort (job);
+//        writer.writeByte (this.skin);
+//        writer.writeInt (face);
+//        writer.writeInt (hair);
+//        writer.writeLong (0L);  // Pet SN
 
         // 能力信息。
         this.basicInfo.getPacketEntity (writer);
@@ -232,8 +226,8 @@ public class MapleRole implements Cloneable {
         role.basicInfo.setMapID (0); // 设置初始地图。
         role.basicInfo.setMesos (600); // 至少给点初始金币。
 
-        role.job = 0;  // 设置初始职业，新手为0.
-        role.level = 1;
+        role.basicInfo.setJob ((byte) 0);  // 设置初始职业，新手为0.
+        role.basicInfo.setLevel ((byte) 1);
 
         return role;
     }
@@ -421,52 +415,12 @@ public class MapleRole implements Cloneable {
         this.gender = gender;
     }
 
-    public byte getSkin() {
-        return skin;
-    }
-
-    public void setSkin(byte skin) {
-        this.skin = skin;
-    }
-
-    public int getFace() {
-        return face;
-    }
-
-    public void setFace(int face) {
-        this.face = face;
-    }
-
-    public int getHair() {
-        return hair;
-    }
-
-    public void setHair(int hair) {
-        this.hair = hair;
-    }
-
     public long getUnknown() {
         return unknown;
     }
 
     public void setUnknown(long unknown) {
         this.unknown = unknown;
-    }
-
-    public byte getLevel() {
-        return level;
-    }
-
-    public void setLevel(byte level) {
-        this.level = level;
-    }
-
-    public short getJob() {
-        return job;
-    }
-
-    public void setJob(short job) {
-        this.job = job;
     }
 
     public short getStrength() {
@@ -536,63 +490,6 @@ public class MapleRole implements Cloneable {
     public void setMaxMP(short maxMP) {
         basicInfo.setMaxMP (maxMP);
     }
-
-//
-//    public long getMesos() {
-//        return mesos;
-//    }
-//
-//    public void setMesos(long mesos) {
-//        this.mesos = mesos;
-//    }
-//
-//    public short getRemainingAP() {
-//        return ability.getRemainingAP();
-//    }
-//
-//    public void setRemainingAP(short remainingAP) {
-//        this.ability.setRemainingAP(remainingAP);
-//    }
-//
-//    public short getRemainingSP() {
-//        return remainingSP;
-//    }
-//
-//    public void setRemainingSP(short remainingSP) {
-//        this.remainingSP = remainingSP;
-//    }
-//
-//    public int getExperience() {
-//        return experience;
-//    }
-//
-//    public void setExperience(int experience) {
-//        this.experience = experience;
-//    }
-//
-//    public short getFame() {
-//        return fame;
-//    }
-//
-//    public void setFame(short fame) {
-//        this.fame = fame;
-//    }
-//
-//    public int getMapID() {
-//        return mapID;
-//    }
-//
-//    public void setMapID(int mapID) {
-//        this.mapID = mapID;
-//    }
-//
-//    public byte getInitSpawnPoint() {
-//        return initSpawnPoint;
-//    }
-//
-//    public void setInitSpawnPoint(byte initSpawnPoint) {
-//        this.initSpawnPoint = initSpawnPoint;
-//    }
 
     public long getDate() {
         return date;

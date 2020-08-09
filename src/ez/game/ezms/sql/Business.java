@@ -1,10 +1,13 @@
 package ez.game.ezms.sql;
 
+import ez.game.ezms.client.MapleRoleState;
 import ez.game.ezms.client.model.MapleEquipment;
 import ez.game.ezms.client.model.MapleItem;
 import ez.game.ezms.client.MapleItemType;
 import ez.game.ezms.client.MapleRole;
+import ez.game.ezms.client.panel.MapleRoleBasicInfo;
 import ez.game.ezms.sql.models.Account;
+import ez.game.ezms.wz.model.cache.MapleWZItem;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -115,6 +118,33 @@ public class Business {
         }
     }
 
+
+    /**
+     * 为角色添加一个或多个物品。
+     * @param role  角色ID
+     * @param item  物品WZID
+     * @param count  物品数量
+     * @return   是否成功。
+     */
+    public static boolean insertItem2DB (MapleRole role, MapleItem item, int count) {
+        DBDataSource ds = DBDataSource.getOrInitializeDBDataSource ();
+        Connection conn = ds.getConnection ();
+
+        try {
+            PreparedStatement pStmt = conn.prepareStatement(
+                    "insert into EZMS_ITEM (roleID,WZID,quantity)" +
+                    "values(?,?,?);");
+            pStmt.setInt (1, role.getID ());
+            pStmt.setInt (2, (int) item.getWZID ());
+            pStmt.setInt (3, count);
+
+            return pStmt.execute ();
+        } catch (SQLException ex) {
+            ex.printStackTrace ();
+            return false;
+        }
+    }
+
     /**
      * 插入新角色数据到MySQL。
      *
@@ -143,11 +173,11 @@ public class Business {
             pStmt.setShort (10, role.getMaxHP());
             pStmt.setShort (11, role.getMaxMP());
             pStmt.setLong (12, role.getBasicInfo ().getMesos());
-            pStmt.setShort (13, role.getJob ());
-            pStmt.setByte (14, role.getSkin());
+            pStmt.setShort (13, role.getBasicInfo ().getJob ());
+            pStmt.setByte (14, role.getBasicInfo ().getSkin());
             pStmt.setByte (15, role.getGenderCode ()); // 男存0，女存1
-            pStmt.setInt (16, role.getHair());
-            pStmt.setInt (17, role.getFace());
+            pStmt.setInt (16, role.getBasicInfo ().getHair());
+            pStmt.setInt (17, role.getBasicInfo ().getFace());
             pStmt.setInt (18, role.getBasicInfo ().getMapID());
             pStmt.setInt (19, 25);
 
@@ -163,6 +193,53 @@ public class Business {
         }
         return false;
     }
+
+    /**
+     * TODO 将角色的基础信息数据更新到MySQL。
+     *
+     * @param isDefined  是否只更新由MapleRoleState定义的字段。
+     * @return  成功返回true.
+     */
+    public static boolean updateRoleBasicInfo2DB (MapleRole role,
+                                                  MapleRoleBasicInfo baseInfo, boolean isDefined) {
+        DBDataSource ds = DBDataSource.getOrInitializeDBDataSource ();
+        Connection conn = ds.getConnection ();
+
+        try {
+            PreparedStatement pStmt = conn.prepareStatement("update EZMS_ROLES set " +
+                            "strength=?,dexterity=?,luck=?,intelligence=?," +
+                            "HP=?,MP=?,maxHP=?,maxMP=?,MESOS=?,jobID=?,skin=?,hair=?,face=?," +
+                            "AP=?,SP0=?,fame=?,exp=?,pet=?,level=? where roleID=?");
+
+            pStmt.setShort (1, baseInfo.getStrength ());
+            pStmt.setShort (2, baseInfo.getDexterity ());
+            pStmt.setShort (3, baseInfo.getLuck ());
+            pStmt.setShort (4, baseInfo.getIntelligence ());
+            pStmt.setShort (5, baseInfo.getHP ());
+            pStmt.setShort (6, baseInfo.getMP ());
+            pStmt.setShort (7, baseInfo.getMaxHP ());
+            pStmt.setShort (8, baseInfo.getMaxMP ());
+            pStmt.setInt (9, (int) baseInfo.getMesos ());
+            pStmt.setShort (10, baseInfo.getJob ());
+            pStmt.setShort (11, baseInfo.getSkin ());
+            pStmt.setLong (12, baseInfo.getHair ());
+            pStmt.setInt (13, baseInfo.getFace ());
+            pStmt.setShort (14, baseInfo.getRemainingAP ());
+            pStmt.setShort (15, baseInfo.getRemainingSP ()); // 男存0，女存1
+            pStmt.setShort (16, baseInfo.getFame ());
+            pStmt.setInt (17, baseInfo.getExperience ());
+            pStmt.setInt (18, 0); // baseInfo.getPet () 暂且如此
+            pStmt.setByte (19, baseInfo.getLevel ());
+
+            pStmt.setInt (20, role.getID ());
+
+            return pStmt.executeUpdate () > 0;
+        } catch (SQLException ex) {
+            ex.printStackTrace ();
+        }
+        return false;
+    }
+
 
     /**
      * 根据角色的数据库ID得到角色的信息实体。
@@ -225,11 +302,11 @@ public class Business {
         role.setAccountID (resultSet.getInt (2));
         role.setID (resultSet.getInt (1));
         role.setGender (resultSet.getByte ("gender") <= 0); // 数据库中存的0表示男。
-        role.setSkin (resultSet.getByte ("skin"));
-        role.setFace (resultSet.getInt ("face"));
-        role.setHair (resultSet.getInt ("hair"));
-        role.setLevel (resultSet.getByte (5));
-        role.setJob (resultSet.getShort ("jobID"));
+        role.getBasicInfo ().setSkin (resultSet.getByte ("skin"));
+        role.getBasicInfo ().setFace (resultSet.getInt ("face"));
+        role.getBasicInfo ().setHair (resultSet.getInt ("hair"));
+        role.getBasicInfo ().setLevel (resultSet.getByte (5));
+        role.getBasicInfo ().setJob (resultSet.getShort ("jobID"));
 
         /* 以下是基础信息。 */
         role.setStrength (resultSet.getShort ("strength"));

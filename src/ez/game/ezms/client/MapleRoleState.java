@@ -101,7 +101,12 @@ public enum MapleRoleState {
     /**
      * 金币。
      */
-    MESOS (0x40000,4);
+    MESOS (0x40000,4),
+
+    /**
+     * 此枚举指示最大的掩码，不使用作指示的标志位。
+     */
+    MAX_FLAG (0x40000, 0);
 
 
     /**
